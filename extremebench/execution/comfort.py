@@ -1,7 +1,7 @@
 """Same severity limits, actual dynamic acceleration/rate (no bicycle inference)."""
 import numpy as np
 from scipy.signal import savgol_filter
-from ..benchmark_v3.comfort import aggregate_ratios
+from ..benchmark.comfort import aggregate_ratios
 
 def dynamic_comfort(logs):
  t=np.array([r['t'] for r in logs]);dt=np.diff(t)

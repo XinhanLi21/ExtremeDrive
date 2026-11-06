@@ -4,22 +4,22 @@ import hashlib,json,math
 
 @dataclass(frozen=True)
 class Protocol:
-    version: str = 'extremedrive-markings-0cm-v3'
+    version: str = 'marking0cm-sl03-approx-v4'
     horizon_s: float = 4.0
     stride_s: float = 4.0
-    sample_dt_s: float = .05
-    max_observation_gap_s: float = .5
-    white_tolerance_m: float = 0.
-    white_persistence_s: float = 0.
-    yellow_tolerance_m: float = 0.
-    yellow_persistence_s: float = 0.
-    event_merge_gap_s: float = .5
+    sample_dt_s: float = 0.05
+    max_observation_gap_s: float = 0.5
+    white_tolerance_m: float = 0
+    white_persistence_s: float = 0
+    yellow_tolerance_m: float = 0
+    yellow_persistence_s: float = 0
+    event_merge_gap_s: float = 0.5
     ttc_horizon_s: float = 1.0
-    ttc_step_s: float = .10
+    ttc_step_s: float = 0.1
     comfort_longitudinal_mps2: float = 4.0
     comfort_lateral_mps2: float = 4.0
     comfort_jerk_mps3: float = 8.0
-    ego_outline: str = 'rectangle'  # legacy snapshot default; current evaluators select SL03
+    ego_outline: str = 'sl03_body_approx_v1'
     ego_length_m: float = 4.82
     ego_width_m: float = 1.89
     ego_center_forward_m: float = 0.0

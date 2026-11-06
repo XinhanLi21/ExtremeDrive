@@ -1,2 +1,2 @@
-"""Research prototype; default parameters are synthetic, not vehicle calibration."""
-__version__ = '0.1.0'
+"""ExtremeDrive planning and vehicle-execution toolkit."""
+from .toolkit import __version__

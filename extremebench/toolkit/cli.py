@@ -4,7 +4,7 @@ import numpy as np
 from .data import Dataset,read_predictions,load,safe_token,digest,prediction_digest
 
 def main():
-    p=argparse.ArgumentParser(description='ExtremeDrive planning and vehicle-execution toolkit 0.4')
+    p=argparse.ArgumentParser(description='ExtremeDrive planning and vehicle-execution toolkit')
     p.add_argument('--assets',default='assets',help='Versioned benchmark assets directory')
     sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('verify')

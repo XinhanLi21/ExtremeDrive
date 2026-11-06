@@ -29,3 +29,9 @@ Validation does not constitute a new evaluation of all seven models: their 917-r
 - Created a new `extremedrive` environment directly from `environment.yml` (Python 3.12).
 - Verified all 295 benchmark asset checksums and passed nine unit tests in that environment.
 - Three fresh execution examples matched the frozen trajectories, scores and safety gates within the regression tolerance.
+
+## Unified current evaluator
+
+- Consolidated active road, comfort, emergency and aggregation code into `extremebench/benchmark/`. Removed historical runner packages and unused prototype entry points.
+- Default protocol matches the current asset configuration. Twelve unit tests passed.
+- Three fresh executions reproduce the reference trajectories, scores and safety gates within 1e-8. All 295 asset checksums remain valid.

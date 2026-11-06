@@ -6,7 +6,7 @@ import sys,subprocess,hashlib,math
 import numpy as np
 from ..core import Command,rollout
 from .sl03 import SL03Config,LoadTransferVehicle
-from .navsim_reference import PIN
+from .upstream import PIN
 def upstream():
     import json
     root=Path(__file__).resolve().parents[1]/'_vendor'

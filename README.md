@@ -22,6 +22,8 @@ flowchart LR
 
 ## Benchmark
 
+The toolkit contains one evaluation implementation in `extremebench/benchmark/`. The `evaluate` command uses the current protocol and annotation snapshot.
+
 - **Driving scenarios:** critical maneuvers and adverse weather or lighting conditions, with routine driving represented in the planning dataset.
 - **Scene annotations:** road markings, drivable areas and dynamic traffic participants, aligned with vehicle motion.
 - **Planning evaluation:** trajectory accuracy and execution-based measures of collision avoidance, road compliance, time-to-collision, progress and comfort.
@@ -72,7 +74,7 @@ extremebench/
   agents/          # public agent interface and input-only baseline
   toolkit/         # dataset API, downloads, submissions, evaluation, visualization
   execution/       # LQR integration, actuators, vehicle dynamics
-  benchmark*/      # geometry and metric implementations
+  benchmark/       # current geometry, road, comfort and safety metrics
   _vendor/         # attributed, pinned LQR dependency closure
 assets/            # fixed splits, compact annotations, protocol, reference results
 scripts/           # download, evaluation and release entry points

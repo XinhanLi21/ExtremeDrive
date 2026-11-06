@@ -8,9 +8,9 @@ from .actors import AdjacentActors
 from .ttc import revise_ttc
 from ..benchmark import scoring
 from ..benchmark.protocol import Protocol
-from ..benchmark_v2.road_rules import evaluate as road_evaluate
-from ..benchmark_v3.applicability import scoped_total
-from ..benchmark_v3.emergency import emergency_safety
+from ..benchmark.road_rules import evaluate as road_evaluate
+from ..benchmark.aggregation import scoped_total
+from ..benchmark.emergency import emergency_safety
 from ..execution.comfort import dynamic_comfort
 from ..execution.mohe_lateral_profile import load_candidate
 from ..execution.navsim_dynamic import execute_official_dynamic
@@ -40,7 +40,7 @@ def score(dataset,pred,run):
     applicable=ctx['window']['category']!='Critical_Driving'
     r['comfort_applicability']={'applicable':applicable,'reason':'noncritical_test' if applicable else 'emergency_maneuver'}
     r['emergency_safety']=emergency_safety(r)
-    r['score']=scoped_total(r['metrics'],r['road_metrics'],r['future_comfort']['score'] if applicable else None,None,applicable,include_ec=False)
+    r['score']=scoped_total(r['metrics'],r['road_metrics'],r['future_comfort']['score'] if applicable else None,applicable)
     r.update(identity,status='automated',manual_review_applied=False)
     return r
 
