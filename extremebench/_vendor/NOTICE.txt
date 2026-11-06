@@ -1,0 +1,14 @@
+Bundled source notices
+
+NAVSIM: https://github.com/autonomousvision/navsim
+Commit: c0b6fb05d9060f665dc98830285fe236312dc2ba
+License: NAVSIM_LICENSE
+
+nuplan-devkit: https://github.com/motional/nuplan-devkit
+Version: 1.2.0
+License: NUPLAN_LICENSE
+
+Selected modules are redistributed with import namespaces relocated under
+extremebench._vendor. Algorithm implementations are unchanged. Source and
+packaged hashes are recorded in manifest.json. Existing source notices and
+license texts are retained.

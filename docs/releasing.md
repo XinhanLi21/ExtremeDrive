@@ -7,7 +7,7 @@ git remote add origin <your-repository-url>
 git push -u origin main
 ```
 
-These commands publish the repository. Check the intended visibility and project-specific license before public distribution. Third-party licenses and the upstream dataset license are already recorded; a project open-source license has not been selected automatically.
+These commands publish the repository. Check the intended visibility and project-specific license before public distribution. Applicable licensing terms are recorded in LICENSE and the bundled source notices.
 
 CI runs tests, verifies assets, executes regression cases and builds the Python distributions. Pushing a version tag or manually running the release workflow builds downloadable artifacts; it does not publish to PyPI or automatically create a public GitHub Release.
 

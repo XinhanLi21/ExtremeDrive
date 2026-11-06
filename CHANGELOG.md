@@ -1,23 +1,10 @@
-# Changelog
+# Current release
 
-## 0.5.2 — 2026-11-06
-- Conda environment definition and unified installation instructions.
-- CI and release workflows use the shared Conda environment file.
+## 0.5.2
 
-## 0.5.1 — 2026-11-06
-- Revised English and Chinese documentation around dataset scope, interfaces and evaluation tasks.
-- Consolidated implementation details in configuration and execution records.
-- Evaluation code and annotation assets are unchanged.
+- Conda-managed installation and GitHub workflows.
+- Dataset access, planning-agent interface and vehicle-execution evaluation.
+- Losslessly compressed annotations and seven reference methods.
+- English and Chinese documentation, tutorials and offline reports.
 
-## 0.5.0 — 2026-11-06
-- GitHub-ready source repository with English/Chinese landing documentation.
-- Public planning agent base class and constant-velocity integration example.
-- CI, release-artifact workflow, issue/PR templates, notebook and helper scripts.
-- No change to 0.4.1 annotation bytes, split membership, protocol or evaluation rules.
-
-## 0.4.1 — 2026-11-06
-- Shared-map deduplication and LZMA compression.
-- All 131 reconstructed context hashes match 0.4.0; three execution regression cases unchanged.
-
-## 0.4.0 — 2026-11-06
-- Portable planning/vehicle-execution toolkit with pinned source data and seven archived reference models.
+The download directory contains one current toolkit archive and its checksum.

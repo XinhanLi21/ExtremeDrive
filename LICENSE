@@ -2,4 +2,4 @@ ExtremeDrive project-specific materials
 
 No public redistribution license has yet been assigned to the ExtremeDrive-specific code or reviewed annotation assets in this repository. Rights remain with their respective owners. This file does not grant permissions beyond applicable law or permissions separately obtained from those owners.
 
-Third-party components retain their own licenses, included under extremebench/_vendor/ and described in THIRD_PARTY_NOTICES.md. The original Hugging Face dataset is distributed separately under CC BY-NC 4.0.
+Bundled dependencies retain the license and source notices included under extremebench/_vendor/. The original Hugging Face dataset is distributed separately under CC BY-NC 4.0.

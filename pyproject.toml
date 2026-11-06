@@ -15,4 +15,4 @@ extremedrive = "extremebench.toolkit.cli:main"
 [tool.setuptools.packages.find]
 include = ["extremebench*"]
 [tool.setuptools.package-data]
-"extremebench._vendor" = ["manifest.json", "*_LICENSE"]
+"extremebench._vendor" = ["manifest.json", "*_LICENSE", "NOTICE.txt"]

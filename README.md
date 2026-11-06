@@ -92,22 +92,10 @@ extremedrive --assets assets reference --model pluto --out results/reference_plu
 
 Use `reference` to export the supplied reference results and `evaluate` to score new trajectory submissions. Result provenance and review policies are described in the [evaluation guide](docs/submission.md).
 
-## Release history
+## Development
 
-- **0.5.2:** Conda environment management.
+See the [contribution guide](CONTRIBUTING.md) and [release guide](docs/releasing.md).
 
-- **0.5.1:** revised English and Chinese documentation.
-
-- **0.5.0:** Git repository layout, documented agent API, workflows, tutorials and reproducible source archives. Benchmark assets and scoring rules remain unchanged.
-- **0.4.1:** lossless shared-geometry compression; all 131 contexts verified against the previous release.
-- **0.4.0:** standalone dataset and vehicle-execution toolkit.
-
-See [CHANGELOG](CHANGELOG.md), [contribution guide](CONTRIBUTING.md) and [release guide](docs/releasing.md).
-
-## Attribution and licensing
+## Dataset
 
 Original data: [Extreme Driving Conditions Dataset](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset), curated by Shiyue Zhao and the Tsinghua University Intelligent Chassis Team (CC BY-NC 4.0).
-
-We acknowledge [NAVSIM](https://github.com/autonomousvision/navsim), [nuPlan](https://github.com/motional/nuplan-devkit) and [nuScenes devkit](https://github.com/nutonomy/nuscenes-devkit) for their contributions to autonomous-driving evaluation and dataset tooling. Source attribution for the LQR implementation and supporting data structures is provided in the third-party notices.
-
-Licensing terms for project materials, source data and third-party components are documented in [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md).

@@ -58,10 +58,9 @@ python -m unittest discover -s tests -v
 python scripts/dev/build_release.py
 ```
 
-参见[贡献指南](CONTRIBUTING.md)、[版本记录](CHANGELOG.md)和[发布说明](docs/releasing.md)。
+参见[贡献指南](CONTRIBUTING.md)和[发布说明](docs/releasing.md)。
 
-## 数据来源与许可
+## 数据来源
 
 原始数据由 Shiyue Zhao 与清华大学智能底盘团队整理，托管于 [Hugging Face](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset)，采用 CC BY-NC 4.0 许可。
 
-工具库、源数据和第三方组件的许可与来源分别见 [LICENSE](LICENSE) 和 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
