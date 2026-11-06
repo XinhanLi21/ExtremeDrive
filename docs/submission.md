@@ -19,7 +19,7 @@ extremedrive --assets assets displacement --submission full_test.jsonl --out res
 
 `summary.json` records score, scope and unknowns; `scores/` contains per-window metrics/events and identity hashes; `rollouts/` contains states, control requests and actuator response. `metrics.csv` and `index.html` are offline results. `visualize` exports an executed-trajectory BEV.
 
-Unknown evidence stays in the denominator and produces bounds; it is not silently removed or assigned a pass. Compare runs with the same toolkit, asset and protocol versions, cohort, and review policy.
+Windows with missing required evidence remain in the evaluation set and contribute to score bounds. Compare runs with the same toolkit, asset and protocol versions, cohort, and review policy.
 
 ## Archived reference
 
@@ -27,6 +27,6 @@ Unknown evidence stays in the denominator and produces bounds; it is not silentl
 extremedrive --assets assets reference --model pluto --out results/reference
 ```
 
-This verifies prediction/result hashes and aggregates the stored reviewed results. It does not run inference or simulation. Historical human decisions apply only to their original trajectories. Fresh evaluation does not inherit those decisions. Thus automated and reviewed results must retain their respective labels.
+The `reference` command verifies prediction/result hashes and aggregates the supplied reviewed results. Trajectory-specific review records apply to their associated predictions. The `evaluate` command runs automatic execution and scoring for new submissions. Reports distinguish these evaluation modes.
 
-This repository provides a local evaluation library; it does not claim to host a public submission server or an official NAVSIM leaderboard.
+Evaluation runs locally through the toolkit CLI.

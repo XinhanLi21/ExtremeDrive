@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1 — 2026-11-06
+- Revised English and Chinese documentation around dataset scope, interfaces and evaluation tasks.
+- Consolidated implementation details in configuration and execution records.
+- Evaluation code and annotation assets are unchanged.
+
 ## 0.5.0 — 2026-11-06
 - GitHub-ready source repository with English/Chinese landing documentation.
 - Public planning agent base class and constant-velocity integration example.

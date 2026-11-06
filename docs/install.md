@@ -1,6 +1,6 @@
 # Installation
 
-Python 3.10–3.12 on Linux is tested by the CI configuration. Scoring uses CPU; planner inference has its own device requirements. Clone your hosted repository or extract the repository archive, then run from its root:
+The toolkit supports Python 3.10–3.12. The CI workflow targets Linux with Python 3.10 and 3.12. Scoring uses CPU; planner inference has its own device requirements. Clone your hosted repository or extract the repository archive, then run from its root:
 
 ```bash
 python -m venv .venv

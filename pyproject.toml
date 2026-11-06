@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "extremedrive-toolkit"
-version = "0.5.0"
+version = "0.5.1"
 description = "ExtremeDrive dataset API, planning submissions and vehicle-execution benchmark"
 readme = "README.md"
 requires-python = ">=3.10"

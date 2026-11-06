@@ -27,7 +27,7 @@ inputs = ds.inputs(ds.tokens()[0])
 execution_tokens = ds.tokens(execution=True)
 ```
 
-`inputs` exposes token, image paths, instruction/speed text, history and history-valid flags only. `target(token)` is a separate supervised-label accessor. `context(token)` is evaluator-only future ground truth and must never be supplied to the planning agent. The toolkit does not use CoC future descriptions as planner inputs.
+`inputs` exposes token, image paths, instruction/speed text, history and history-valid flags only. `target(token)` is a separate supervised-label accessor. `context(token)` is reference annotations for evaluation and must never be supplied to the planning agent. The toolkit does not use CoC future descriptions as planner inputs.
 
 `context` includes scene geometry in metres, anchor pose, observed actors in the same map frame, corrected relative observation times, reviewed drivable geometry, and measured initial state. Its original source-path fields are provenance; runtime data loading uses the supplied data root. Coordinates are not inferred from source directory names.
 

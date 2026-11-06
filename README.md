@@ -4,7 +4,9 @@
 <p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Dataset</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a> · <a href="README_zh.md">中文</a></p>
 </div>
 
-ExtremeDrive evaluates planned motion under shared road, traffic and vehicle constraints. A four-second trajectory is tracked by LQR, translated into actuator commands, executed through a seven-DOF vehicle model, and evaluated against reviewed road and actor annotations.
+ExtremeDrive is a dataset and benchmark for autonomous driving in critical and adverse conditions. It combines real-world driving records with road and traffic-participant annotations to evaluate motion planning under environmental and vehicle-dynamics constraints.
+
+This toolkit provides data access, planning-agent interfaces, trajectory execution, evaluation metrics and visualization. Submitted trajectories are evaluated through a common controller and vehicle model, supporting reproducible comparisons of planning performance and executed driving behavior.
 
 ```mermaid
 flowchart LR
@@ -18,16 +20,18 @@ flowchart LR
     H[Reviewed maps and recorded actors] --> G
 ```
 
-## Highlights
+## Benchmark
 
-- **Execution-aware evaluation:** collision avoidance, road and marking compliance, TTC, progress, comfort and short-horizon emergency safety.
-- **Versioned benchmark:** unchanged 758/89/341 planning-window split; 131 test windows in the execution cohort; seven archived reference planners.
-- **Compact annotations:** shared geometry and lossless LZMA storage, 5.1 MiB for all execution contexts. Original coordinates, observations and timing are preserved.
-- **Portable integration:** a Python agent interface, JSONL submissions, pinned Hugging Face downloads, CPU evaluation and offline HTML/CSV/BEV outputs.
+- **Driving scenarios:** critical maneuvers and adverse weather or lighting conditions, with routine driving represented in the planning dataset.
+- **Scene annotations:** road markings, drivable areas and dynamic traffic participants, aligned with vehicle motion.
+- **Planning evaluation:** trajectory accuracy and execution-based measures of collision avoidance, road compliance, time-to-collision, progress and comfort.
+- **Reproducible comparison:** predefined data splits, a common trajectory-execution protocol and reference results for seven adapted planning methods.
+
+The planning split contains 758 training, 89 validation and 341 test windows. Execution-based evaluation uses a predefined subset of 131 test windows. See [data splits](docs/splits.md) and [evaluation protocol](docs/PROTOCOL.md).
 
 ## Getting started
 
-1. [Installation and smoke test](docs/install.md)
+1. [Installation](docs/install.md)
 2. [Dataset download and data root](docs/dataset.md)
 3. [Dataset API and cache format](docs/DATA_FORMAT.md)
 4. [Fixed splits and evaluation scope](docs/splits.md)
@@ -35,7 +39,7 @@ flowchart LR
 6. [Submissions and evaluation](docs/submission.md)
 7. [Scoring protocol and vehicle execution](docs/PROTOCOL.md)
 8. [Results and visualization tutorial](tutorials/quickstart.ipynb)
-9. [Tests and reproduction evidence](docs/VALIDATION.md)
+9. [Validation and reproducibility](docs/VALIDATION.md)
 
 ### Quick start
 
@@ -49,7 +53,7 @@ extremedrive --assets assets verify
 bash scripts/evaluation/run_smoke.sh
 ```
 
-The smoke test runs three real stored predictions through the controller and vehicle model. No sensor download or GPU is needed. Open `results/smoke/index.html` to view the results.
+The example evaluates three supplied trajectories on CPU using the bundled scene annotations. Open `results/smoke/index.html` to inspect the results.
 
 ### Connect your planner
 
@@ -69,7 +73,7 @@ extremebench/
   agents/          # public agent interface and input-only baseline
   toolkit/         # dataset API, downloads, submissions, evaluation, visualization
   execution/       # LQR integration, actuators, vehicle dynamics
-  benchmark*/      # frozen geometry and scoring implementation
+  benchmark*/      # geometry and metric implementations
   _vendor/         # attributed, pinned LQR dependency closure
 assets/            # fixed splits, compact annotations, protocol, reference results
 scripts/           # download, evaluation and release entry points
@@ -81,15 +85,17 @@ docs/              # installation, data, agents, splits, metrics, submissions
 
 ## Reference results
 
-The release contains predictions and reviewed results for Latent TransFuser, TCP, TransFuser, DiffusionDrive, PlanTF, PLUTO and Diffusion-Planner. AutoVLA is excluded.
+Reference predictions and evaluation results are provided for seven adapted methods: Latent TransFuser, TCP, TransFuser, DiffusionDrive, PlanTF, PLUTO and Diffusion-Planner.
 
 ```bash
 extremedrive --assets assets reference --model pluto --out results/reference_pluto
 ```
 
-Reference mode verifies archived prediction/result identities and aggregates the reviewed records. Fresh execution is reported separately and does not inherit trajectory-specific human review decisions. See [evaluation scope](docs/submission.md).
+Use `reference` to export the supplied reference results and `evaluate` to score new trajectory submissions. Result provenance and review policies are described in the [evaluation guide](docs/submission.md).
 
 ## Release history
+
+- **0.5.1:** revised English and Chinese documentation.
 
 - **0.5.0:** Git repository layout, documented agent API, workflows, tutorials and reproducible source archives. Benchmark assets and scoring rules remain unchanged.
 - **0.4.1:** lossless shared-geometry compression; all 131 contexts verified against the previous release.
@@ -101,6 +107,6 @@ See [CHANGELOG](CHANGELOG.md), [contribution guide](CONTRIBUTING.md) and [releas
 
 Original data: [Extreme Driving Conditions Dataset](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset), curated by Shiyue Zhao and the Tsinghua University Intelligent Chassis Team (CC BY-NC 4.0).
 
-Repository organization follows [NAVSIM](https://github.com/autonomousvision/navsim) and [nuScenes devkit](https://github.com/nutonomy/nuscenes-devkit). The pinned LQR implementation and nuPlan data structures retain their source notices. ExtremeDrive uses its own annotations, vehicle configuration and scoring protocol.
+We acknowledge [NAVSIM](https://github.com/autonomousvision/navsim), [nuPlan](https://github.com/motional/nuplan-devkit) and [nuScenes devkit](https://github.com/nutonomy/nuscenes-devkit) for their contributions to autonomous-driving evaluation and dataset tooling. Source attribution for the LQR implementation and supporting data structures is provided in the third-party notices.
 
-See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md). Dataset and third-party licenses are separate from project-specific code and annotations. Paper citation metadata will be added when finalized; no publication or leaderboard affiliation is implied.
+Licensing terms for project materials, source data and third-party components are documented in [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md).
