@@ -23,3 +23,9 @@ Validation does not constitute a new evaluation of all seven models: their 917-r
 - Three fresh smoke executions match frozen trajectories, scores and safety gates within 1e-8.
 - Wheel and source distributions built successfully; the wheel includes the agent API and vendored licenses, and the source distribution includes benchmark assets and the notebook.
 - Main documentation links were checked locally. GitHub Actions is configured but has not run on GitHub because this repository has not been pushed.
+
+## 0.5.2 Conda installation
+
+- Created a new `extremedrive` environment directly from `environment.yml` (Python 3.12).
+- Verified all 295 benchmark asset checksums and passed nine unit tests in that environment.
+- Three fresh execution examples matched the frozen trajectories, scores and safety gates within the regression tolerance.

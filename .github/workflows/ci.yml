@@ -11,13 +11,17 @@ jobs:
     env:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: conda-incubator/setup-miniconda@v4
         with:
-          python-version: ${{ matrix.python }}
-          cache: pip
-      - run: pip install -e '.[dev]'
+          activate-environment: extremedrive
+          environment-file: environment.yml
+          python-version: '${{ matrix.python }}'
+      - run: python -m pip install -e '.[dev]'
       - run: extremedrive --assets assets verify
       - run: python -m unittest discover -s tests -v
       - run: bash scripts/evaluation/run_smoke.sh

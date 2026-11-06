@@ -46,9 +46,8 @@ The planning split contains 758 training, 89 validation and 341 test windows. Ex
 Run from the repository root:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
+conda env create -f environment.yml
+conda activate extremedrive
 extremedrive --assets assets verify
 bash scripts/evaluation/run_smoke.sh
 ```
@@ -94,6 +93,8 @@ extremedrive --assets assets reference --model pluto --out results/reference_plu
 Use `reference` to export the supplied reference results and `evaluate` to score new trajectory submissions. Result provenance and review policies are described in the [evaluation guide](docs/submission.md).
 
 ## Release history
+
+- **0.5.2:** Conda environment management.
 
 - **0.5.1:** revised English and Chinese documentation.
 

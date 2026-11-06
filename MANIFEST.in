@@ -1,3 +1,4 @@
+include environment.yml
 include README.md README_zh.md LICENSE THIRD_PARTY_NOTICES.md CHANGELOG.md
 recursive-include docs *.md *.json *.txt *.png
 recursive-include tests *.py

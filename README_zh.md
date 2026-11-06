@@ -20,9 +20,8 @@ ExtremeDrive 面向危急驾驶及恶劣条件下的自动驾驶研究，将真�
 ## 快速开始
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
+conda env create -f environment.yml
+conda activate extremedrive
 extremedrive --assets assets verify
 bash scripts/evaluation/run_smoke.sh
 ```
@@ -53,7 +52,8 @@ extremedrive --assets assets reference --model pluto --out results/reference_plu
 ## 开发与维护
 
 ```bash
-pip install -e '.[dev]'
+conda activate extremedrive
+python -m pip install -e '.[dev]'
 python -m unittest discover -s tests -v
 python scripts/dev/build_release.py
 ```

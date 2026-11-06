@@ -1,6 +1,6 @@
 # Contributing
 
-Use a separate branch. Install with `pip install -e '.[dev]'`, run unit tests, verify assets, and execute the smoke evaluation before proposing changes.
+Use a separate branch. Create the environment with `conda env create -f environment.yml`, activate it with `conda activate extremedrive`, and install development dependencies with `python -m pip install -e '.[dev]'`, run unit tests, verify assets, and execute the smoke evaluation before proposing changes.
 
 Benchmark definitions are versioned: changes to splits, coordinates, clocks, geometry, controller/vehicle parameters, metric thresholds or review scope require an explicit new protocol/asset version and before/after comparisons. Do not silently regenerate accepted annotations.
 

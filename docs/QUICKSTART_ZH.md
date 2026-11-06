@@ -7,13 +7,12 @@ ExtremeDrive Toolkit 提供数据读取、规划模型接入、轨迹执行与�
 解压完整发布包，进入目录：
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
+conda env create -f environment.yml
+conda activate extremedrive
 extremedrive --assets assets verify
 ```
 
-建议 Python 3.10–3.12。评分在 CPU 上运行，模型推理按各自 GPU 要求配置。代码 wheel 不含传感器和评测资产；使用 wheel 时仍需提供完整包中的 `assets` 目录。
+使用 Conda 管理运行环境；`environment.yml` 默认创建 Python 3.12 环境，并在环境内安装工具库及依赖。评分在 CPU 上运行，模型推理按各自 GPU 要求配置。代码 wheel 不含传感器和评测资产；使用 wheel 时仍需提供完整包中的 `assets` 目录。
 
 ## 2. 数据准备
 
@@ -95,3 +94,14 @@ extremedrive --assets assets visualize \
 ## 8. 数据存储
 
 评测标注采用共享地图与无损压缩存储。数据接口在加载时还原场景并校验完整性；使用方式与未压缩标注一致。存储格式见 [DATA_FORMAT.md](DATA_FORMAT.md)。
+
+## 9. 环境维护
+
+在仓库根目录执行：
+
+```bash
+conda env update -n extremedrive -f environment.yml
+conda activate extremedrive
+```
+
+开发依赖可在激活环境后通过 `python -m pip install -e '.[dev]'` 安装。也可使用 `conda run -n extremedrive extremedrive --assets assets verify` 直接运行命令。

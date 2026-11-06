@@ -12,6 +12,7 @@ These commands publish the repository. Check the intended visibility and project
 CI runs tests, verifies assets, executes regression cases and builds the Python distributions. Pushing a version tag or manually running the release workflow builds downloadable artifacts; it does not publish to PyPI or automatically create a public GitHub Release.
 
 ```bash
+conda activate extremedrive
 python -m build
 python scripts/dev/build_release.py
 ```

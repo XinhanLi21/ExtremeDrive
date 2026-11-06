@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.2 — 2026-11-06
+- Conda environment definition and unified installation instructions.
+- CI and release workflows use the shared Conda environment file.
+
 ## 0.5.1 — 2026-11-06
 - Revised English and Chinese documentation around dataset scope, interfaces and evaluation tasks.
 - Consolidated implementation details in configuration and execution records.
