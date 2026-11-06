@@ -1,0 +1,6 @@
+* text=auto
+*.json.xz binary
+*.json.gz binary
+*.png binary
+*.ipynb text eol=lf
+*.sh text eol=lf

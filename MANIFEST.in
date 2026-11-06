@@ -1,0 +1,7 @@
+include README.md README_zh.md LICENSE THIRD_PARTY_NOTICES.md CHANGELOG.md
+recursive-include docs *.md *.json *.txt *.png
+recursive-include tests *.py
+recursive-include tutorials *.ipynb
+recursive-include scripts *.py *.sh
+recursive-include examples *.py *.jsonl
+recursive-include assets *.json *.jsonl *.xz *.gz

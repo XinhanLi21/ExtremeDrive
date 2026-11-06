@@ -1,0 +1,1833 @@
+{
+  "windows": 131,
+  "models": {
+    "latent_transfuser": {
+      "score": 74.84519583166977,
+      "no_collision": 0.9236641221374046,
+      "marking_compliance": 0.9083969465648855,
+      "drivable_compliance": 0.8473282442748091,
+      "ttc_compliance": 0.8625954198473282,
+      "progress": 0.8898767876448458,
+      "manual_ttc_confirmations": 43
+    },
+    "tcp": {
+      "score": 71.41076141381143,
+      "no_collision": 0.8854961832061069,
+      "marking_compliance": 0.8549618320610687,
+      "drivable_compliance": 0.8320610687022901,
+      "ttc_compliance": 0.8396946564885496,
+      "progress": 0.845969433243325,
+      "manual_ttc_confirmations": 43
+    },
+    "transfuser": {
+      "score": 75.20986360285706,
+      "no_collision": 0.8931297709923665,
+      "marking_compliance": 0.916030534351145,
+      "drivable_compliance": 0.8396946564885496,
+      "ttc_compliance": 0.8473282442748091,
+      "progress": 0.8597570260986721,
+      "manual_ttc_confirmations": 43
+    },
+    "diffusiondrive": {
+      "score": 75.69281514049857,
+      "no_collision": 0.916030534351145,
+      "marking_compliance": 0.9312977099236641,
+      "drivable_compliance": 0.8778625954198473,
+      "ttc_compliance": 0.8625954198473282,
+      "progress": 0.8681400388255041,
+      "manual_ttc_confirmations": 44
+    },
+    "plantf": {
+      "score": 67.03808126986924,
+      "no_collision": 0.9236641221374046,
+      "marking_compliance": 0.9923664122137404,
+      "drivable_compliance": 0.9007633587786259,
+      "ttc_compliance": 0.8854961832061069,
+      "progress": 0.5309941295285876,
+      "manual_ttc_confirmations": 39
+    },
+    "pluto": {
+      "score": 65.0142597634261,
+      "no_collision": 0.9541984732824428,
+      "marking_compliance": 0.9923664122137404,
+      "drivable_compliance": 0.9465648854961832,
+      "ttc_compliance": 0.9083969465648855,
+      "progress": 0.46421714178953327,
+      "manual_ttc_confirmations": 38
+    },
+    "diffusion_planner": {
+      "score": 69.6988064763154,
+      "no_collision": 0.9389312977099237,
+      "marking_compliance": 0.9541984732824428,
+      "drivable_compliance": 0.9236641221374046,
+      "ttc_compliance": 0.8931297709923665,
+      "progress": 0.6036334691061699,
+      "manual_ttc_confirmations": 41
+    }
+  },
+  "ttc_unknown": 0,
+  "score_unknown": 0,
+  "manual_review": {
+    "date": "2026-11-05",
+    "timezone": "Asia/Shanghai",
+    "source": "explicit user confirmation in this conversation",
+    "user_statement": "我检查了一下都没有风险",
+    "scope": "Only currently unknown TTC entries shown in the 49-window review gallery; existing TTC failures are unchanged.",
+    "reviewed_windows": 49,
+    "reviewed_model_window_pairs": 291,
+    "unknown_source_sha256": "922a3a3344ecf8621833bbce373246c382e781eb49a446d88af17d50c05ecf60",
+    "records": [
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000033:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000081:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000081:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000097:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000097:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000113:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "2ab853023c98d577:000129:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "7dc1d9bc1991364e:000001:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000024:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000216:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000216:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000232:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000232:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000248:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000312:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000312:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000344:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000344:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000360:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000360:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000376:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000376:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000392:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000392:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000408:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000408:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000424:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000456:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000472:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000504:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000504:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000732:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000732:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000867:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "ae1a4214ed5e31ef:000867:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "f1cef315fdcbaa9e:000001:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "f1cef315fdcbaa9e:000001:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "f1cef315fdcbaa9e:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusion_planner",
+        "token": "f1cef315fdcbaa9e:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000033:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000065:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000065:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000081:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000081:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000097:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000097:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "2ab853023c98d577:000113:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000024:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000216:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000216:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000232:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000232:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000248:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000312:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000312:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000344:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000344:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000360:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000360:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000376:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000376:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000392:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000392:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000408:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000408:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000424:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000456:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000456:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000472:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000488:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000488:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000504:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000504:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000520:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000520:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000732:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000732:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000867:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "ae1a4214ed5e31ef:000867:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "f1cef315fdcbaa9e:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "diffusiondrive",
+        "token": "f1cef315fdcbaa9e:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000033:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000065:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000081:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000081:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000097:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000097:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "2ab853023c98d577:000113:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000024:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000216:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000216:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000232:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000232:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000248:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000312:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000312:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000344:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000344:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000360:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000360:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000376:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000376:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000392:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000392:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000408:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000408:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000424:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000456:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000456:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000472:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000488:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000488:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000504:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000504:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000520:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000520:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000732:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000732:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000867:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "ae1a4214ed5e31ef:000867:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "f1cef315fdcbaa9e:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "latent_transfuser",
+        "token": "f1cef315fdcbaa9e:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000033:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000081:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000081:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000097:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000097:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000113:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "2ab853023c98d577:000129:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "7dc1d9bc1991364e:000001:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "7dc1d9bc1991364e:000001:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000024:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000216:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000216:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000232:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000232:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000248:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000312:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000312:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000344:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000344:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000360:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000360:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000376:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000376:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000392:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000392:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000408:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000408:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000424:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000472:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000504:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000504:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000732:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000732:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000867:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "ae1a4214ed5e31ef:000867:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "f1cef315fdcbaa9e:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "plantf",
+        "token": "f1cef315fdcbaa9e:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000033:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000081:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000081:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000097:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000097:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "2ab853023c98d577:000113:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "7dc1d9bc1991364e:000001:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "7dc1d9bc1991364e:000001:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000024:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000216:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000216:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000232:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000232:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000248:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000312:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000344:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000344:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000360:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000360:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000376:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000376:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000392:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000392:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000408:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000408:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000424:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000472:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000504:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000504:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000732:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000732:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000867:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "ae1a4214ed5e31ef:000867:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "f1cef315fdcbaa9e:000001:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "f1cef315fdcbaa9e:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "pluto",
+        "token": "f1cef315fdcbaa9e:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000033:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000065:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000065:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000081:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000081:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000097:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "2ab853023c98d577:000097:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000024:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000216:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000216:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000232:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000232:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000248:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000312:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000312:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000344:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000344:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000360:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000360:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000376:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000376:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000392:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000392:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000408:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000408:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000424:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000456:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000456:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000472:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000488:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000488:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000504:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000504:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000520:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000520:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000732:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000732:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000867:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "ae1a4214ed5e31ef:000867:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "f1cef315fdcbaa9e:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "tcp",
+        "token": "f1cef315fdcbaa9e:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000033:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000065:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000081:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000081:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000097:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000097:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "2ab853023c98d577:000113:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000024:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000216:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000216:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000232:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000232:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000248:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000312:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000312:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000344:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000344:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000360:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000360:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000376:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000376:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000392:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000392:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000408:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000408:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000424:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000456:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000456:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000472:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000488:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000488:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000504:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000504:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000520:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000520:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000732:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000732:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000867:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "ae1a4214ed5e31ef:000867:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "f1cef315fdcbaa9e:000017:adjacent",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      },
+      {
+        "model": "transfuser",
+        "token": "f1cef315fdcbaa9e:000017:main",
+        "ttc_compliance": 1,
+        "reason": "user_review_confirmed_no_risk"
+      }
+    ]
+  },
+  "split_hashes": {
+    "train": "3997f7b4665af223473bde063396e9599c889cd44f712e663a636bfa1ae4a5b4",
+    "val": "c1b6f2d28318ec4a096f631fdd61b329b68678b5e368d7d1b08487601436216f",
+    "test": "6ab440ee2fd90f39728c79a36a56173be3f41103f0a46e31244e25a285497de4"
+  }
+}

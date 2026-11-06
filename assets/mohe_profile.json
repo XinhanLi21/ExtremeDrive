@@ -1,0 +1,126 @@
+{
+  "version": "mohe_lateral_candidate_v1",
+  "fit_runs": [
+    "run10",
+    "run11"
+  ],
+  "heldout": "run17",
+  "calibration_sha256": "31472ae0d24319eb9e996289f74f25c1fa2838bffa91a96d9e79cee87a92be4a",
+  "front_axle_corner_stiffness_n_rad": 22068.138494130595,
+  "rear_axle_corner_stiffness_n_rad": 22593.02698280565,
+  "trajectory_fit_axle_n_rad": [
+    37837.53993754324,
+    40145.27950234355
+  ],
+  "trajectory_fit_objective": "train only 1s conditional rollout, vy residual /0.1m/s and yaw residual /1deg/s, soft_l1",
+  "bootstrap95_axle": [
+    [
+      20314.235624755423,
+      20832.30908145461
+    ],
+    [
+      24151.177647875753,
+      24954.62158657309
+    ]
+  ],
+  "assumed_mass_kg": 1800.0,
+  "assumed_yaw_inertia_kgm2": 3000.0,
+  "lf_m": 1.45,
+  "lr_m": 1.45,
+  "domain": "MoHe, 3<vx<10, |GPS beta|<5deg, |r|<.35rad/s, |front angle|<.15rad, |dvx/dt|<1m/s2; offline centered 1.1s filters",
+  "validation": "conditional lateral bicycle rollout: measured speed/steer throughout horizon, initial vy/r only; not full free-running 7DOF or closed-loop planning",
+  "evaluation": {
+    "run10": {
+      "role": "fit",
+      "eligible": 1787,
+      "derivative_mae_before": [
+        1.1323535605091264,
+        0.11786980916448256
+      ],
+      "derivative_mae_after": [
+        0.2275842013266991,
+        0.054550507050314674
+      ],
+      "rollout_before": {
+        "windows": 120,
+        "vy_rmse_mps": 0.07071820194002144,
+        "yaw_rmse_deg_s": 0.24847484924317442
+      },
+      "rollout_derivative_fit": {
+        "windows": 120,
+        "vy_rmse_mps": 0.06321161824352203,
+        "yaw_rmse_deg_s": 0.6223895145524041
+      },
+      "rollout_trajectory_fit": {
+        "windows": 120,
+        "vy_rmse_mps": 0.05185153300471746,
+        "yaw_rmse_deg_s": 0.37351345462306096
+      },
+      "source_sha256": "db650f3f468719fd0e5a63e211b80523245ab48039095c48e425aa6f6cf7584a"
+    },
+    "run11": {
+      "role": "fit",
+      "eligible": 3270,
+      "derivative_mae_before": [
+        1.2002323025566104,
+        0.11887658129462408
+      ],
+      "derivative_mae_after": [
+        0.241268817895972,
+        0.05931733349973061
+      ],
+      "rollout_before": {
+        "windows": 211,
+        "vy_rmse_mps": 0.08901762602639766,
+        "yaw_rmse_deg_s": 0.37432902749762187
+      },
+      "rollout_derivative_fit": {
+        "windows": 211,
+        "vy_rmse_mps": 0.07238639605582527,
+        "yaw_rmse_deg_s": 0.682623847066086
+      },
+      "rollout_trajectory_fit": {
+        "windows": 211,
+        "vy_rmse_mps": 0.054542863062905844,
+        "yaw_rmse_deg_s": 0.41315044149648456
+      },
+      "source_sha256": "f71cbabe5f3109f94b85e25613c3fd32fe06b9ff3f84d8ab97491c267cab9c8c"
+    },
+    "run17": {
+      "role": "heldout",
+      "eligible": 384,
+      "derivative_mae_before": [
+        1.0618052808856138,
+        0.11567549945356093
+      ],
+      "derivative_mae_after": [
+        0.16178222301723413,
+        0.04950292670999723
+      ],
+      "rollout_before": {
+        "windows": 26,
+        "vy_rmse_mps": 0.08638173311575593,
+        "yaw_rmse_deg_s": 0.36053518547316904
+      },
+      "rollout_derivative_fit": {
+        "windows": 26,
+        "vy_rmse_mps": 0.05412706593892737,
+        "yaw_rmse_deg_s": 0.6356587038367897
+      },
+      "rollout_trajectory_fit": {
+        "windows": 26,
+        "vy_rmse_mps": 0.05210157252072542,
+        "yaw_rmse_deg_s": 0.41442354721781605
+      },
+      "source_sha256": "1e6ea26392143ee2a535117f76cdfc75979028d32e096d5029ba2fa422836a55"
+    }
+  },
+  "status": "effective low-slip candidate under assumed mass/CG/inertia; not measured tire stiffness",
+  "unidentified": [
+    "friction",
+    "brake",
+    "motor torque",
+    "steering actuator delay"
+  ],
+  "default_global_update": false
+}
