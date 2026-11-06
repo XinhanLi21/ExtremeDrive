@@ -1,37 +1,25 @@
-# Release validation — 2026-11-06
+# Validation and reproducibility
 
-- Seven unit tests passed: fixed splits and input/label separation; upstream episode coverage; unsafe archive traversal and link rejection; archive layout; duplicate/nonfinite submission rejection; unknown denominator handling; prediction identity changes.
-- Asset manifest verifies 155 files, including all 131 execution contexts.
-- All 917 prediction/result bindings verified. Aggregates for seven reference models match the existing reviewed result tables within 1e-10.
-- Three existing PLUTO predictions (critical driving, low light, snow) were rerun through LQR, actuators, seven-DOF dynamics and scoring. In the original runtime, all three execution trajectories and composite scores exactly matched the corresponding existing results.
-- A fresh Python 3.12 environment installed the toolkit and its declared dependencies. The same three cases were executed from `/tmp`, outside the source tree. Maximum trajectory element difference was below 8e-14; composite-score difference was below 9e-14.
-- The pinned Hugging Face repository file index was retrieved; all 13 execution-source episodes and all 336 episodes required by the fixed splits were resolved. A README and a real episode metadata.jsonl were downloaded successfully through huggingface_hub. Large sensor archives were not downloaded again; extraction layout and unsafe-member rejection were tested with fixture archives.
-- Offline HTML/CSV export and BEV rendering were exercised.
+The current toolkit uses one benchmark implementation and one release archive.
 
-Validation does not constitute a new evaluation of all seven models: their 917-result table is a verified historical reference. New execution testing covered three representative windows. Use the full cohort command for a new model evaluation.
+## Runtime and evaluation
 
-## 0.4.1 storage-only revision
+- The Conda environment was created from `environment.yml` with Python 3.12.
+- Twelve unit tests cover data splits, input isolation, agent outputs, submission validation, archive extraction, protocol defaults and score applicability.
+- Three representative trajectories are executed through the controller and vehicle model. Executed trajectories, composite scores and safety gates match the reference records within 1e-8.
+- The 294 files listed in the asset manifest are verified by SHA-256. All 917 reference prediction/result bindings were verified, and seven-model aggregate results matched within 1e-10.
 
-- 131 contexts reconstructed from shared geometry and LZMA/XZ storage; all canonical JSON hashes match 0.4.0. See compression-validation.json.
-- No scorer, split, vehicle model, observation, geometry or numeric precision change.
-- Three cross-condition fresh executions reproduce exactly the original trajectory, score, component metrics and comfort values. See compression-score-check.json.
+## Data and storage
 
-## 0.5.0 Git repository packaging
+- All 131 reconstructed execution contexts were checked for lossless equivalence. The 140 shared geometry blobs are referenced, with no missing or unused blobs.
+- The pinned Hugging Face index resolves 13 execution-source episodes and 336 episodes used by the planning splits. Dataset documentation and an episode metadata file were downloaded successfully. Large sensor archives were not downloaded again during toolkit validation.
+- Package contents exclude environments, Git history, bytecode, build caches and generated evaluation outputs.
 
-- All 296 asset files (including the manifest) remain byte-identical to 0.4.1.
-- Nine local unit tests passed, including the public agent interface.
-- Three fresh smoke executions match frozen trajectories, scores and safety gates within 1e-8.
-- Wheel and source distributions built successfully; the wheel includes the agent API and vendored licenses, and the source distribution includes benchmark assets and the notebook.
-- Main documentation links were checked locally. GitHub Actions is configured but has not run on GitHub because this repository has not been pushed.
+## Reproduction records
 
-## 0.5.2 Conda installation
+- [Lossless context validation](compression-validation.json)
+- [Storage-change execution checks](compression-score-check.json)
+- [Environment portability checks](portability-check.json)
+- [Reference aggregate checks](reference-check.json)
 
-- Created a new `extremedrive` environment directly from `environment.yml` (Python 3.12).
-- Verified all 295 benchmark asset checksums and passed nine unit tests in that environment.
-- Three fresh execution examples matched the frozen trajectories, scores and safety gates within the regression tolerance.
-
-## Unified current evaluator
-
-- Consolidated active road, comfort, emergency and aggregation code into `extremebench/benchmark/`. Removed historical runner packages and unused prototype entry points.
-- Default protocol matches the current asset configuration. Twelve unit tests passed.
-- Three fresh executions reproduce the reference trajectories, scores and safety gates within 1e-8. All 295 asset checksums remain valid.
+These records distinguish the verified historical reference table from fresh execution tests. Full new-model evaluation uses the complete execution cohort. GitHub workflows are configured; local validation has been run independently of GitHub.

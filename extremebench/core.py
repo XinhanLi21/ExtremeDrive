@@ -97,31 +97,6 @@ class Command:
     @staticmethod
     def zero():return Command(0.,np.zeros(4),np.zeros(4))
 
-class Tracker:
-    """Fixed transparent baseline: curvature feedforward + heading/cross-track
-    feedback, and speed PI with time-aligned along-track correction. No replanner.
-    """
-    def __init__(self,c):self.c=c;self.integral=0.
-    def command(self,state,ref):
-        c=self.c;x,y,yaw,vx,vy,r=state[:6];rx,ry,ryaw,rv,ra,k=ref
-        dx=rx-x;dy=ry-y
-        along=math.cos(ryaw)*dx+math.sin(ryaw)*dy
-        lateral=-math.sin(yaw)*dx+math.cos(yaw)*dy
-        raw_steer=math.atan((c.lf+c.lr)*k)+c.heading_gain*wrap(ryaw-yaw)+math.atan2(c.lateral_gain*lateral,max(vx,0)+2)+c.yaw_damping*(rv*k-r)
-        steer=float(np.clip(raw_steer,-c.max_steer,c.max_steer))
-        speed_error=rv-vx
-        raw_a=ra+c.speed_kp*speed_error+c.speed_ki*self.integral+c.progress_kp*along
-        a=float(np.clip(raw_a,c.min_accel,c.max_accel))
-        if abs(a-raw_a)<1e-9 or (raw_a>c.max_accel and speed_error<0) or (raw_a<c.min_accel and speed_error>0):
-            self.integral=float(np.clip(self.integral+speed_error*c.control_dt,-10,10))
-        force=c.mass*a+c.air_drag*vx*abs(vx)+c.rolling_force*math.tanh(vx/.4)
-        # Hold a standstill instead of integrating controller error into creep.
-        if rv<.03 and abs(vx)<.10:force=-c.mass*.5
-        def distribute(total,share):return total*np.array([share/2,share/2,(1-share)/2,(1-share)/2])
-        drive=distribute(max(force,0)*c.wheel_radius,c.drive_front_share)
-        brake=distribute(max(-force,0)*c.wheel_radius,c.brake_front_share)
-        limited=abs(steer-raw_steer)>1e-9 or abs(a-raw_a)>1e-9 or np.any(drive>c.max_drive_torque) or np.any(brake>c.max_brake_torque)
-        return Command(steer,np.clip(drive,0,c.max_drive_torque),np.clip(brake,0,c.max_brake_torque),a,bool(limited))
 
 class Actuators:
     """Causal command delay, steering lag/rate/angle limits, torque lag/limits."""
@@ -175,7 +150,7 @@ class Vehicle:
         if out[3]<-.5:raise FloatingPointError('reverse body motion outside prototype validity')
         return out
 
-def rollout(scene,c,*,tracker_cls=Tracker,vehicle_cls=Vehicle):
+def rollout(scene,c,*,tracker_cls,vehicle_cls):
     c.validate();tr=Trajectory(scene['trajectory']);tracker=tracker_cls(c);act=Actuators(c);plant=vehicle_cls(c)
     first=tr.sample(0);initial=scene.get('initial_state',{})
     if 'front_steer_rad' in initial:

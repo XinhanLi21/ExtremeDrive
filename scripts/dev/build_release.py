@@ -1,8 +1,7 @@
 """Build a deterministic GitHub source archive with compact benchmark assets."""
 from pathlib import Path
-import hashlib,zipfile,re
+import hashlib,zipfile
 ROOT=Path(__file__).resolve().parents[2]
-version=re.search(r'^version = "([^"]+)"', (ROOT/'pyproject.toml').read_text(),re.M).group(1)
 out=ROOT/'dist';out.mkdir(exist_ok=True);dest=out/'ExtremeDrive_Toolkit.zip'
 exclude={'.git','.venv','__pycache__','build','dist','.pytest_cache'}
 with zipfile.ZipFile(dest,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:

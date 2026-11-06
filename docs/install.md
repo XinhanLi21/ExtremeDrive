@@ -11,7 +11,7 @@ bash scripts/evaluation/run_smoke.sh
 
 `assets/` is included in the repository and source release. It contains compact annotations and metadata, not raw sensor files. A code-only wheel still requires a separate path to these assets. No Git LFS or external simulator installation is required.
 
-For development: `pip install -e '.[dev]'`. For the existing tested dependency snapshot, see `tested-environment.txt`. Benchmark rules are versioned independently of toolkit packaging.
+For development: `pip install -e '.[dev]'`. The runtime is defined by `environment.yml` and `pyproject.toml`. Benchmark rules are versioned independently of toolkit packaging.
 
 ## Environment management
 

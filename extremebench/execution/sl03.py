@@ -4,8 +4,7 @@
 from dataclasses import dataclass
 import math
 import numpy as np
-from scipy.linalg import solve_discrete_are
-from ..core import Config, Vehicle, Tracker, wrap
+from ..core import Config, Vehicle
 
 @dataclass(frozen=True)
 class SL03Config(Config):
@@ -28,25 +27,6 @@ class SL03Config(Config):
         if not 0<self.cg_height<2 or not 0<=self.front_roll_share<=1:raise ValueError('invalid load transfer parameters')
         return self
 
-class LQRTracker(Tracker):
-    """Own discrete lateral LQR + longitudinal PI; NOT exact NAVSIM LQR.
-    Linearized kinematic lateral error model with curvature feedforward.
-    """
-    def __init__(self,c):super().__init__(c);self.cache={}
-    def command(self,state,ref):
-        cmd=super().command(state,ref);c=self.c
-        v=max(abs(float(state[3])),.5);key=round(v,1)
-        if key not in self.cache:
-            A=np.array([[1,key*c.control_dt],[0,1.]])
-            B=np.array([[0],[key*c.control_dt/(c.lf+c.lr)]])
-            Q=np.diag([2.,4.]);R=np.array([[3.]])
-            P=solve_discrete_are(A,B,Q,R)
-            self.cache[key]=np.linalg.solve(R+B.T@P@B,B.T@P@A)
-        dx=state[0]-ref[0];dy=state[1]-ref[1]
-        e=np.array([-math.sin(ref[2])*dx+math.cos(ref[2])*dy,wrap(state[2]-ref[2])])
-        raw=math.atan((c.lf+c.lr)*ref[5])-float((self.cache[key]@e)[0])
-        cmd.steer=float(np.clip(raw,-c.max_steer,c.max_steer));cmd.limited |= abs(raw-cmd.steer)>1e-8
-        return cmd
 
 class LoadTransferVehicle(Vehicle):
     def tire_forces(self,z,u):
