@@ -10,17 +10,8 @@ ExtremeDrive is a dataset and benchmark for autonomous driving in critical and a
 
 This toolkit provides data access, planning-agent interfaces, trajectory execution, evaluation metrics and visualization. Submitted trajectories are evaluated through a common controller and vehicle model, supporting reproducible comparisons of planning performance and executed driving behavior.
 
-```mermaid
-flowchart LR
-    A[Sensor inputs] --> B[Planning agent]
-    B --> C[4-second trajectory]
-    C --> D[LQR]
-    D --> E[Actuators]
-    E --> F[Vehicle dynamics]
-    F --> D
-    F --> G[Execution metrics]
-    H[Reviewed maps and recorded actors] --> G
-```
+
+![Paired camera observations and BEV annotations](docs/media/bev-scenes.png)
 
 ## Benchmark
 
