@@ -19,7 +19,7 @@ extremedrive --assets assets displacement --submission full_test.jsonl --out res
 
 `summary.json` records score, scope and unknowns; `scores/` contains per-window metrics/events and identity hashes; `rollouts/` contains states, control requests and actuator response. `metrics.csv` and `index.html` are offline results. `visualize` exports an executed-trajectory BEV.
 
-Windows with missing required evidence remain in the evaluation set and contribute to score bounds. Compare runs with the same toolkit, asset and protocol versions, cohort, and review policy.
+All configured clips remain in the evaluation denominator. Indeterminate metric outcomes contribute to the reported score bounds. Compare runs with the same toolkit, asset and protocol versions, cohort, and review policy.
 
 ## Formal comparison
 

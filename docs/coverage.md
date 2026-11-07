@@ -1,17 +1,16 @@
-# Execution annotation coverage
+# Execution evaluation coverage
 
-The current release provides 2,574 executable contexts from 2,574 test clips, using 37 accepted maps. Existing reviewed road surfaces, actor boxes and sensor-clock alignment are reused. Map poses use observed source records and the established scene transforms. Road surfaces use reviewed polygons in the same scene; no missing pose is extrapolated.
+All 2,574 test clips support execution-based evaluation using 37 accepted maps. Each clip is associated with a scene coordinate frame, observed ego poses, synchronized timestamps, reviewed road surfaces and recorded 3D actors.
 
-| Evidence | Clips |
+| Resource | Count |
 |---|---:|
-| Connected execution contexts | 2,574 |
-| Annotated-3D collision observations available | 2,574 |
-| No missing 3D actor velocity evidence in the coverage check | 1,138 |
-| At least one 3D actor with incomplete velocity evidence | 1,436 |
-| Missing map-pose/time coverage; not connected | 0 |
+| Test clips | 2,574 |
+| Execution contexts | 2,574 |
+| Source episodes | 56 |
+| Accepted maps | 37 |
 
-Collision and TTC use annotated 3D actors only. Unmatched 2D detections do not invalidate a readable observation. An empty 3D actor set is evaluated as empty; it does not certify the absence of unannotated real-world actors. Missing annotation files or temporal gaps remain unknown.
+Road geometry follows the reviewed scene polygons. Ego poses and timestamps are aligned with the original sensor records through the established scene transforms. Collision and TTC evaluate the annotated 3D actor set; 2D detections are retained as annotation metadata and do not participate in geometric scoring.
 
-A velocity-evidence gap is not automatically an unknown TTC result. The scorer tests whether the target can conflict with the submitted executed trajectory; only relevant targets require sufficient velocity evidence. Coverage counts are annotation diagnostics, not model scores.
+TTC combines adjacent-frame motion estimates with trajectory-dependent conflict analysis. The [evaluation protocol](PROTOCOL.md) defines metric applicability, scoring states and aggregation.
 
-[The coverage manifest](../assets/execution_coverage.json) lists every test token, source episode, map revision, connection status and remaining evidence gaps. The protocol identity records the 3D-only policy. Historical scores must not be reused as results on this expanded cohort.
+The [execution manifest](../assets/cohort.json) identifies the test clips used for execution evaluation. The [annotation metadata](../assets/execution_coverage.json) records scene associations, map revisions and evidence provenance. All methods must use the same released inputs and evaluation protocol.

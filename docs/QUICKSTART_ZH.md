@@ -70,7 +70,7 @@ extremedrive --assets assets evaluate \
 extremedrive --assets assets reference --model pluto --out results/reference_pluto
 ```
 
-可替换为 latent_transfuser、tcp、transfuser、diffusiondrive、plantf、diffusion_planner。该命令校验并导出随库提供的参考结果。参考结果中的人工复核记录绑定对应预测；新提交按自动评价流程评分。证据缺失项以 unknown 标记，并计入评分范围。
+可替换为 latent_transfuser、tcp、transfuser、diffusiondrive、plantf、diffusion_planner。该命令校验并导出随库提供的参考结果。参考结果中的人工复核记录绑定对应预测；新提交按自动评价流程评分。各指标的适用范围、判定状态与汇总方式见评测协议。
 
 ## 6. 评分范围
 

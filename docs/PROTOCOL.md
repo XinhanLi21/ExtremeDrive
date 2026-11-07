@@ -4,7 +4,7 @@ ExtremeDrive evaluates planned trajectories under a common execution protocol. T
 
 ## Input contract
 
-The default input policy removes scenario-derived action hints. Online route commands are unavailable in the current release; no command is inferred from the annotation. See [input provenance and ablations](input_policy.md).
+The default input policy removes scenario-derived action hints. The input contract uses sensor observations and measured vehicle state; it does not infer route commands from scenario annotations. See [input provenance and ablations](input_policy.md).
 
 ## Execution
 
