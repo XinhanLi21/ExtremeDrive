@@ -2,6 +2,7 @@
 from pathlib import Path
 import json,gzip,lzma,hashlib
 import numpy as np
+from .instructions import language_inputs, annotation, POLICIES
 
 def load(path):
     path=Path(path)
@@ -23,9 +24,11 @@ def prediction_rate(pred):
     raise ValueError('Expected finite [x,y,yaw] poses at 2 Hz (8 points) or 4 Hz (16 points), horizon 4 s')
 
 class Dataset:
-    def __init__(self,assets,dataroot=None,split='test',input_hz=2,trajectory_hz=2):
+    def __init__(self,assets,dataroot=None,split='test',input_hz=2,trajectory_hz=2,input_policy='sensor_only'):
         if split not in ('train','val','test'):raise ValueError('invalid split')
         trajectory_times(input_hz);trajectory_times(trajectory_hz)
+        if input_policy not in POLICIES:raise ValueError('invalid input policy')
+        self.input_policy=input_policy
         self.input_hz=input_hz;self.trajectory_hz=trajectory_hz;self._sampling=None
         self.assets=Path(assets);self.dataroot=Path(dataroot) if dataroot else None;self.split=split
         self.rows={r['token']:r for r in load(self.assets/'splits'/f'{split}.json')}
@@ -43,10 +46,12 @@ class Dataset:
         history=r['history'] if self.input_hz==2 else sampling['history_4hz']
         valid=r['history_valid'] if self.input_hz==2 else sampling['history_valid_4hz']
         frames=[{**f,'images':[self.image_path(n) for n in f['images']] if f['images'] else None} for f in sampling['image_history'][str(self.input_hz)]]
-        return {'token':token,'images':[self.image_path(n) for n in r['images']],'language':r['language'],
+        return {'token':token,'images':[self.image_path(n) for n in r['images']],**language_inputs(r,self.input_policy),
                 'history':history,'history_valid':valid,'input_hz':self.input_hz,
                 'history_times_s':(np.arange(-int(1.5*self.input_hz),1)/self.input_hz).tolist(),
                 'image_history':frames,'trajectory_hz':self.trajectory_hz,'target_times_s':trajectory_times(self.trajectory_hz).tolist()}
+    def instruction_annotation(self,token):
+        return annotation(self.rows[token])
     def target(self,token,hz=None):
         hz=self.trajectory_hz if hz is None else hz;trajectory_times(hz)
         return self.rows[token]['target'] if hz==2 else self.sampling(token)['target_4hz']
@@ -68,13 +73,17 @@ class Dataset:
         return result
 
 def read_predictions(path,expected=None,hz=None):
-    result={};rates=set()
+    result={};rates=set();input_policies=set()
     if hz is not None:trajectory_times(hz)
     for line in Path(path).read_text().splitlines():
         if not line.strip():continue
         p=json.loads(line);t=p['token'];safe_token(t)
         if t in result:raise ValueError('duplicate token: '+t)
         rate=prediction_rate(p);rates.add(rate)
+        policy=p.get('input_policy','unspecified')
+        if policy not in (*POLICIES,'unspecified'):raise ValueError('invalid input policy')
+        input_policies.add(policy)
+        if len(input_policies)>1:raise ValueError('Mixed input policies in one submission')
         if hz is not None and rate!=hz:raise ValueError('Submission sampling rate does not match requested rate')
         if 'trajectory_hz' in p and p['trajectory_hz']!=rate:raise ValueError('trajectory_hz metadata disagrees with timestamps')
         if len(rates)>1:raise ValueError('Mixed trajectory rates in one submission are not supported')

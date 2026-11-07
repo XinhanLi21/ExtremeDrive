@@ -26,8 +26,8 @@ def execute(dataset,pred):
     return run
 
 def score(dataset,pred,run):
-    ctx=dataset.context(pred['token']);protocol=load(dataset.assets/'protocol.json');p=Protocol(**protocol)
-    identity={'token':pred['token'],'prediction_sha256':prediction_digest(pred),'protocol_sha256':digest(protocol),'context_sha256':digest(ctx)}
+    ctx=dataset.context(pred['token']);protocol=load(dataset.assets/'protocol.json');p=Protocol(**protocol).validate()
+    identity={'token':pred['token'],'prediction_sha256':prediction_digest(pred),'protocol_sha256':digest(protocol),'context_sha256':digest(ctx),'input_policy':pred.get('input_policy','unspecified'),'review_policy':'automatic_only_v1'}
     if run['failure']:return {**identity,'score':0.,'status':'execution_failed','failure':run['failure']}
     plan=[[l['t'],l['x'],l['y'],l['yaw']] for l in run['logs']]
     original=scoring.Actors
@@ -36,12 +36,13 @@ def score(dataset,pred,run):
         r=scoring.score_window(ctx['scene'],ctx['window'],plan,p,execution_status=run['execution_status'])
     finally:scoring.Actors=original
     r['road_metrics']=road_evaluate(r['trajectory'],ctx['road'],p)
-    r=revise_ttc(r,ctx,p);r['future_comfort']=dynamic_comfort(run['logs'])
+    r=revise_ttc(r,ctx,p);r['future_comfort']=dynamic_comfort(run['logs'],p.comfort)
     applicable=ctx['window']['category']!='Critical_Driving'
+    r['metrics']['comfort']=r['future_comfort']['score'] if applicable else None
     r['comfort_applicability']={'applicable':applicable,'reason':'noncritical_test' if applicable else 'emergency_maneuver'}
     r['emergency_safety']=emergency_safety(r)
     r['score']=scoped_total(r['metrics'],r['road_metrics'],r['future_comfort']['score'] if applicable else None,applicable)
-    r.update(identity,status='automated',manual_review_applied=False)
+    r.update(identity,status='automated',manual_review_applied=False,score_name='ExtremeDrive automatic execution score',score_status='unavailable' if r['score'] is None else 'evaluated')
     return r
 
 def summarize(records):
@@ -59,3 +60,31 @@ def summarize(records):
 
 def write(path,obj):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(obj,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
+
+
+def evaluation_identity(dataset,preds,records):
+    policies={p.get('input_policy','unspecified') for p in preds.values()}
+    if len(policies)!=1:raise ValueError('Mixed input policies cannot be aggregated')
+    policy=next(iter(policies));complete=set(preds)==set(dataset.tokens(True))
+    if any(r.get('manual_review_applied',False) for r in records):
+        raise ValueError('Reviewed results cannot enter the automatic benchmark')
+    return dict(mode='fresh_automated_execution',review_policy='automatic_only_v1',
+                input_policy=policy,complete_cohort=complete,
+                benchmark_eligible=complete and policy=='sensor_only',
+                protocol_sha256=digest(load(dataset.assets/'protocol.json')),
+                cohort_sha256=digest(sorted(preds)),
+                asset_manifest_sha256=digest(load(dataset.assets/'manifest.json')))
+
+
+def compare_summaries(summaries):
+    """Reject archived, incomplete, ambiguous, or differently configured runs."""
+    if not summaries:raise ValueError('No runs supplied')
+    keys=('mode','review_policy','input_policy','trajectory_hz','protocol_sha256',
+          'cohort_sha256','asset_manifest_sha256')
+    first=summaries[0]
+    for s in summaries:
+        if not s.get('benchmark_eligible') or not s.get('complete_cohort') or s.get('mode')!='fresh_automated_execution' or s.get('review_policy')!='automatic_only_v1' or s.get('input_policy')!='sensor_only':
+            raise ValueError('Only complete automatic sensor-only runs qualify for formal comparison')
+        if any(k not in s or s[k]!=first.get(k) for k in keys):
+            raise ValueError('Evaluation identities differ; do not mix protocols, inputs or rates')
+    return summaries

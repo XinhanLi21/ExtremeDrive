@@ -29,3 +29,5 @@ The bundled input-only baseline is `extremebench.agents.constant_velocity:Consta
 Future targets, map/evaluator contexts and actor observations are not passed to `predict`. `Dataset.target()` is a separate supervised-label accessor. Remove `--execution-only` to predict the full split for displacement evaluation. Model training is managed by the individual planning method.
 
 Input and output sampling are independently configurable at 2 Hz or 4 Hz. See [sampling](sampling.md) for timestamps, valid masks and grid conventions.
+
+Default `language` contains measured speed and a generic prediction request only. Source annotations are available separately for auditing, never as default online navigation. See [input policy](input_policy.md).

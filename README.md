@@ -60,6 +60,8 @@ extremedrive --assets assets evaluate --submission predictions.jsonl --workers 4
 
 Predictions contain `[x, y, yaw]` poses over four seconds: eight poses at 2 Hz or sixteen at 4 Hz, in the capture-anchor ego frame. The evaluator requires the complete execution cohort unless a diagnostic subset is explicitly requested.
 
+Default agent inputs exclude scenario-derived maneuver hints. Formal comparisons use the same automatic collision/TTC policy for every model. See [input policies](docs/input_policy.md), [comfort configuration](docs/comfort.md), and [submissions](docs/submission.md).
+
 ## Sampling rates
 
 Use `--input-hz 2|4` for causal history sampling and `--trajectory-hz 2|4` for trajectory output. Both default to 2 Hz. The data split, anchor windows, execution model and metric sampling remain fixed. See [sampling and timestamps](docs/sampling.md).

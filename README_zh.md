@@ -46,6 +46,8 @@ bash scripts/evaluation/run_smoke.sh
 7. [评价指标](docs/PROTOCOL.md)
 8. [交互教程](tutorials/quickstart.ipynb)
 
+默认模型输入不包含场景标注中的避险动作提示；正式比较对所有模型采用统一自动评分。详见[输入与提示对照](docs/input_policy.md)、[舒适性配置](docs/comfort.md)和[提交规范](docs/submission.md)。
+
 ## 采样频率
 
 提供 **2 Hz / 4 Hz** 两种配置：`--input-hz` 控制历史输入采样，`--trajectory-hz` 控制预测轨迹频率，默认均为 2 Hz。4 秒预测分别对应 8 / 16 个点；原划分、自车控制和指标计算时钟保持一致。详见[采样与时间戳](docs/sampling.md)。

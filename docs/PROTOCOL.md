@@ -2,6 +2,10 @@
 
 ExtremeDrive evaluates planned trajectories under a common execution protocol. This document defines the trajectory-execution process, metrics and aggregation rules. Geometry and temporal thresholds are specified in `assets/protocol.json`.
 
+## Input contract
+
+The default input policy removes scenario-derived action hints. Online route commands are unavailable in the current release; no command is inferred from the annotation. See [input provenance and ablations](input_policy.md).
+
 ## Execution
 
 1. Eight (2 Hz) or sixteen (4 Hz) ego-relative poses over four seconds are transformed into the aligned scene frame.
@@ -23,7 +27,7 @@ Vehicle initialization uses measured motion states together with fixed actuator 
 | Exclusion X | Compliance with annotated physical exclusion geometry, when available |
 | TTC T | Constant-velocity footprint conflict test over one second, at 0.1 s increments |
 | Progress P | Route-relative progress within the specified route-distance threshold |
-| Comfort C | Duration-weighted severity of simulated acceleration, jerk and yaw motion; only noncritical test windows |
+| Comfort C | Duration-weighted severity of executed acceleration, jerk and yaw motion; only noncritical test windows; [active limits and filtering](comfort.md) |
 | Emergency safety | Critical-driving windows satisfying collision, marking, road/direction and TTC safety conditions over the four-second horizon |
 
 The 0.15 m road-surface allowance is distinct from the **0 cm marking rule**; it does not permit crossing a marked boundary. Emergency safety measures compliance with the specified safety criteria over the evaluation horizon.
@@ -38,10 +42,10 @@ Unavailable exclusion geometry contributes no additional gate. A known failed ha
 
 Actor association and local adjacent-frame fits are supplied with the annotation snapshot. Unknown-velocity actors are excluded from TTC only when a conservative reachable set cannot intersect the ego sweep. Risk-relevant actors without velocity evidence remain unknown. Source annotations and review decisions are kept distinct.
 
-Reference results include trajectory-specific collision and TTC review records. Each result is bound to its corresponding prediction by a content hash. New submissions use automatic evaluation; reference review decisions apply exclusively to the associated predictions. Reports identify the evaluation and review policy used.
+Formal comparisons use `automatic_only_v1` for every model: collision and TTC are computed by the same code on the same annotation snapshot, with no prediction-specific human overrides. Unknown evidence remains unknown. Archived reviewed results retain their prediction bindings but are marked `benchmark_eligible=false`; they cannot enter the `compare` command. Re-scoring an archived prediction recomputes the metrics and does not import review outcomes.
 
 ## Aggregation
 
 The default execution run requires all 131 tokens. Unknowns remain in the denominator; the output reports lower/upper bounds and separately labeled known-only means. Comfort and emergency safety include their own applicability counts. A partial diagnostic run is explicitly marked as incomplete.
 
-Comparisons use the same split, execution configuration, metric definitions and review policy. These definitions constitute the ExtremeDrive evaluation protocol.
+The `compare` command requires complete sensor-only automatic runs with equal protocol, asset, cohort and output-rate identities. Hint-conditioned runs and unspecified input declarations remain diagnostic results. Comparisons use the same split, execution configuration, metric definitions and review policy. These definitions constitute the ExtremeDrive evaluation protocol.

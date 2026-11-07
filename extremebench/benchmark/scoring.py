@@ -145,8 +145,8 @@ def score_window(scene,window,rows,p=None,execution_status='supplied_executed_tr
     progress=float(np.clip(forward/length,0,1)) if length>1. else float(np.linalg.norm(poses[-1,:2]-poses[0,:2])<=1.)
     if np.any(lateral>8):progress=0.
     metrics['progress']=progress
-    comfortable=(np.abs(ax)<=p.comfort_longitudinal_mps2)&(np.abs(ay)<=p.comfort_lateral_mps2)&(jerk<=p.comfort_jerk_mps3)
-    metrics['comfort']=float(np.sum(np.diff(t)*comfortable[:-1])/p.horizon_s)
+    # Comfort requires executed dynamics; the toolkit supplies it after rollout.
+    metrics['comfort']=None
     limits=(p.measured_max_accel_mps2,p.measured_max_decel_mps2,p.measured_max_lateral_mps2)
     if all(v is not None for v in limits):
         dynamic=(ax>limits[0])|(ax < -limits[1])|(np.abs(ay)>limits[2]);events+=event_runs(dynamic,t,'motion_limit',p.event_merge_gap_s,.1);metrics['motion_limit_compliance']=int(not dynamic.any())

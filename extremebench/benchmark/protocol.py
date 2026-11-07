@@ -1,10 +1,11 @@
 """ExtremeDrive-specific protocol, inspired by PDMS, not NAVSIM compatibility."""
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 import hashlib,json,math
+from .comfort import ComfortConfig
 
 @dataclass(frozen=True)
 class Protocol:
-    version: str = 'marking0cm-sl03-approx-v4'
+    version: str = 'extremedrive-execution-v1'
     horizon_s: float = 4.0
     stride_s: float = 4.0
     sample_dt_s: float = 0.05
@@ -16,9 +17,7 @@ class Protocol:
     event_merge_gap_s: float = 0.5
     ttc_horizon_s: float = 1.0
     ttc_step_s: float = 0.1
-    comfort_longitudinal_mps2: float = 4.0
-    comfort_lateral_mps2: float = 4.0
-    comfort_jerk_mps3: float = 8.0
+    comfort: dict = field(default_factory=lambda: asdict(ComfortConfig()))
     ego_outline: str = 'sl03_body_approx_v1'
     ego_length_m: float = 4.82
     ego_width_m: float = 1.89
@@ -34,9 +33,10 @@ class Protocol:
     measured_max_lateral_mps2: float | None = None
 
     def validate(self):
+        ComfortConfig(**self.comfort).validate()
         for k,v in asdict(self).items():
             if isinstance(v,(int,float)) and not math.isfinite(v): raise ValueError(f'nonfinite {k}')
-        for k in ('horizon_s','stride_s','sample_dt_s','max_observation_gap_s','ttc_horizon_s','ttc_step_s','ego_length_m','ego_width_m','comfort_longitudinal_mps2','comfort_lateral_mps2','comfort_jerk_mps3','progress_weight','ttc_weight','comfort_weight'):
+        for k in ('horizon_s','stride_s','sample_dt_s','max_observation_gap_s','ttc_horizon_s','ttc_step_s','ego_length_m','ego_width_m','progress_weight','ttc_weight','comfort_weight'):
             if getattr(self,k)<=0: raise ValueError(f'{k} must be positive')
         for k in ('white_tolerance_m','yellow_tolerance_m','white_persistence_s','yellow_persistence_s','event_merge_gap_s'):
             if getattr(self,k)<0: raise ValueError(f'{k} must be nonnegative')

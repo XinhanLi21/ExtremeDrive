@@ -28,7 +28,7 @@ inputs = ds.inputs(ds.tokens()[0])
 execution_tokens = ds.tokens(execution=True)
 ```
 
-`inputs` exposes token, image paths, instruction/speed text, sampled history images, history and validity flags, and the requested prediction time grid. `target(token)` is a separate supervised-label accessor. `context(token)` is reference annotations for evaluation and must never be supplied to the planning agent. The toolkit does not use CoC future descriptions as planner inputs.
+`inputs` exposes token, image paths, policy-controlled text and measured speed, sampled history images, history and validity flags, and the requested prediction time grid. `target(token)` is a separate supervised-label accessor. `context(token)` is reference annotations for evaluation and must never be supplied to the planning agent. The toolkit does not use CoC future descriptions as planner inputs.
 
 `context` includes scene geometry in metres, anchor pose, observed actors in the same map frame, corrected relative observation times, reviewed drivable geometry, and measured initial state. Its original source-path fields are provenance; runtime data loading uses the supplied data root. Coordinates are not inferred from source directory names.
 
@@ -40,7 +40,7 @@ Each line contains exactly one window prediction. Required keys:
 - `times_s`: 0.5-second steps through 4.0 s (2 Hz) or 0.25-second steps through 4.0 s (4 Hz).
 - `poses`: eight or sixteen `[x_m,y_m,yaw_rad]` rows in the capture-anchor ego frame, x forward/y left, yaw counterclockwise.
 
-Duplicates, missing/extra cohort tokens, wrong shape, invalid timing and nonfinite numbers are rejected. Additional model metadata can accompany a prediction but cannot change evaluation scope.
+Duplicates, missing/extra cohort tokens, wrong shape, invalid timing and nonfinite numbers are rejected. The `input_policy` field records the information contract. Missing policies are diagnostic only; formally comparable submissions declare `sensor_only`. Additional model metadata cannot change evaluation scope.
 
 Use `examples/smoke_predictions.jsonl` as a valid example. All 131-window reference prediction files use the same format. Current planning inputs contain three selected camera streams; raw upstream episodes contain additional sensors available to custom adapters. Adding sensor inputs does not change the frozen split or scoring protocol.
 
