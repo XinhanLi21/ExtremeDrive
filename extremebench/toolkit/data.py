@@ -12,21 +12,44 @@ def prediction_digest(p):return digest({k:p[k] for k in ('token','times_s','pose
 def safe_token(token):
     if not isinstance(token,str) or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:_-' for c in token):raise ValueError('invalid token')
     return token.replace(':','_')
+def trajectory_times(hz):
+    if hz not in (2,4):raise ValueError('Supported sampling rates are 2 Hz and 4 Hz')
+    return np.arange(1,4*hz+1,dtype=float)/hz
+
+def prediction_rate(pred):
+    a=np.asarray(pred['poses'],dtype=float);times=np.asarray(pred['times_s'],dtype=float)
+    for hz in (2,4):
+        if a.shape==(4*hz,3) and times.shape==(4*hz,) and np.isfinite(a).all() and np.isfinite(times).all() and np.allclose(times,trajectory_times(hz),rtol=0,atol=1e-8):return hz
+    raise ValueError('Expected finite [x,y,yaw] poses at 2 Hz (8 points) or 4 Hz (16 points), horizon 4 s')
+
 class Dataset:
-    def __init__(self,assets,dataroot=None,split='test'):
+    def __init__(self,assets,dataroot=None,split='test',input_hz=2,trajectory_hz=2):
         if split not in ('train','val','test'):raise ValueError('invalid split')
+        trajectory_times(input_hz);trajectory_times(trajectory_hz)
+        self.input_hz=input_hz;self.trajectory_hz=trajectory_hz;self._sampling=None
         self.assets=Path(assets);self.dataroot=Path(dataroot) if dataroot else None;self.split=split
         self.rows={r['token']:r for r in load(self.assets/'splits'/f'{split}.json')}
         self.cohort=[r['token'] for r in load(self.assets/'cohort.json')['records']]
     def tokens(self,execution=False):return [t for t in self.rows if not execution or t in self.cohort]
+    def sampling(self,token):
+        if self._sampling is None:self._sampling=load(self.assets/'sampling'/(self.split+'.json.xz'))
+        return self._sampling[token]
+    def image_path(self,name):
+        rel=name.split('/Extreme_Driving_Conditions_Dataset/',1)[-1]
+        if rel.startswith('/') or '..' in Path(rel).parts:raise ValueError('unmapped sensor path')
+        return str(self.dataroot/rel) if self.dataroot else rel
     def inputs(self,token):
-        r=self.rows[token];images=[]
-        for name in r['images']:
-            rel=name.split('/Extreme_Driving_Conditions_Dataset/',1)[-1]
-            if rel.startswith('/') or '..' in Path(rel).parts:raise ValueError('unmapped sensor path')
-            images.append(str(self.dataroot/rel) if self.dataroot else rel)
-        return {'token':token,'images':images,'language':r['language'],'history':r['history'],'history_valid':r['history_valid']}
-    def target(self,token):return self.rows[token]['target']
+        r=self.rows[token];sampling=self.sampling(token)
+        history=r['history'] if self.input_hz==2 else sampling['history_4hz']
+        valid=r['history_valid'] if self.input_hz==2 else sampling['history_valid_4hz']
+        frames=[{**f,'images':[self.image_path(n) for n in f['images']] if f['images'] else None} for f in sampling['image_history'][str(self.input_hz)]]
+        return {'token':token,'images':[self.image_path(n) for n in r['images']],'language':r['language'],
+                'history':history,'history_valid':valid,'input_hz':self.input_hz,
+                'history_times_s':(np.arange(-int(1.5*self.input_hz),1)/self.input_hz).tolist(),
+                'image_history':frames,'trajectory_hz':self.trajectory_hz,'target_times_s':trajectory_times(self.trajectory_hz).tolist()}
+    def target(self,token,hz=None):
+        hz=self.trajectory_hz if hz is None else hz;trajectory_times(hz)
+        return self.rows[token]['target'] if hz==2 else self.sampling(token)['target_4hz']
     def context(self,token):
         if token not in self.cohort:raise ValueError('Execution annotations released for the 131-window cohort only; use displacement evaluation for the full split.')
         path=self.assets/'contexts'/(safe_token(token)+'.json.xz')
@@ -44,14 +67,17 @@ class Dataset:
         if digest(result)!=packed['reconstructed_sha256']:raise ValueError('reconstructed context checksum mismatch')
         return result
 
-def read_predictions(path,expected=None):
-    result={}
+def read_predictions(path,expected=None,hz=None):
+    result={};rates=set()
+    if hz is not None:trajectory_times(hz)
     for line in Path(path).read_text().splitlines():
         if not line.strip():continue
         p=json.loads(line);t=p['token'];safe_token(t)
         if t in result:raise ValueError('duplicate token: '+t)
-        a=np.asarray(p['poses'],dtype=float);times=np.asarray(p['times_s'],dtype=float)
-        if a.shape!=(8,3) or times.shape!=(8,) or not np.isfinite(a).all() or not np.isfinite(times).all() or not np.allclose(times,np.arange(1,9)*.5,rtol=0,atol=1e-8):raise ValueError('Expected 8 finite [x,y,yaw] at 0.5,...,4 s: '+t)
+        rate=prediction_rate(p);rates.add(rate)
+        if hz is not None and rate!=hz:raise ValueError('Submission sampling rate does not match requested rate')
+        if 'trajectory_hz' in p and p['trajectory_hz']!=rate:raise ValueError('trajectory_hz metadata disagrees with timestamps')
+        if len(rates)>1:raise ValueError('Mixed trajectory rates in one submission are not supported')
         result[t]=p
     if not result:raise ValueError('empty submission')
     if expected is not None and set(result)!=set(expected):raise ValueError(f'Token coverage mismatch: missing={len(set(expected)-set(result))}, extra={len(set(result)-set(expected))}')

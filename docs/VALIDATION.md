@@ -5,9 +5,12 @@ The current toolkit uses one benchmark implementation and one release archive.
 ## Runtime and evaluation
 
 - The Conda environment was created from `environment.yml` with Python 3.12.
-- Twelve unit tests cover data splits, input isolation, agent outputs, submission validation, archive extraction, protocol defaults and score applicability.
+- Sixteen unit tests cover data splits, input isolation, agent outputs, submission validation, archive extraction, protocol defaults and score applicability.
 - Three representative trajectories are executed through the controller and vehicle model. Executed trajectories, composite scores and safety gates match the reference records within 1e-8.
-- The 294 files listed in the asset manifest are verified by SHA-256. All 917 reference prediction/result bindings were verified, and seven-model aggregate results matched within 1e-10.
+- The 298 files listed in the asset manifest are verified by SHA-256. All 917 reference prediction/result bindings were verified, and seven-model aggregate results matched within 1e-10.
+
+- All 1,188 windows retain identical labels at shared 2 Hz / 4 Hz timestamps (absolute tolerance 1e-10). Causal image history is checked for missing slots and reused observations.
+- Three constant-velocity diagnostic trajectories produce matching execution scores at 2 Hz and 4 Hz.
 
 ## Data and storage
 

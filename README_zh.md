@@ -41,6 +41,16 @@ bash scripts/evaluation/run_smoke.sh
 7. [评价指标](docs/PROTOCOL.md)
 8. [交互教程](tutorials/quickstart.ipynb)
 
+## 采样频率
+
+提供 **2 Hz / 4 Hz** 两种配置：`--input-hz` 控制历史输入采样，`--trajectory-hz` 控制预测轨迹频率，默认均为 2 Hz。4 秒预测分别对应 8 / 16 个点；原划分、自车控制和指标计算时钟保持一致。详见[采样与时间戳](docs/sampling.md)。
+
+```bash
+extremedrive --assets assets predict --agent my_agent:Agent \
+  --dataroot /path/to/data --input-hz 4 --trajectory-hz 4 --execution-only --out predictions_4hz.jsonl
+extremedrive --assets assets evaluate --submission predictions_4hz.jsonl --trajectory-hz 4 --out results/model_4hz
+```
+
 ## 参考结果
 
 提供 Latent TransFuser、TCP、TransFuser、DiffusionDrive、PlanTF、PLUTO 和 Diffusion-Planner 的适配预测及参考评测结果。

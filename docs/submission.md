@@ -2,7 +2,7 @@
 
 ## Submission format
 
-JSONL with one record per token: `token`, `times_s=[0.5,...,4.0]`, `poses` of shape 8×3. See [schema](DATA_FORMAT.md). Duplicate tokens, wrong horizon, invalid shapes and nonfinite coordinates are rejected.
+JSONL with one record per token: `token`, `times_s=[0.5,...,4.0]` and 8×3 poses at 2 Hz, or `times_s=[0.25,...,4.0]` and 16×3 poses at 4 Hz. See [schema](DATA_FORMAT.md). Duplicate tokens, wrong horizon, invalid shapes and nonfinite coordinates are rejected.
 
 ```bash
 extremedrive --assets assets validate --submission predictions.jsonl

@@ -8,6 +8,7 @@ assets/
   cohort.json                   # ordered execution token definitions
   contexts/*.json.xz            # per-window data and shared-geometry references
   context_blobs/*.json.xz       # content-addressed static maps and road geometry
+  sampling/                    # 4 Hz sensor-derived labels and real history-frame selections
   protocol.json                 # geometry and timing rules
   mohe_profile.json             # fixed vehicle parameter candidate
   huggingface.json              # source repository, revision and file index
@@ -27,7 +28,7 @@ inputs = ds.inputs(ds.tokens()[0])
 execution_tokens = ds.tokens(execution=True)
 ```
 
-`inputs` exposes token, image paths, instruction/speed text, history and history-valid flags only. `target(token)` is a separate supervised-label accessor. `context(token)` is reference annotations for evaluation and must never be supplied to the planning agent. The toolkit does not use CoC future descriptions as planner inputs.
+`inputs` exposes token, image paths, instruction/speed text, sampled history images, history and validity flags, and the requested prediction time grid. `target(token)` is a separate supervised-label accessor. `context(token)` is reference annotations for evaluation and must never be supplied to the planning agent. The toolkit does not use CoC future descriptions as planner inputs.
 
 `context` includes scene geometry in metres, anchor pose, observed actors in the same map frame, corrected relative observation times, reviewed drivable geometry, and measured initial state. Its original source-path fields are provenance; runtime data loading uses the supplied data root. Coordinates are not inferred from source directory names.
 
@@ -36,8 +37,8 @@ execution_tokens = ds.tokens(execution=True)
 Each line contains exactly one window prediction. Required keys:
 
 - `token`: a fixed split/cohort token.
-- `times_s`: `[0.5,1.0,1.5,2.0,2.5,3.0,3.5,4.0]`.
-- `poses`: eight `[x_m,y_m,yaw_rad]` rows in the capture-anchor ego frame, x forward/y left, yaw counterclockwise.
+- `times_s`: 0.5-second steps through 4.0 s (2 Hz) or 0.25-second steps through 4.0 s (4 Hz).
+- `poses`: eight or sixteen `[x_m,y_m,yaw_rad]` rows in the capture-anchor ego frame, x forward/y left, yaw counterclockwise.
 
 Duplicates, missing/extra cohort tokens, wrong shape, invalid timing and nonfinite numbers are rejected. Additional model metadata can accompany a prediction but cannot change evaluation scope.
 
@@ -56,3 +57,5 @@ Static scene metadata/features and road objects are stored by SHA-256 content id
 At load time, the data API verifies shared-blob hashes, reconstructs the original context, and verifies its canonical JSON SHA-256. No shared mutable object cache is used: modifying one returned context cannot modify another window. The old `.json.gz` context layout is still readable. Only storage changes; evaluators receive the same Python structure.
 
 NAVSIM also uses LZMA for metric caches ([upstream implementation](https://github.com/autonomousvision/navsim/blob/main/navsim/planning/metric_caching/metric_cache.py)). This release uses JSON rather than pickle and additionally deduplicates shared map objects. No OpenScene-style temporal subsampling is applied.
+
+Sampling-rate selection and real capture timestamps are documented in [sampling.md](sampling.md).

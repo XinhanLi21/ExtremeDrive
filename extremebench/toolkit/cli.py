@@ -1,7 +1,7 @@
 import argparse,json,importlib,hashlib,html,csv
 from pathlib import Path
 import numpy as np
-from .data import Dataset,read_predictions,load,safe_token,digest,prediction_digest
+from .data import Dataset,read_predictions,load,safe_token,digest,prediction_digest,prediction_rate,trajectory_times
 
 def main():
     p=argparse.ArgumentParser(description='ExtremeDrive planning and vehicle-execution toolkit')
@@ -9,10 +9,10 @@ def main():
     sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('verify')
     q=sub.add_parser('download');q.add_argument('--dataroot',required=True);q.add_argument('--scope',choices=['execution','test','train','val','all'],default='execution');q.add_argument('--dry-run',action='store_true')
-    q=sub.add_parser('inspect');q.add_argument('--dataroot');q.add_argument('--split',default='test',choices=['train','val','test'])
-    q=sub.add_parser('predict');q.add_argument('--agent',required=True,help='module:Class implementing predict(inputs) -> 8x3');q.add_argument('--dataroot',required=True);q.add_argument('--split',default='test',choices=['train','val','test']);q.add_argument('--execution-only',action='store_true');q.add_argument('--out',required=True)
+    q=sub.add_parser('inspect');q.add_argument('--input-hz',type=int,choices=[2,4],default=2);q.add_argument('--trajectory-hz',type=int,choices=[2,4],default=2);q.add_argument('--dataroot');q.add_argument('--split',default='test',choices=['train','val','test'])
+    q=sub.add_parser('predict');q.add_argument('--input-hz',type=int,choices=[2,4],default=2);q.add_argument('--trajectory-hz',type=int,choices=[2,4],default=2);q.add_argument('--agent',required=True,help='module:Class implementing predict(inputs) -> Nx3 (8 or 16 points)');q.add_argument('--dataroot',required=True);q.add_argument('--split',default='test',choices=['train','val','test']);q.add_argument('--execution-only',action='store_true');q.add_argument('--out',required=True)
     for name in ['validate','displacement','evaluate']:
-        q=sub.add_parser(name);q.add_argument('--submission',required=True);q.add_argument('--out',default='results');q.add_argument('--split',default='test',choices=['train','val','test'])
+        q=sub.add_parser(name);q.add_argument('--trajectory-hz',type=int,choices=[2,4]);q.add_argument('--submission',required=True);q.add_argument('--out',default='results');q.add_argument('--split',default='test',choices=['train','val','test'])
         if name in ('validate','evaluate'):q.add_argument('--subset',action='store_true',help='Allow diagnostic subsets; never report as full cohort')
         if name=='evaluate':q.add_argument('--workers',type=int,default=1)
     q=sub.add_parser('reference');q.add_argument('--model',required=True);q.add_argument('--out',default='reference_results')
@@ -32,14 +32,14 @@ def main():
         from .download import download
         result=download(assets,a.dataroot,a.scope,a.dry_run)
     elif a.command=='inspect':
-        ds=Dataset(assets,a.dataroot,a.split);result={'split':a.split,'windows':len(ds.rows),'execution_windows':len(ds.tokens(True)),'example_inputs':ds.inputs(ds.tokens()[0])}
+        ds=Dataset(assets,a.dataroot,a.split,input_hz=a.input_hz,trajectory_hz=a.trajectory_hz);result={'split':a.split,'windows':len(ds.rows),'execution_windows':len(ds.tokens(True)),'example_inputs':ds.inputs(ds.tokens()[0])}
         if a.dataroot:
             paths={p for t in ds.tokens() for p in ds.inputs(t)['images']};missing=[x for x in paths if not Path(x).is_file()];result.update(sensor_files=len(paths),missing_sensor_files=len(missing),missing_examples=missing[:5])
     elif a.command=='predict':
-        ds=Dataset(assets,a.dataroot,a.split);module,name=a.agent.split(':');agent=getattr(importlib.import_module(module),name)();dest=Path(a.out);dest.parent.mkdir(parents=True,exist_ok=True)
+        ds=Dataset(assets,a.dataroot,a.split,input_hz=a.input_hz,trajectory_hz=a.trajectory_hz);module,name=a.agent.split(':');agent=getattr(importlib.import_module(module),name)();dest=Path(a.out);dest.parent.mkdir(parents=True,exist_ok=True)
         with dest.open('w') as out:
-            for token in ds.tokens(a.execution_only):out.write(json.dumps(dict(token=token,times_s=(np.arange(1,9)*.5).tolist(),poses=np.asarray(agent.predict(ds.inputs(token))).tolist()),allow_nan=False)+'\n')
-        result={'predictions':len(read_predictions(dest))}
+            for token in ds.tokens(a.execution_only):out.write(json.dumps(dict(token=token,times_s=trajectory_times(a.trajectory_hz).tolist(),trajectory_hz=a.trajectory_hz,input_hz=a.input_hz,poses=np.asarray(agent.predict(ds.inputs(token))).tolist()),allow_nan=False)+'\n')
+        result={'predictions':len(read_predictions(dest,hz=a.trajectory_hz)),'input_hz':a.input_hz,'trajectory_hz':a.trajectory_hz}
     elif a.command=='reference':
         from .evaluation import summarize,write
         if a.model not in [x.name for x in (assets/'reference').iterdir()]:raise ValueError('unknown reference model')
@@ -54,15 +54,16 @@ def main():
         ds=Dataset(assets,split=a.split)
         if a.command in ('validate','evaluate'):
             if a.split!='test':raise ValueError('Execution protocol applies to test; use displacement for train/val')
-            preds=read_predictions(a.submission,None if a.subset else ds.tokens(True))
+            preds=read_predictions(a.submission,None if a.subset else ds.tokens(True),hz=a.trajectory_hz)
             if not set(preds)<=set(ds.tokens(True)):raise ValueError('Unknown execution tokens')
-        else:preds=read_predictions(a.submission,ds.tokens())
-        if a.command=='validate':result={'valid':True,'windows':len(preds),'complete_cohort':len(preds)==131}
+        else:preds=read_predictions(a.submission,ds.tokens(),hz=a.trajectory_hz)
+        rate=prediction_rate(next(iter(preds.values())))
+        if a.command=='validate':result={'valid':True,'windows':len(preds),'complete_cohort':len(preds)==131,'trajectory_hz':rate}
         elif a.command=='displacement':
             rows=[]
             for t,r in preds.items():
-                e=np.linalg.norm(np.asarray(r['poses'])[:,:2]-np.asarray(ds.target(t))[:,:2],axis=1);rows.append({'token':t,'ADE_m':float(e.mean()),'FDE_m':float(e[-1])})
-            result={'windows':len(rows),'ADE_m':float(np.mean([r['ADE_m'] for r in rows])),'FDE_m':float(np.mean([r['FDE_m'] for r in rows]))};write(Path(a.out)/'displacement.json',dict(summary=result,records=rows))
+                e=np.linalg.norm(np.asarray(r['poses'])[:,:2]-np.asarray(ds.target(t,hz=rate))[:,:2],axis=1);rows.append({'token':t,'ADE_m':float(e.mean()),'FDE_m':float(e[-1])})
+            result={'windows':len(rows),'trajectory_hz':rate,'ADE_m':float(np.mean([r['ADE_m'] for r in rows])),'FDE_m':float(np.mean([r['FDE_m'] for r in rows]))};write(Path(a.out)/'displacement.json',dict(summary=result,records=rows))
         else:
             from concurrent.futures import ProcessPoolExecutor
             jobs=[(str(assets.resolve()),pred,str(Path(a.out).resolve())) for pred in preds.values()]
@@ -70,7 +71,7 @@ def main():
             if a.workers==1:records=[worker(x) for x in jobs]
             else:
                 with ProcessPoolExecutor(max_workers=a.workers) as pool:records=list(pool.map(worker,jobs))
-            result=summarize(records);result.update(mode='fresh_automated_execution',complete_cohort=len(preds)==131,submission_sha256=hashlib.sha256(Path(a.submission).read_bytes()).hexdigest())
+            result=summarize(records);result.update(trajectory_hz=rate,mode='fresh_automated_execution',complete_cohort=len(preds)==131,submission_sha256=hashlib.sha256(Path(a.submission).read_bytes()).hexdigest())
             write(Path(a.out)/'summary.json',result);report(Path(a.out),records,result)
     print(json.dumps(result,ensure_ascii=False,indent=2))
 

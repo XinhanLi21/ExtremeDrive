@@ -4,7 +4,7 @@ ExtremeDrive evaluates planned trajectories under a common execution protocol. T
 
 ## Execution
 
-1. Eight ego-relative poses at 0.5–4.0 seconds are transformed into the aligned scene frame.
+1. Eight (2 Hz) or sixteen (4 Hz) ego-relative poses over four seconds are transformed into the aligned scene frame.
 2. The reference is sampled for LQR at 10 Hz. Measured initial longitudinal/lateral velocity and yaw rate initialize the vehicle.
 3. Acceleration and steering-rate requests are translated into wheel torque and steering targets, with actuator delay, lag, limits and rate constraints.
 4. A seven-degree-of-freedom model integrates planar motion and four wheel rotations at 1 kHz. Effective lateral parameters are fitted from vehicle recordings. Parameter provenance and validation status are included in the execution output.

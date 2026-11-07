@@ -65,7 +65,17 @@ extremedrive --assets assets validate --submission predictions.jsonl
 extremedrive --assets assets evaluate --submission predictions.jsonl --workers 4 --out results/my_agent
 ```
 
-Predictions contain eight `[x, y, yaw]` poses at 0.5–4.0 seconds in the capture-anchor ego frame. The evaluator requires the complete execution cohort unless a diagnostic subset is explicitly requested.
+Predictions contain `[x, y, yaw]` poses over four seconds: eight poses at 2 Hz or sixteen at 4 Hz, in the capture-anchor ego frame. The evaluator requires the complete execution cohort unless a diagnostic subset is explicitly requested.
+
+## Sampling rates
+
+Use `--input-hz 2|4` for causal history sampling and `--trajectory-hz 2|4` for trajectory output. Both default to 2 Hz. The data split, anchor windows, execution model and metric sampling remain fixed. See [sampling and timestamps](docs/sampling.md).
+
+```bash
+extremedrive --assets assets predict --agent my_agent:Agent \
+  --dataroot /path/to/data --input-hz 4 --trajectory-hz 4 --execution-only --out predictions_4hz.jsonl
+extremedrive --assets assets evaluate --submission predictions_4hz.jsonl --trajectory-hz 4 --out results/model_4hz
+```
 
 ## Repository layout
 

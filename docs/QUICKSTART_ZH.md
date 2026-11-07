@@ -37,13 +37,13 @@ extremedrive --assets assets inspect --dataroot /path/to/data --split test
 
 ## 3. 接入模型
 
-编写一个类，提供 `predict(inputs)`，返回 8×3 数组，每行是未来的 `[x, y, yaw]`，对应 0.5 至 4.0 秒。x 向前、y 向左，角度单位为 rad，使用当前自车坐标。
+编写一个类，提供 `predict(inputs)`，返回 8×3（2 Hz）或 16×3（4 Hz）数组，每行是未来的 `[x, y, yaw]`，覆盖 4.0 秒。x 向前、y 向左，角度单位为 rad，使用当前自车坐标。
 
 ```python
 class Agent:
     def predict(self, inputs):
         # inputs: images、language、history、history_valid、token
-        return model_predict(inputs)  # 8 × 3
+        return model_predict(inputs)  # 按 inputs["target_times_s"] 返回轨迹
 ```
 
 ```bash
@@ -105,3 +105,7 @@ conda activate extremedrive
 ```
 
 开发依赖可在激活环境后通过 `python -m pip install -e '.[dev]'` 安装。也可使用 `conda run -n extremedrive extremedrive --assets assets verify` 直接运行命令。
+
+## 10. 2 Hz / 4 Hz 配置
+
+`predict` 支持 `--input-hz 2|4` 与 `--trajectory-hz 2|4`，默认均为 2 Hz。前者控制历史输入采样，后者控制预测轨迹网格。`validate`、`evaluate`、`displacement` 可从提交的时间戳自动识别轨迹频率，也可显式指定 `--trajectory-hz` 校验。详见 [sampling.md](sampling.md)。

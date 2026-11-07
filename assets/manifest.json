@@ -294,6 +294,10 @@
     "reference_bindings.json": "d28755bc3840607c4b126e0a472800b0f7f2178bb622f17e7cb3670cd5fce783",
     "splits/test.json": "6ab440ee2fd90f39728c79a36a56173be3f41103f0a46e31244e25a285497de4",
     "splits/train.json": "3997f7b4665af223473bde063396e9599c889cd44f712e663a636bfa1ae4a5b4",
-    "splits/val.json": "c1b6f2d28318ec4a096f631fdd61b329b68678b5e368d7d1b08487601436216f"
+    "splits/val.json": "c1b6f2d28318ec4a096f631fdd61b329b68678b5e368d7d1b08487601436216f",
+    "sampling/val.json.xz": "ad8e9c4b241558980c9be2ca218081715adb3a717ae157bc8678bdd58c6c8f3e",
+    "sampling/audit.json": "188fa10ca2b7f7d106f10b285eb769c22ed9ca824436a26dca945ca61d764b38",
+    "sampling/test.json.xz": "0669d5c621a519668362b1f309555094bfc63fb4a67e3805b7087eb3614ea07c",
+    "sampling/train.json.xz": "91e435ac1148032faa2bc1eddfeb5279c35ccdb4945c9f6c072890d02124808b"
   }
 }

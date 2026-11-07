@@ -6,5 +6,5 @@ import numpy as np
 class PlanningAgent(ABC):
     @abstractmethod
     def predict(self, inputs: Mapping[str, Any]) -> np.ndarray:
-        """Return eight [x_m, y_m, yaw_rad] poses at 0.5 through 4.0 seconds."""
+        """Return [x_m, y_m, yaw_rad] at inputs['target_times_s'] (8 or 16 poses)."""
         raise NotImplementedError
