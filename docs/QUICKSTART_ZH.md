@@ -21,7 +21,7 @@ extremedrive --assets assets verify
 原始数据由 Shiyue Zhao 与清华大学智能底盘团队整理。下载工具使用指定的数据版本，按 episode 下载并解压到统一目录。
 
 ```bash
-# 查看当前执行评测需要下载的 13 个原始片段
+# 查看当前执行评测需要下载的 56 个原始片段
 extremedrive --assets assets download --scope execution --dataroot /path/to/data --dry-run
 # 下载并解压
 extremedrive --assets assets download --scope execution --dataroot /path/to/data
@@ -53,7 +53,7 @@ extremedrive --assets assets validate --submission predictions.jsonl
 extremedrive --assets assets evaluate --submission predictions.jsonl --workers 4 --out results/my_model
 ```
 
-移除 `--execution-only` 可生成完整 test 的 341 个窗口预测；用 `displacement` 计算 ADE/FDE。执行评分默认要求完整 131 个窗口；调试少数窗口必须显式加 `--subset`。
+移除 `--execution-only` 可生成完整 test 的 2,574 个片段预测；用 `displacement` 计算 ADE/FDE。执行评分默认要求完整 2,422 个片段；调试少数窗口必须显式加 `--subset`。
 
 ## 4. 运行评测示例
 
@@ -77,9 +77,9 @@ extremedrive --assets assets reference --model pluto --out results/reference_plu
 - 碰撞、白黄线合规、可行驶面及行驶方向、TTC、进度、危急操作安全性。
 - 舒适性仅排除真正的危急驾驶；雪天、低照度仍计算。
 - 不包含 EC、交通信号灯规则或偏离记录轨迹后的交互式后继场景。
-- 131 个窗口是 test 的执行评测集合，不是 131 个独立原始片段。
+- 2,422 个片段是 test 的执行评测集合，来自 56 段原始记录，不是独立采集的 2,422 个场景。
 
-具体阈值见 `assets/protocol.json`，定义见 [PROTOCOL.md](PROTOCOL.md)。`assets/manifest.json` 提供全部评测资源校验；原固定划分文件保留原字节，读取时才转换路径。
+具体阈值见 `assets/protocol.json`，定义见 [PROTOCOL.md](PROTOCOL.md)。`assets/manifest.json` 提供全部评测资源校验；场景归属不变，片段按文件名每隔 0.25 秒提取；读取时转换数据路径。
 
 ## 7. 导出 BEV 检查图
 

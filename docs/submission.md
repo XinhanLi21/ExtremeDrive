@@ -9,7 +9,7 @@ extremedrive --assets assets validate --submission predictions.jsonl
 extremedrive --assets assets evaluate --submission predictions.jsonl --workers 4 --out results/model
 ```
 
-The default requires every token in the 131-window cohort. `--subset` permits explicitly labeled diagnostics only. Full test displacement evaluation requires all 341 predictions:
+The default requires every token in the 2,422-clip cohort. `--subset` permits explicitly labeled diagnostics only. Full test displacement evaluation requires all 2,574 predictions:
 
 ```bash
 extremedrive --assets assets displacement --submission full_test.jsonl --out results/test

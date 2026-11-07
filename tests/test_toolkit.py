@@ -6,10 +6,10 @@ from extremebench.toolkit.evaluation import summarize
 ROOT=Path(__file__).resolve().parents[1];ASSETS=ROOT/'assets'
 class ToolkitTests(unittest.TestCase):
  def test_split_and_no_label_leak(self):
-  for split,count in [('train',758),('val',89),('test',341)]:
+  for split,count in [('train',11541),('val',1285),('test',2574)]:
    ds=Dataset(ASSETS,'/portable/data',split);self.assertEqual(len(ds.tokens()),count)
    inp=ds.inputs(ds.tokens()[0]);self.assertNotIn('target',inp);self.assertNotIn('context',inp);self.assertTrue(all(p.startswith('/portable/data/') for p in inp['images']))
-  self.assertEqual(len(ds.tokens(True)),131)
+  self.assertEqual(len(ds.tokens(True)),2422)
  def test_validation_uses_configured_cohort_size(self):
   from unittest.mock import patch
   from contextlib import redirect_stdout
@@ -25,7 +25,7 @@ class ToolkitTests(unittest.TestCase):
     with patch('sys.argv',['extremedrive','--assets',str(root),'validate','--submission',str(pred),'--subset']),redirect_stdout(out):main()
     self.assertEqual(json.loads(out.getvalue())['complete_cohort'],expected)
  def test_download_coverage(self):
-  cfg,records=plan(ASSETS,'execution');self.assertEqual(len(records),13);self.assertEqual(len(cfg['revision']),40)
+  cfg,records=plan(ASSETS,'execution');self.assertEqual(len(records),56);self.assertEqual(len(cfg['revision']),40)
   _,records=plan(ASSETS,'all');self.assertEqual(len(records),336)
  def test_archive_escape_and_links(self):
   with tempfile.TemporaryDirectory() as d:

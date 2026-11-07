@@ -22,7 +22,7 @@ ExtremeDrive 面向危急驾驶及恶劣条件下的自动驾驶研究，将真�
 - **规划评价：** 支持轨迹误差，以及执行后的碰撞规避、道路合规、碰撞时间、行驶进度和舒适性评价。
 - **方法比较：** 使用预定义数据划分与统一轨迹执行协议。
 
-训练、验证、测试集分别包含 758、89、341 个规划窗口；执行评测采用测试集中的 131 个窗口。详见[数据划分](docs/splits.md)与[评价协议](docs/PROTOCOL.md)。
+训练、验证、测试集分别包含 11,541、1,285、2,574 个规划片段；执行评测已接入其中 2,422 个测试片段。详见[数据划分](docs/splits.md)与[评价协议](docs/PROTOCOL.md)。
 
 ## 快速开始
 
@@ -50,7 +50,7 @@ bash scripts/evaluation/run_smoke.sh
 
 ## 采样频率
 
-提供 **2 Hz / 4 Hz** 两种配置：`--input-hz` 控制历史输入采样，`--trajectory-hz` 控制预测轨迹频率，默认均为 2 Hz。4 秒预测分别对应 8 / 16 个点；原划分、自车控制和指标计算时钟保持一致。详见[采样与时间戳](docs/sampling.md)。
+提供 **2 Hz / 4 Hz** 两种配置：`--input-hz` 控制历史输入采样，`--trajectory-hz` 控制预测轨迹频率，默认均为 2 Hz。4 秒预测分别对应 8 / 16 个点；原场景归属、自车控制和指标计算时钟保持一致。详见[采样与时间戳](docs/sampling.md)。
 
 ```bash
 extremedrive --assets assets predict --agent my_agent:Agent \

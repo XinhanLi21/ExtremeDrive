@@ -42,11 +42,11 @@ Each line contains exactly one window prediction. Required keys:
 
 Duplicates, missing/extra cohort tokens, wrong shape, invalid timing and nonfinite numbers are rejected. The `input_policy` field records the information contract. Missing policies are diagnostic only; formally comparable submissions declare `sensor_only`. Additional model metadata cannot change evaluation scope.
 
-Use `examples/smoke_predictions.jsonl` as a valid example. All 131-window reference prediction files use the same format. Current planning inputs contain three selected camera streams; raw upstream episodes contain additional sensors available to custom adapters. Adding sensor inputs does not change the frozen split or scoring protocol.
+Use `examples/smoke_predictions.jsonl` as a valid example. Archived 131-clip reference prediction files use the same format. Current planning inputs contain three selected camera streams; raw upstream episodes contain additional sensors available to custom adapters. Adding sensor inputs does not change the frozen split or scoring protocol.
 
 ## Reproducibility
 
-Original split files include paths from the source machine. `Dataset.inputs` remaps them to `dataroot` at access time, so split bytes and their original hashes remain unchanged. The corrected labels in these files supersede nominal filename-timing reconstructions. Source dataset directory split labels are metadata, not benchmark split assignments.
+Current manifests contain relative sensor paths; retained context provenance may contain source-machine paths. `Dataset.inputs` resolves sensor paths under `dataroot` without rewriting the manifests. The corrected labels in these files supersede nominal filename-timing reconstructions. Source dataset directory split labels are metadata, not benchmark split assignments.
 
 LQR dependency modules are included under a private namespace, with original and relocated file hashes. Only import namespaces were changed. No external NAVSIM checkout is needed by the released primary execution path.
 
