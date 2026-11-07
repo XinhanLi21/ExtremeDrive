@@ -9,7 +9,7 @@ class ToolkitTests(unittest.TestCase):
   for split,count in [('train',11541),('val',1285),('test',2574)]:
    ds=Dataset(ASSETS,'/portable/data',split);self.assertEqual(len(ds.tokens()),count)
    inp=ds.inputs(ds.tokens()[0]);self.assertNotIn('target',inp);self.assertNotIn('context',inp);self.assertTrue(all(p.startswith('/portable/data/') for p in inp['images']))
-  self.assertEqual(len(ds.tokens(True)),2422)
+  self.assertEqual(len(ds.tokens(True)),2574)
  def test_validation_uses_configured_cohort_size(self):
   from unittest.mock import patch
   from contextlib import redirect_stdout

@@ -2,7 +2,7 @@
 
 ## 0.5.2
 
-- Planning clips: 11,541 train, 1,285 validation, 2,574 test; 2,422 execution contexts.
+- Planning clips: 11,541 train, 1,285 validation, 2,574 test; 2,574 execution contexts.
 - Fixed scene membership across training, validation and test.
 
 - Neutral default instructions, explicit hint-ablation policies and provenance audit.

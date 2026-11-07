@@ -5,13 +5,13 @@
 | Training (`train`) | 11,541 | 248 | Agent inputs and supervised trajectory targets |
 | Validation (`val`) | 1,285 | 32 | Checkpoint selection and trajectory evaluation |
 | Test (`test`) | 2,574 | 56 | Full-test ADE/FDE |
-| Execution evaluation | 2,422 | 56 | Trajectory tracking, vehicle execution and safety metrics |
+| Execution evaluation | 2,574 | 56 | Trajectory tracking, vehicle execution and safety metrics |
 
 A **clip** is a four-second planning sample. Anchors follow each available 0.25-second filename slot within an episode. Labels retain the corrected real capture and sensor clocks; changing trajectory sampling between 2 Hz and 4 Hz does not change the clip count. Clips overlap and are not independent driving episodes.
 
 Episodes, map scenes, anchor images and tokens are disjoint across training, validation and test sets. The released manifests define the samples used for training and evaluation.
 
-`assets/cohort.json` specifies the execution tokens. The remaining 152 test clips lack the required map-pose/time coverage in the reviewed snapshot and remain available for displacement evaluation. See [annotation coverage](coverage.md) for the current evidence scope.
+`assets/cohort.json` specifies the execution tokens. All test clips have map-pose and time-aligned execution contexts. See [annotation coverage](coverage.md) for the current evidence scope.
 
 The execution cohort covers all six categories: normal driving, complex traffic, critical driving, rain, low light and snow. Comfort applies to noncritical clips; emergency-safety success applies to critical-driving clips. Each metric reports its applicability denominator. Aggregate safety metrics only over the declared execution cohort, not over all test clips.
 

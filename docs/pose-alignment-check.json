@@ -1,0 +1,1074 @@
+{
+  "restored": 152,
+  "records": [
+    {
+      "token": "0ce26785d179c2a9:dense000000:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000001:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000002:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000003:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000004:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000005:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000006:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000007:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000008:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000009:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000010:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000011:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000012:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000013:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000014:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000015:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000016:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000017:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000018:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "scene_id": "b7b7d16bc3c01f64",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000000:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000001:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000002:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000003:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000004:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000005:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000006:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000007:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000008:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000009:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000010:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000011:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000012:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000013:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000014:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000015:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000016:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000017:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000000:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000001:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000002:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000003:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000004:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000005:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000006:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000007:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000008:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000009:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000010:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000011:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000012:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000013:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000014:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000015:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000016:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000017:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000018:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000019:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000020:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000021:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cff1039fbb55f612:dense000022:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000000:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000001:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000002:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000003:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000004:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000005:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000006:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000007:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000008:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000009:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000010:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000011:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000012:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000013:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000014:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000015:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000016:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000017:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000018:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "3565cd558f52a10f:dense000019:main",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "scene_id": "1954ccd85b9393c6",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "615e64b436ff9af4:dense000000:main",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_8_part2__dup2",
+      "scene_id": "438fbf963cc05346",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "a5ec4e74c8a9b06e:dense000000:main",
+      "source_episode": "train/Complex_Traffic_Driving/Waiting_To_Turn_Left/episode_17",
+      "scene_id": "438fbf963cc05346",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000000:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000001:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000002:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000003:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000004:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000005:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000006:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000007:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000008:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000009:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000010:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000011:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000012:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000013:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000014:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "6508ae43fd53873f:dense000015:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000000:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000001:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000002:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000003:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000004:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 2.384185791015625e-07
+    },
+    {
+      "token": "68c93ca6adbde137:dense000005:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000006:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000007:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000008:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000009:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000010:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000011:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000012:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "68c93ca6adbde137:dense000013:main",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "scene_id": "d1eef333e63e260e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "763d42b1c4fb5e30:dense000000:main",
+      "source_episode": "train/Complex_Traffic_Driving/Intersection_Go_Straight/episode_156_part3",
+      "scene_id": "6c79dff31189a5f0",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "763d42b1c4fb5e30:dense000001:main",
+      "source_episode": "train/Complex_Traffic_Driving/Intersection_Go_Straight/episode_156_part3",
+      "scene_id": "6c79dff31189a5f0",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "8ad82185a5c1adcb:dense000000:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part7",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "8ad82185a5c1adcb:dense000001:main",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part7",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000000:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000001:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000002:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 2.384185791015625e-07
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000003:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000004:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000005:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000006:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000007:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000008:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000009:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000010:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000011:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000012:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000013:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000014:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000015:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000016:main",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "scene_id": "ae1a4214ed5e31ef",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000000:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000001:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000002:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000003:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000004:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000005:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000006:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000007:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000008:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000009:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000010:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000011:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000012:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000013:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000014:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000015:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000016:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000017:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000018:main",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "scene_id": "f7b756864a0d960e",
+      "pose_overlap_error_m": 0.0,
+      "capture_error_s": 0.0
+    }
+  ],
+  "execution_checks": 152,
+  "execution_failures": 0,
+  "missing_dynamic_checks": 0,
+  "previous_contexts_unchanged": 2422,
+  "diagnostic_only": true
+}

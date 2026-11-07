@@ -46,7 +46,7 @@ Formal comparisons use `automatic_only_v1` for every model: collision and TTC ar
 
 ## Aggregation
 
-The default execution run requires all 2,422 tokens. Unknowns remain in the denominator; the output reports lower/upper bounds and separately labeled known-only means. Comfort and emergency safety include their own applicability counts. A partial diagnostic run is explicitly marked as incomplete.
+The default execution run requires all 2,574 tokens. Unknowns remain in the denominator; the output reports lower/upper bounds and separately labeled known-only means. Comfort and emergency safety include their own applicability counts. A partial diagnostic run is explicitly marked as incomplete.
 
 The `compare` command requires complete sensor-only automatic runs with equal protocol, asset, cohort and output-rate identities. Hint-conditioned runs and unspecified input declarations remain diagnostic results. Comparisons use the same split, execution configuration, metric definitions and review policy. These definitions constitute the ExtremeDrive evaluation protocol.
 

@@ -1,23 +1,20 @@
 {
   "summary": {
     "test_clips": 2574,
-    "connected": 2422,
-    "blocked": 152,
+    "connected": 2574,
+    "blocked": 0,
     "old_execution_preserved": 131,
-    "new_connected": 2291,
-    "collision_evidence_complete": 2422,
-    "velocity_evidence_complete": 1065,
+    "new_connected": 2443,
+    "collision_evidence_complete": 2574,
+    "velocity_evidence_complete": 1138,
     "missing_dynamic_clips": 0,
-    "unknown_velocity_clips": 1357,
-    "blocker_counts": {
-      "anchor_pose_missing": 152,
-      "map_pose_time_coverage": 152
-    },
-    "dynamic_or_velocity_gap_clips": 1357,
+    "unknown_velocity_clips": 1436,
+    "blocker_counts": {},
+    "dynamic_or_velocity_gap_clips": 1436,
     "label_map_position_error_m_quantiles": [
-      0.06427323951345218,
-      0.2818010563385893,
-      0.8907656478411841,
+      0.06093018523769192,
+      0.2721723669561688,
+      0.8887453793164563,
       1.254131327319993
     ],
     "actor_evidence_policy": "annotated_3d_only"
@@ -222,6 +219,120 @@
       "category": "Normal_Driving"
     },
     {
+      "token": "0ce26785d179c2a9:dense000000:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000001:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000002:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000003:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000004:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000005:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000006:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000007:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000008:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000009:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000010:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000011:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000012:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000013:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000014:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000015:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000016:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000017:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0ce26785d179c2a9:dense000018:main",
+      "scene_id": "b7b7d16bc3c01f64",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
       "token": "0ce26785d179c2a9:dense000019:main",
       "scene_id": "b7b7d16bc3c01f64",
       "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
@@ -400,6 +511,114 @@
       "scene_id": "b7b7d16bc3c01f64",
       "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_2",
       "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000000:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000001:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000002:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000003:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000004:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000005:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000006:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000007:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000008:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000009:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000010:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000011:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000012:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000013:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000014:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000015:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000016:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "0d27906b2eb29e4a:dense000017:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_48",
+      "category": "Normal_Driving"
     },
     {
       "token": "0d27906b2eb29e4a:dense000018:main",
@@ -1176,6 +1395,144 @@
       "category": "Complex_Traffic_Driving"
     },
     {
+      "token": "cff1039fbb55f612:dense000000:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000001:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000002:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000003:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000004:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000005:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000006:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000007:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000008:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000009:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000010:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000011:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000012:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000013:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000014:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000015:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000016:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000017:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000018:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000019:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000020:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000021:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "cff1039fbb55f612:dense000022:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
       "token": "cff1039fbb55f612:dense000023:main",
       "scene_id": "1954ccd85b9393c6",
       "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part1",
@@ -1699,6 +2056,126 @@
     },
     {
       "token": "1954ccd85b9393c6:000201:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000000:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000001:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000002:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000003:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000004:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000005:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000006:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000007:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000008:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000009:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000010:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000011:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000012:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000013:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000014:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000015:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000016:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000017:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000018:main",
+      "scene_id": "1954ccd85b9393c6",
+      "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "3565cd558f52a10f:dense000019:main",
       "scene_id": "1954ccd85b9393c6",
       "source_episode": "train/Complex_Traffic_Driving/Go_Straight/episode_146_part2",
       "category": "Complex_Traffic_Driving"
@@ -5886,6 +6363,12 @@
       "category": "Normal_Driving"
     },
     {
+      "token": "615e64b436ff9af4:dense000000:main",
+      "scene_id": "438fbf963cc05346",
+      "source_episode": "train/Normal_Driving/Right_Turn/episode_8_part2__dup2",
+      "category": "Normal_Driving"
+    },
+    {
       "token": "615e64b436ff9af4:dense000001:main",
       "scene_id": "438fbf963cc05346",
       "source_episode": "train/Normal_Driving/Right_Turn/episode_8_part2__dup2",
@@ -5995,6 +6478,12 @@
     },
     {
       "token": "438fbf963cc05346:000102:main",
+      "scene_id": "438fbf963cc05346",
+      "source_episode": "train/Complex_Traffic_Driving/Waiting_To_Turn_Left/episode_17",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "a5ec4e74c8a9b06e:dense000000:main",
       "scene_id": "438fbf963cc05346",
       "source_episode": "train/Complex_Traffic_Driving/Waiting_To_Turn_Left/episode_17",
       "category": "Complex_Traffic_Driving"
@@ -7258,6 +7747,102 @@
       "scene_id": "6389755c266ddd3f",
       "source_episode": "train/Critical_Driving/Emergency_Maneuver_To_Avoid_Front_Vehicle/episode_2",
       "category": "Critical_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000000:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000001:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000002:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000003:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000004:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000005:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000006:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000007:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000008:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000009:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000010:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000011:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000012:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000013:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000014:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "6508ae43fd53873f:dense000015:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part1",
+      "category": "Low_Light_Driving"
     },
     {
       "token": "6508ae43fd53873f:dense000016:main",
@@ -10602,6 +11187,90 @@
       "category": "Low_Light_Driving"
     },
     {
+      "token": "68c93ca6adbde137:dense000000:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000001:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000002:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000003:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000004:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000005:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000006:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000007:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000008:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000009:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000010:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000011:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000012:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "68c93ca6adbde137:dense000013:main",
+      "scene_id": "d1eef333e63e260e",
+      "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
       "token": "68c93ca6adbde137:dense000014:main",
       "scene_id": "d1eef333e63e260e",
       "source_episode": "train/Complex_Traffic_Driving/Lane_Change_Right/episode_111",
@@ -11221,6 +11890,18 @@
     },
     {
       "token": "6c79dff31189a5f0:000118:main",
+      "scene_id": "6c79dff31189a5f0",
+      "source_episode": "train/Complex_Traffic_Driving/Intersection_Go_Straight/episode_156_part3",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "763d42b1c4fb5e30:dense000000:main",
+      "scene_id": "6c79dff31189a5f0",
+      "source_episode": "train/Complex_Traffic_Driving/Intersection_Go_Straight/episode_156_part3",
+      "category": "Complex_Traffic_Driving"
+    },
+    {
+      "token": "763d42b1c4fb5e30:dense000001:main",
       "scene_id": "6c79dff31189a5f0",
       "source_episode": "train/Complex_Traffic_Driving/Intersection_Go_Straight/episode_156_part3",
       "category": "Complex_Traffic_Driving"
@@ -12408,6 +13089,18 @@
       "category": "Snow_Driving"
     },
     {
+      "token": "8ad82185a5c1adcb:dense000000:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part7",
+      "category": "Low_Light_Driving"
+    },
+    {
+      "token": "8ad82185a5c1adcb:dense000001:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part7",
+      "category": "Low_Light_Driving"
+    },
+    {
       "token": "8ad82185a5c1adcb:dense000002:main",
       "scene_id": "ae1a4214ed5e31ef",
       "source_episode": "train/Low_Light_Driving/Go_Straight/episode_185_part7",
@@ -13213,6 +13906,108 @@
     },
     {
       "token": "ae1a4214ed5e31ef:000614:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000000:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000001:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000002:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000003:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000004:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000005:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000006:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000007:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000008:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000009:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000010:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000011:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000012:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000013:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000014:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000015:main",
+      "scene_id": "ae1a4214ed5e31ef",
+      "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "c1d0f046464bf5e3:dense000016:main",
       "scene_id": "ae1a4214ed5e31ef",
       "source_episode": "train/Normal_Driving/Go_Straight/episode_185_part3",
       "category": "Normal_Driving"
@@ -14508,6 +15303,120 @@
       "category": "Critical_Driving"
     },
     {
+      "token": "cf46084a59d12a2d:dense000000:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000001:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000002:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000003:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000004:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000005:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000006:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000007:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000008:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000009:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000010:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000011:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000012:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000013:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000014:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000015:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000016:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000017:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
+      "token": "cf46084a59d12a2d:dense000018:main",
+      "scene_id": "f7b756864a0d960e",
+      "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
+      "category": "Normal_Driving"
+    },
+    {
       "token": "cf46084a59d12a2d:dense000019:main",
       "scene_id": "f7b756864a0d960e",
       "source_episode": "val/Normal_Driving/Go_Straight/episode_78",
@@ -14561,5 +15470,5 @@
     "val": "08380e1a45bc9c9399107d67fabe6a4f20cf2d1d668893051f74150a964e00ca",
     "test": "6bed491e2f20dbaa470feef420c1180df7d432aea0583b3ea555ea3896c38e93"
   },
-  "status": "dense_execution_contexts_connected"
+  "status": "complete_test_execution_contexts"
 }

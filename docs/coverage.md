@@ -1,14 +1,14 @@
 # Execution annotation coverage
 
-The current release provides 2,422 executable contexts from 2,574 test clips, using 37 accepted maps. Existing reviewed road surfaces, actor boxes and sensor-clock alignment are reused. The remaining 152 clips lack map-pose/time coverage in the current snapshot; no map pose is extrapolated to fill that gap.
+The current release provides 2,574 executable contexts from 2,574 test clips, using 37 accepted maps. Existing reviewed road surfaces, actor boxes and sensor-clock alignment are reused. Map poses use observed source records and the established scene transforms. Road surfaces use reviewed polygons in the same scene; no missing pose is extrapolated.
 
 | Evidence | Clips |
 |---|---:|
-| Connected execution contexts | 2,422 |
-| Annotated-3D collision observations available | 2,422 |
-| No missing 3D actor velocity evidence in the coverage check | 1,065 |
-| At least one 3D actor with incomplete velocity evidence | 1,357 |
-| Missing map-pose/time coverage; not connected | 152 |
+| Connected execution contexts | 2,574 |
+| Annotated-3D collision observations available | 2,574 |
+| No missing 3D actor velocity evidence in the coverage check | 1,138 |
+| At least one 3D actor with incomplete velocity evidence | 1,436 |
+| Missing map-pose/time coverage; not connected | 0 |
 
 Collision and TTC use annotated 3D actors only. Unmatched 2D detections do not invalidate a readable observation. An empty 3D actor set is evaluated as empty; it does not certify the absence of unannotated real-world actors. Missing annotation files or temporal gaps remain unknown.
 

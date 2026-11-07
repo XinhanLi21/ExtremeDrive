@@ -1,23 +1,20 @@
 {
   "summary": {
     "test_clips": 2574,
-    "connected": 2422,
-    "blocked": 152,
+    "connected": 2574,
+    "blocked": 0,
     "old_execution_preserved": 131,
-    "new_connected": 2291,
-    "collision_evidence_complete": 2422,
-    "velocity_evidence_complete": 1065,
+    "new_connected": 2443,
+    "collision_evidence_complete": 2574,
+    "velocity_evidence_complete": 1138,
     "missing_dynamic_clips": 0,
-    "unknown_velocity_clips": 1357,
-    "blocker_counts": {
-      "anchor_pose_missing": 152,
-      "map_pose_time_coverage": 152
-    },
-    "dynamic_or_velocity_gap_clips": 1357,
+    "unknown_velocity_clips": 1436,
+    "blocker_counts": {},
+    "dynamic_or_velocity_gap_clips": 1436,
     "label_map_position_error_m_quantiles": [
-      0.06427323951345218,
-      0.2818010563385893,
-      0.8907656478411841,
+      0.06093018523769192,
+      0.2721723669561688,
+      0.8887453793164563,
       1.254131327319993
     ],
     "actor_evidence_policy": "annotated_3d_only"
@@ -692,11 +689,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 2,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 9,
+      "max_label_map_error_m": 0.042392254097052835,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000001:main",
@@ -707,11 +712,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 2,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 8,
+      "max_label_map_error_m": 0.04590972354616691,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000002:main",
@@ -722,11 +735,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 2,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 7,
+      "max_label_map_error_m": 0.04033048236485482,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000003:main",
@@ -737,11 +758,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.04364876537040674,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000004:main",
@@ -752,11 +781,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.04224219120481117,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000005:main",
@@ -767,11 +804,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.044051405748118624,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000006:main",
@@ -782,11 +827,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 5,
+      "max_label_map_error_m": 0.04932565793159847,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000007:main",
@@ -797,11 +850,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 4,
+      "max_label_map_error_m": 0.047971251681374595,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000008:main",
@@ -812,11 +873,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 3,
+      "max_label_map_error_m": 0.054818663865071386,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000009:main",
@@ -827,11 +896,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 2,
+      "max_label_map_error_m": 0.05832496311167482,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000010:main",
@@ -842,11 +919,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 1,
+      "max_label_map_error_m": 0.051720307036084726,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000011:main",
@@ -857,11 +942,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.05106654054921568,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000012:main",
@@ -872,11 +965,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.050534422845416656,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000013:main",
@@ -887,11 +988,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.044972226840234185,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000014:main",
@@ -902,11 +1011,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04395857820003694,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000015:main",
@@ -917,11 +1034,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03938455595632917,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000016:main",
@@ -932,11 +1057,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03888248984992573,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000017:main",
@@ -947,11 +1080,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03912605041550327,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000018:main",
@@ -962,11 +1103,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03343778537613797,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0ce26785d179c2a9:dense000019:main",
@@ -1607,11 +1756,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.018630928550406215,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000001:main",
@@ -1622,11 +1779,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.018194475045098746,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000002:main",
@@ -1637,11 +1802,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.015365412998976927,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000003:main",
@@ -1652,11 +1825,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.018438822749514562,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000004:main",
@@ -1667,11 +1848,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.029748845244600523,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000005:main",
@@ -1682,11 +1871,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.0335191081039495,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000006:main",
@@ -1697,11 +1894,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04018357205017988,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000007:main",
@@ -1712,11 +1917,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.05816457265563202,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000008:main",
@@ -1727,11 +1940,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.07321463408519077,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000009:main",
@@ -1742,11 +1963,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.08053500738522767,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000010:main",
@@ -1757,11 +1986,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.08781877615332666,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000011:main",
@@ -1772,11 +2009,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.09938222050056532,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000012:main",
@@ -1787,11 +2032,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.10963190541175544,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000013:main",
@@ -1802,11 +2055,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.12378469792974087,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000014:main",
@@ -1817,11 +2078,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.12927358982128734,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000015:main",
@@ -1832,11 +2101,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.13908254139890228,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000016:main",
@@ -1847,11 +2124,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.15300963095197054,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000017:main",
@@ -1862,11 +2147,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.16905894460889134,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "0d27906b2eb29e4a:dense000018:main",
@@ -4516,11 +4809,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 44,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 127,
+      "max_label_map_error_m": 0.062461811256295255,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000001:main",
@@ -4531,11 +4832,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 46,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 128,
+      "max_label_map_error_m": 0.05525976548644026,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000002:main",
@@ -4546,11 +4855,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 47,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 122,
+      "max_label_map_error_m": 0.051059890884313064,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000003:main",
@@ -4561,11 +4878,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 54,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 124,
+      "max_label_map_error_m": 0.05425543336124812,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000004:main",
@@ -4576,11 +4901,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 56,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 133,
+      "max_label_map_error_m": 0.03690046506511621,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000005:main",
@@ -4591,11 +4924,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 55,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 126,
+      "max_label_map_error_m": 0.04516514117767773,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000006:main",
@@ -4606,11 +4947,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 55,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 127,
+      "max_label_map_error_m": 0.04209406581115091,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000007:main",
@@ -4621,11 +4970,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 59,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 127,
+      "max_label_map_error_m": 0.03222411633579124,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000008:main",
@@ -4636,11 +4993,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 64,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 132,
+      "max_label_map_error_m": 0.03801491360703427,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000009:main",
@@ -4651,11 +5016,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 68,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 124,
+      "max_label_map_error_m": 0.03974721637476574,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000010:main",
@@ -4666,11 +5039,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 66,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 124,
+      "max_label_map_error_m": 0.026085000216358154,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000011:main",
@@ -4681,11 +5062,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 72,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 123,
+      "max_label_map_error_m": 0.02615969826430229,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000012:main",
@@ -4696,11 +5085,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 71,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 122,
+      "max_label_map_error_m": 0.025134276746599054,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000013:main",
@@ -4711,11 +5108,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 75,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 123,
+      "max_label_map_error_m": 0.024670583575828044,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000014:main",
@@ -4726,11 +5131,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 87,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 124,
+      "max_label_map_error_m": 0.023046350788126852,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000015:main",
@@ -4741,11 +5154,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 89,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 125,
+      "max_label_map_error_m": 0.02791404061742762,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000016:main",
@@ -4756,11 +5177,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 94,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 127,
+      "max_label_map_error_m": 0.03074032686908421,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000017:main",
@@ -4771,11 +5200,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 105,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 134,
+      "max_label_map_error_m": 0.038378369438891106,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000018:main",
@@ -4786,11 +5223,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 109,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 128,
+      "max_label_map_error_m": 0.042781278143992525,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000019:main",
@@ -4801,11 +5246,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 112,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 128,
+      "max_label_map_error_m": 0.05105285457023987,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000020:main",
@@ -4816,11 +5269,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 120,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 128,
+      "max_label_map_error_m": 0.057167961274749476,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000021:main",
@@ -4831,11 +5292,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 119,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 130,
+      "max_label_map_error_m": 0.06725559725218527,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000022:main",
@@ -4846,11 +5315,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 118,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 131,
+      "max_label_map_error_m": 0.08881456259569724,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cff1039fbb55f612:dense000023:main",
@@ -6621,11 +7098,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 41,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 74,
+      "max_label_map_error_m": 0.017237105496788536,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000001:main",
@@ -6636,11 +7121,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 38,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 83,
+      "max_label_map_error_m": 0.020367543782440645,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000002:main",
@@ -6651,11 +7144,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 42,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 85,
+      "max_label_map_error_m": 0.02312381169278481,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000003:main",
@@ -6666,11 +7167,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 44,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 88,
+      "max_label_map_error_m": 0.025210839551369348,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000004:main",
@@ -6681,11 +7190,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 51,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 93,
+      "max_label_map_error_m": 0.02563824796541199,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000005:main",
@@ -6696,11 +7213,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 53,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 99,
+      "max_label_map_error_m": 0.026723802458459994,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000006:main",
@@ -6711,11 +7236,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 59,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 112,
+      "max_label_map_error_m": 0.0271766377048677,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000007:main",
@@ -6726,11 +7259,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 64,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 108,
+      "max_label_map_error_m": 0.026981580253097912,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000008:main",
@@ -6741,11 +7282,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 71,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 113,
+      "max_label_map_error_m": 0.025834985729883464,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000009:main",
@@ -6756,11 +7305,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 80,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 119,
+      "max_label_map_error_m": 0.021817101123604344,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000010:main",
@@ -6771,11 +7328,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 85,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 123,
+      "max_label_map_error_m": 0.022950524879519773,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000011:main",
@@ -6786,11 +7351,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 84,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 124,
+      "max_label_map_error_m": 0.026385916078282036,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000012:main",
@@ -6801,11 +7374,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 88,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 126,
+      "max_label_map_error_m": 0.03300056970858412,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000013:main",
@@ -6816,11 +7397,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 92,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 129,
+      "max_label_map_error_m": 0.033696091394154234,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000014:main",
@@ -6831,11 +7420,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 90,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 128,
+      "max_label_map_error_m": 0.036651566110869484,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000015:main",
@@ -6846,11 +7443,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 84,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 129,
+      "max_label_map_error_m": 0.03717419721659861,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000016:main",
@@ -6861,11 +7466,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 75,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 129,
+      "max_label_map_error_m": 0.03917389538513632,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000017:main",
@@ -6876,11 +7489,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 68,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 128,
+      "max_label_map_error_m": 0.037540860266802756,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000018:main",
@@ -6891,11 +7512,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 63,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 126,
+      "max_label_map_error_m": 0.03837044570832435,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000019:main",
@@ -6906,11 +7535,19 @@
       "map_revision": 7,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 61,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 119,
+      "max_label_map_error_m": 0.035854725452668885,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "3565cd558f52a10f:dense000020:main",
@@ -21223,11 +21860,19 @@
       "map_revision": 5,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.14105287563278307,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "615e64b436ff9af4:dense000001:main",
@@ -21632,11 +22277,19 @@
       "map_revision": 5,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 10,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 10,
+      "max_label_map_error_m": 0.10315580538312369,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "a5ec4e74c8a9b06e:dense000001:main",
@@ -25986,11 +26639,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 15,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.08524263373778275,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000001:main",
@@ -26001,11 +26662,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 15,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.06620973754406927,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000002:main",
@@ -26016,11 +26685,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 16,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.06260876106987061,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000003:main",
@@ -26031,11 +26708,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 15,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.06845601325413518,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000004:main",
@@ -26046,11 +26731,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 15,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.06752646230654996,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000005:main",
@@ -26061,11 +26754,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 15,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.05123925812329003,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000006:main",
@@ -26076,11 +26777,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 14,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 6,
+      "max_label_map_error_m": 0.04040405375805112,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000007:main",
@@ -26091,11 +26800,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 12,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 5,
+      "max_label_map_error_m": 0.03462947230634167,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000008:main",
@@ -26106,11 +26823,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 11,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 5,
+      "max_label_map_error_m": 0.023191533083420448,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000009:main",
@@ -26121,11 +26846,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 7,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 4,
+      "max_label_map_error_m": 0.02213262543789119,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000010:main",
@@ -26136,11 +26869,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 8,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 4,
+      "max_label_map_error_m": 0.019815932689725542,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000011:main",
@@ -26151,11 +26892,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 5,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 4,
+      "max_label_map_error_m": 0.019025434059563535,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000012:main",
@@ -26166,11 +26915,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 4,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 3,
+      "max_label_map_error_m": 0.026218727224112774,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000013:main",
@@ -26181,11 +26938,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 4,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 3,
+      "max_label_map_error_m": 0.02258089881249997,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000014:main",
@@ -26196,11 +26961,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 4,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 3,
+      "max_label_map_error_m": 0.026097780492169376,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000015:main",
@@ -26211,11 +26984,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 3,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 3,
+      "max_label_map_error_m": 0.03116971178954138,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "6508ae43fd53873f:dense000016:main",
@@ -37379,11 +38160,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 7,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 47,
+      "max_label_map_error_m": 0.025893716330299025,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000001:main",
@@ -37394,11 +38183,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 7,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 44,
+      "max_label_map_error_m": 0.02468264246304645,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000002:main",
@@ -37409,11 +38206,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 10,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 42,
+      "max_label_map_error_m": 0.02190537309558593,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000003:main",
@@ -37424,11 +38229,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 11,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 46,
+      "max_label_map_error_m": 0.021057542956793306,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000004:main",
@@ -37439,11 +38252,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 9,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 46,
+      "max_label_map_error_m": 0.01957642736572378,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000005:main",
@@ -37454,11 +38275,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 8,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 45,
+      "max_label_map_error_m": 0.020726472568223825,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000006:main",
@@ -37469,11 +38298,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 6,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 43,
+      "max_label_map_error_m": 0.017310632690133693,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000007:main",
@@ -37484,11 +38321,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 7,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 43,
+      "max_label_map_error_m": 0.016686128426203893,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000008:main",
@@ -37499,11 +38344,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 6,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 45,
+      "max_label_map_error_m": 0.015524401251170479,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000009:main",
@@ -37514,11 +38367,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 7,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 42,
+      "max_label_map_error_m": 0.016017479472006074,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000010:main",
@@ -37529,11 +38390,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 8,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 42,
+      "max_label_map_error_m": 0.02106397641612575,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000011:main",
@@ -37544,11 +38413,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 9,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 42,
+      "max_label_map_error_m": 0.02482198208927169,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000012:main",
@@ -37559,11 +38436,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 12,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 43,
+      "max_label_map_error_m": 0.02917795233071082,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000013:main",
@@ -37574,11 +38459,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 15,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 44,
+      "max_label_map_error_m": 0.0348343023538134,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "68c93ca6adbde137:dense000014:main",
@@ -39686,11 +40579,19 @@
       "map_revision": 5,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 36,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 32,
+      "max_label_map_error_m": 0.02789760096631296,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "763d42b1c4fb5e30:dense000001:main",
@@ -39701,11 +40602,19 @@
       "map_revision": 5,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 26,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": false,
+      "observed_3d_boxes": 32,
+      "max_label_map_error_m": 0.017211477453754627,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "763d42b1c4fb5e30:dense000002:main",
@@ -43843,11 +44752,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.012785425019252828,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "8ad82185a5c1adcb:dense000001:main",
@@ -43858,11 +44775,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.012092223553895741,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "8ad82185a5c1adcb:dense000002:main",
@@ -46623,11 +47548,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.01829039031141801,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000001:main",
@@ -46638,11 +47571,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.019085464587833997,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000002:main",
@@ -46653,11 +47594,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.01933433343793269,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000003:main",
@@ -46668,11 +47617,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.020097386665691785,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000004:main",
@@ -46683,11 +47640,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.01761804643859814,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000005:main",
@@ -46698,11 +47663,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.022037014990425416,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000006:main",
@@ -46713,11 +47686,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.02600666107360505,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000007:main",
@@ -46728,11 +47709,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.028677935092966525,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000008:main",
@@ -46743,11 +47732,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03485746049277292,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000009:main",
@@ -46758,11 +47755,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03692339351754762,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000010:main",
@@ -46773,11 +47778,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.033208303888618916,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000011:main",
@@ -46788,11 +47801,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.039157634163753896,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000012:main",
@@ -46803,11 +47824,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04012414264530758,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000013:main",
@@ -46818,11 +47847,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04100837576264861,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000014:main",
@@ -46833,11 +47870,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03993694146861413,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000015:main",
@@ -46848,11 +47893,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04015738940084069,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000016:main",
@@ -46863,11 +47916,19 @@
       "map_revision": 12,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03885656101819917,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "c1d0f046464bf5e3:dense000017:main",
@@ -51210,11 +52271,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.059228780417608734,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000001:main",
@@ -51225,11 +52294,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.06393791594292637,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000002:main",
@@ -51240,11 +52317,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.05453988135327044,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000003:main",
@@ -51255,11 +52340,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04051200536775774,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000004:main",
@@ -51270,11 +52363,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04235070717224646,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000005:main",
@@ -51285,11 +52386,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04417168184019503,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000006:main",
@@ -51300,11 +52409,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.045645595727310986,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000007:main",
@@ -51315,11 +52432,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.05128898829588487,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000008:main",
@@ -51330,11 +52455,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.05865479080460331,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000009:main",
@@ -51345,11 +52478,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.05201941221685285,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000010:main",
@@ -51360,11 +52501,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.049761933225902714,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000011:main",
@@ -51375,11 +52524,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.049110551826475536,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000012:main",
@@ -51390,11 +52547,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04212648956128416,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000013:main",
@@ -51405,11 +52570,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04332942128401422,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000014:main",
@@ -51420,11 +52593,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.04785162102660437,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000015:main",
@@ -51435,11 +52616,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.042052094986419146,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000016:main",
@@ -51450,11 +52639,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.035766384388297275,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000017:main",
@@ -51465,11 +52662,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03659775565846871,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000018:main",
@@ -51480,11 +52685,19 @@
       "map_revision": 4,
       "latest_map_matches": true,
       "surface_available": true,
-      "blockers": [
-        "anchor_pose_missing",
-        "map_pose_time_coverage"
-      ],
-      "connected": false
+      "blockers": [],
+      "connected": true,
+      "missing_dynamic_samples": 0,
+      "missing_dynamic_times_s": [],
+      "unknown_velocity_observations": 0,
+      "collision_evidence_complete": true,
+      "velocity_evidence_complete": true,
+      "observed_3d_boxes": 0,
+      "max_label_map_error_m": 0.03288249637570999,
+      "pose_recovery": "original observed frames excluded by scene concatenation",
+      "pose_overlap_error_m": 0.0,
+      "pose_overlap_yaw_error_rad": 0.0,
+      "actor_evidence_policy": "annotated_3d_only"
     },
     {
       "token": "cf46084a59d12a2d:dense000019:main",
