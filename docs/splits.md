@@ -9,7 +9,7 @@
 
 A **clip** is a four-second planning sample. Anchors follow each available 0.25-second filename slot within an episode. Labels retain the corrected real capture and sensor clocks; changing trajectory sampling between 2 Hz and 4 Hz does not change the clip count. Clips overlap and are not independent driving episodes.
 
-The original episode and scene assignments are preserved across train, validation and test. Clip manifests have been regenerated with dense anchors; they are not byte-identical to the former sparse manifests. Episodes, map scenes, anchor images and tokens are disjoint across splits. Rebuild feature caches and predictions for the current manifests rather than relabeling earlier results.
+Episodes, map scenes, anchor images and tokens are disjoint across training, validation and test sets. The released manifests define the samples used for training and evaluation.
 
 `assets/cohort.json` specifies the execution tokens. The remaining 152 test clips lack the required map-pose/time coverage in the reviewed snapshot and remain available for displacement evaluation. See [annotation coverage](coverage.md) for the current evidence scope.
 

@@ -4,7 +4,7 @@
 
 The original split `language` was constructed by `prepare_hdp_time_aligned.py` from the aligned episode's `metadata.jsonl` `prompt` plus measured speed. The prompt is a source scenario annotation. Its creation timestamp and its availability to the driver/planner at the capture time are **not recorded**. A capture timestamp identifies the observation; it does not establish when the prompt was written. The toolkit therefore does not certify any source scenario prompt as an online navigation command.
 
-`Dataset.instruction_annotation(token)` exposes source episode, capture timestamp, original annotation, a normalized navigation annotation (when recognized), and a separate emergency-maneuver hint. These are audit/training annotations, not default planner inputs. Unknown annotation creation and online availability are represented by null, not fabricated dates. Current dense manifests contain neutral text without scenario instructions. The original prompt provenance described above applies to the archived sparse experiments; `instruction_annotation` returns an empty scenario annotation when no instruction is stored.
+`Dataset.instruction_annotation(token)` exposes source episode, capture timestamp, original annotation, a normalized navigation annotation (when recognized), and a separate emergency-maneuver hint. These are audit/training annotations, not default planner inputs. Unknown annotation creation and online availability are represented by null, not fabricated dates. Current manifests contain neutral text without scenario instructions. The original prompt provenance described above applies to the archived experiments; `instruction_annotation` returns an empty scenario annotation when no instruction is stored.
 
 ## Input policies
 
@@ -30,7 +30,7 @@ The generic CLI passes policy-specific text. Native adapters that encode navigat
 
 ## Archived paired experiment
 
-`scripts/experiments/ablate_cached_sensor_commands.py` evaluates the original TransFuser and DiffusionDrive checkpoints on the former 341-clip sparse test set. It reuses their exact frozen perception embeddings and changes only the four-element scenario-command input. No-command is an all-zero vector, not the historical `other` category. Checkpoint hashes, feature-cache identity, sample order, eight-sample batches and per-batch random seeds are shared across conditions. Both the full text-removal and emergency-hint-only conditions are run.
+`scripts/experiments/ablate_cached_sensor_commands.py` evaluates the original TransFuser and DiffusionDrive checkpoints on the archived 341-clip test set. It reuses their exact frozen perception embeddings and changes only the four-element scenario-command input. No-command is an all-zero vector, not the historical `other` category. Checkpoint hashes, feature-cache identity, sample order, eight-sample batches and per-batch random seeds are shared across conditions. Both the full text-removal and emergency-hint-only conditions are run.
 
 This is an **inference-time counterfactual on checkpoints trained with scenario commands**. It measures dependence on the supplied hint; it does not establish the performance of a model trained without hints. A no-hint training experiment must use the neutral input policy in train, validation and test, and select checkpoints using validation only. These results do not cover the current 2,574-clip test set. Existing adapters that never consume scenario language are negative controls, not evidence that hints are harmless for language-conditioned methods.
 
