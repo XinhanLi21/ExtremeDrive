@@ -1,6 +1,5 @@
 <div align="center">
-<img src="docs/media/extremedrive-icon.png" alt="ExtremeDrive" width="180">
-<h1>ExtremeDrive</h1>
+<h1><img src="docs/media/extremedrive-icon.png" alt="" width="100" align="absmiddle">&nbsp; ExtremeDrive</h1>
 <h3>面向危急驾驶的自动驾驶数据集与评测基准</h3>
 <p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">数据集</a> · <a href="docs/QUICKSTART_ZH.md">使用说明</a> · <a href="docs/agents.md">模型接口</a> · <a href="docs/PROTOCOL.md">评价指标</a> · <a href="README.md">English</a></p>
 </div>
