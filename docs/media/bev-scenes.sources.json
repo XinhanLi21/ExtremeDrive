@@ -1,23 +1,121 @@
 [
   {
-    "token": "7dc1d9bc1991364e:000017:main",
-    "camera": "train/Critical_Driving/Emergency_Maneuver/episode_10/images/ZED_LEFT/ZED_LEFT_20251121_122353_307118.jpg",
+    "token": "6389755c266ddd3f:000017:adjacent",
+    "camera": "train/Critical_Driving/Emergency_Maneuver_To_Avoid_Front_Vehicle/episode_2/images/ZED_LEFT/ZED_LEFT_20251127_151918_891762.jpg",
     "map": "bundled execution context; capture-anchor coordinates",
     "actors": "anchor annotations only",
-    "trajectory": "recorded future reference, not model prediction"
+    "trajectory": "recorded future reference, not model prediction",
+    "presentation_lane_overrides": [
+      {
+        "centerline": [
+          [
+            -1.8,
+            -6
+          ],
+          [
+            -1.75,
+            5
+          ],
+          [
+            -1.55,
+            16
+          ],
+          [
+            -1.05,
+            26
+          ]
+        ],
+        "phase": -3
+      },
+      {
+        "centerline": [
+          [
+            1.35,
+            -6
+          ],
+          [
+            1.35,
+            5
+          ],
+          [
+            1.65,
+            16
+          ],
+          [
+            2.2,
+            26
+          ]
+        ],
+        "phase": -2
+      }
+    ],
+    "override_scope": "illustration only; original benchmark geometry unchanged",
+    "dash_length_m": 3,
+    "gap_length_m": 3,
+    "width_m": 0.15
   },
   {
     "token": "ae1a4214ed5e31ef:000891:main",
     "camera": "train/Low_Light_Driving/Go_Straight/episode_185_part8/images/ZED_LEFT/ZED_LEFT_20251120_182415_046859.jpg",
     "map": "bundled execution context; capture-anchor coordinates",
     "actors": "anchor annotations only",
-    "trajectory": "recorded future reference, not model prediction"
+    "trajectory": "recorded future reference, not model prediction",
+    "presentation_lane_overrides": [
+      {
+        "centerline": [
+          [
+            -2.1,
+            -6
+          ],
+          [
+            -2.1,
+            26
+          ]
+        ],
+        "phase": -2
+      },
+      {
+        "centerline": [
+          [
+            1.22,
+            -6
+          ],
+          [
+            1.45,
+            26
+          ]
+        ],
+        "phase": -2
+      },
+      {
+        "centerline": [
+          [
+            4.7,
+            -6
+          ],
+          [
+            5.02,
+            26
+          ]
+        ],
+        "phase": -2
+      }
+    ],
+    "override_scope": "illustration only; original benchmark geometry unchanged",
+    "dash_length_m": 3,
+    "gap_length_m": 3,
+    "width_m": 0.15
   },
   {
     "token": "9e42e63943d77a12:000001:main",
     "camera": "train/Snow_Driving/Go_Straight/episode_13__pi05_annotations_snow_clean/images/ZED_LEFT/ZED_LEFT_20260322_152232_883719.jpg",
     "map": "bundled execution context; capture-anchor coordinates",
     "actors": "anchor annotations only",
-    "trajectory": "recorded future reference, not model prediction"
+    "trajectory": "recorded future reference, not model prediction",
+    "presentation_lane_overrides": [],
+    "override_scope": "illustration only; original benchmark geometry unchanged",
+    "dash_length_m": 3,
+    "gap_length_m": 3,
+    "width_m": 0.15
   }
 ]
