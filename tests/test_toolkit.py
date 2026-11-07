@@ -10,6 +10,20 @@ class ToolkitTests(unittest.TestCase):
    ds=Dataset(ASSETS,'/portable/data',split);self.assertEqual(len(ds.tokens()),count)
    inp=ds.inputs(ds.tokens()[0]);self.assertNotIn('target',inp);self.assertNotIn('context',inp);self.assertTrue(all(p.startswith('/portable/data/') for p in inp['images']))
   self.assertEqual(len(ds.tokens(True)),131)
+ def test_validation_uses_configured_cohort_size(self):
+  from unittest.mock import patch
+  from contextlib import redirect_stdout
+  from extremebench.toolkit.cli import main
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d);(root/'splits').mkdir()
+   (root/'splits/test.json').write_text(json.dumps([{'token':'a'},{'token':'b'}]))
+   (root/'cohort.json').write_text(json.dumps({'records':[{'token':'a'},{'token':'b'}]}))
+   pred=root/'pred.jsonl'
+   rows=[{'token':t,'times_s':[.5*i for i in range(1,9)],'poses':[[0,0,0]]*8} for t in ('a','b')]
+   for count,expected in [(2,True),(1,False)]:
+    pred.write_text('\n'.join(json.dumps(r) for r in rows[:count]));out=io.StringIO()
+    with patch('sys.argv',['extremedrive','--assets',str(root),'validate','--submission',str(pred),'--subset']),redirect_stdout(out):main()
+    self.assertEqual(json.loads(out.getvalue())['complete_cohort'],expected)
  def test_download_coverage(self):
   cfg,records=plan(ASSETS,'execution');self.assertEqual(len(records),13);self.assertEqual(len(cfg['revision']),40)
   _,records=plan(ASSETS,'all');self.assertEqual(len(records),336)

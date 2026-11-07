@@ -56,7 +56,7 @@ class Dataset:
         hz=self.trajectory_hz if hz is None else hz;trajectory_times(hz)
         return self.rows[token]['target'] if hz==2 else self.sampling(token)['target_4hz']
     def context(self,token):
-        if token not in self.cohort:raise ValueError('Execution annotations released for the 131-window cohort only; use displacement evaluation for the full split.')
+        if token not in self.cohort:raise ValueError('Token is outside the configured execution cohort; inspect cohort.json and annotation coverage.')
         path=self.assets/'contexts'/(safe_token(token)+'.json.xz')
         if not path.exists():return load(self.assets/'contexts'/(safe_token(token)+'.json.gz'))
         packed=load(path)

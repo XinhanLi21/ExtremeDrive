@@ -66,7 +66,7 @@ def main():
         policies={r.get('input_policy','unspecified') for r in preds.values()}
         if len(policies)!=1 or not policies <= set(POLICIES)|{'unspecified'}:raise ValueError('Mixed or invalid input policies')
         rate=prediction_rate(next(iter(preds.values())))
-        if a.command=='validate':result={'valid':True,'windows':len(preds),'complete_cohort':len(preds)==131,'trajectory_hz':rate}
+        if a.command=='validate':result={'valid':True,'windows':len(preds),'complete_cohort':set(preds)==set(ds.tokens(True)),'trajectory_hz':rate}
         elif a.command=='displacement':
             rows=[]
             for t,r in preds.items():
