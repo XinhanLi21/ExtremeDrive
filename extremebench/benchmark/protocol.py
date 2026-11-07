@@ -6,6 +6,7 @@ from .comfort import ComfortConfig
 @dataclass(frozen=True)
 class Protocol:
     version: str = 'extremedrive-execution-v1'
+    actor_evidence_policy: str = 'annotated_3d_only'
     horizon_s: float = 4.0
     stride_s: float = 4.0
     sample_dt_s: float = 0.05
@@ -33,6 +34,7 @@ class Protocol:
     measured_max_lateral_mps2: float | None = None
 
     def validate(self):
+        if self.actor_evidence_policy != 'annotated_3d_only':raise ValueError('Unsupported actor evidence policy')
         ComfortConfig(**self.comfort).validate()
         for k,v in asdict(self).items():
             if isinstance(v,(int,float)) and not math.isfinite(v): raise ValueError(f'nonfinite {k}')

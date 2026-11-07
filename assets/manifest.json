@@ -276,7 +276,7 @@
     "huggingface.json": "5629242d2b473762388c4c526b122d9b546ea69a2f4a21f520bfd48d83c8585c",
     "manual_review.json": "c3305cc9c149e15c3bde136b5e64ad08a94eb4db63e0df88f67a4f81b6a87800",
     "mohe_profile.json": "f75d2deaed2c80e7ef1668068249adbd797de816dc077be475a809fa1cefab53",
-    "protocol.json": "c9eefb2efe675103bb0298d98f0c9debbf2de051b25ad6950ed6ed368cc9f043",
+    "protocol.json": "d606d0e914aeb617ddb64eeff667b144cb1ad13ddd4b202f3d332f0e4cd875f7",
     "reference/diffusion_planner/predictions.jsonl": "b586d4854b25c62f01eb5c9ab05aea846a7a2f67e05aa57f764571552626e094",
     "reference/diffusion_planner/results.json.gz": "4422cbeeb939bf9148997f8e0d46aa6e41e50fafc406831d86ea742ef794bb58",
     "reference/diffusiondrive/predictions.jsonl": "d70089b486db34d99a037f2a934e8e3361d5e96f1b07cb9c41f2249e901dd4be",

@@ -49,3 +49,7 @@ Formal comparisons use `automatic_only_v1` for every model: collision and TTC ar
 The default execution run requires all 131 tokens. Unknowns remain in the denominator; the output reports lower/upper bounds and separately labeled known-only means. Comfort and emergency safety include their own applicability counts. A partial diagnostic run is explicitly marked as incomplete.
 
 The `compare` command requires complete sensor-only automatic runs with equal protocol, asset, cohort and output-rate identities. Hint-conditioned runs and unspecified input declarations remain diagnostic results. Comparisons use the same split, execution configuration, metric definitions and review policy. These definitions constitute the ExtremeDrive evaluation protocol.
+
+## Actor evidence scope
+
+Collision and TTC use annotated 3D actors only (`actor_evidence_policy=annotated_3d_only`). Unmatched 2D detections are retained for audit but do not invalidate an otherwise available observation. A readable annotation with no 3D actors supplies an empty actor set; this is evaluation against the annotated 3D subset, not a claim that the physical scene contains no other actors. Missing annotation files and temporal gaps remain unknown. Velocity evidence is still required for potentially conflicting 3D actors. Historical scores are not relabeled under this policy; its protocol identity is recorded for new evaluations.

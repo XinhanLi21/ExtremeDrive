@@ -37,5 +37,6 @@
   "comfort_weight": 2.0,
   "measured_max_accel_mps2": null,
   "measured_max_decel_mps2": null,
-  "measured_max_lateral_mps2": null
+  "measured_max_lateral_mps2": null,
+  "actor_evidence_policy": "annotated_3d_only"
 }
