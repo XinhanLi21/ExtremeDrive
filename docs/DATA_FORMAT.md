@@ -50,7 +50,7 @@ Original split files include paths from the source machine. `Dataset.inputs` rem
 
 LQR dependency modules are included under a private namespace, with original and relocated file hashes. Only import namespaces were changed. No external NAVSIM checkout is needed by the released primary execution path.
 
-## Lossless storage (0.4.1)
+## Lossless storage
 
 Static scene metadata/features and road objects are stored by SHA-256 content identity. Exactly equal objects share one file; distinct revisions or geometries are never merged based on scene name. Actor frames and their relative timestamps remain window-specific. JSON preserves all coordinates, numbers, fields and array order; LZMA/XZ compresses bytes without quantization or geometry simplification.
 

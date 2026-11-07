@@ -1,20 +1,16 @@
-# GitHub repository and release
+# Current toolkit distribution
 
-This is a standalone Git repository. Choose the owning GitHub account/organization and create an empty repository; add its actual URL as `origin`. No remote address is embedded in the toolkit.
+`main` is the single maintained distribution. Use its current code and documentation; no parallel release branches or version-tagged downloads are maintained. Git history is retained for reproducibility.
 
-```bash
-git remote add origin <your-repository-url>
-git push -u origin main
-```
-
-These commands publish the repository. Check the intended visibility and project-specific license before public distribution. Applicable licensing terms are recorded in LICENSE and the bundled source notices.
-
-CI runs tests, verifies assets, executes regression cases and builds the Python distributions. Pushing a version tag or manually running the release workflow builds downloadable artifacts; it does not publish to PyPI or automatically create a public GitHub Release.
+Install through Conda as described in [installation](install.md). Build the complete download with:
 
 ```bash
 conda activate extremedrive
-python -m build
 python scripts/dev/build_release.py
 ```
 
-The wheel is code-only. The full source archive includes compact benchmark assets and the offline tutorial. The files in `dist/` can be attached to a GitHub Release after the repository owner chooses to publish it. No trained checkpoint or raw sensor data is included.
+The archive has a stable name, `ExtremeDrive_Toolkit.zip`, with a SHA-256 checksum. It includes compact benchmark assets and the offline tutorial; raw sensor data and trained checkpoints are not included.
+
+The manually triggered release workflow validates the toolkit and uploads only this archive and checksum. After a successful upload, older toolkit download artifacts are removed. CI retains its run logs without accumulating downloadable smoke-test artifacts. This workflow does not publish to PyPI or create a GitHub Release.
+
+Protocol identities, asset hashes and archived evaluation provenance remain available for reproducibility. They identify experimental conditions, not alternative supported toolkit versions.
