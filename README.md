@@ -20,7 +20,7 @@ The toolkit contains one evaluation implementation in `extremebench/benchmark/`.
 - **Driving scenarios:** critical maneuvers and adverse weather or lighting conditions, with routine driving represented in the planning dataset.
 - **Scene annotations:** road markings, drivable areas and dynamic traffic participants, aligned with vehicle motion.
 - **Planning evaluation:** trajectory accuracy and execution-based measures of collision avoidance, road compliance, time-to-collision, progress and comfort.
-- **Reproducible comparison:** predefined data splits, a common trajectory-execution protocol and reference results for seven adapted planning methods.
+- **Reproducible comparison:** predefined data splits and a common trajectory-execution protocol.
 
 The planning split contains 758 training, 89 validation and 341 test windows. Execution-based evaluation uses a predefined subset of 131 test windows. See [data splits](docs/splits.md) and [evaluation protocol](docs/PROTOCOL.md).
 
@@ -79,7 +79,7 @@ extremebench/
   execution/       # LQR integration, actuators, vehicle dynamics
   benchmark/       # current geometry, road, comfort and safety metrics
   _vendor/         # attributed, pinned LQR dependency closure
-assets/            # fixed splits, compact annotations, protocol, reference results
+assets/            # fixed splits, compact annotations and protocol
 scripts/           # download, evaluation and release entry points
 tutorials/         # executable dataset/evaluation walkthrough
 tests/             # interface, integrity and regression checks
@@ -87,15 +87,6 @@ docs/              # installation, data, agents, splits, metrics, submissions
 .github/           # CI, release artifacts and issue templates
 ```
 
-## Reference results
-
-Reference predictions and evaluation results are provided for seven adapted methods: Latent TransFuser, TCP, TransFuser, DiffusionDrive, PlanTF, PLUTO and Diffusion-Planner.
-
-```bash
-extremedrive --assets assets reference --model pluto --out results/reference_pluto
-```
-
-Use `reference` to export the supplied reference results and `evaluate` to score new trajectory submissions. Result provenance and review policies are described in the [evaluation guide](docs/submission.md).
 
 ## Development
 

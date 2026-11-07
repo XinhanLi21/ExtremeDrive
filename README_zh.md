@@ -20,7 +20,7 @@ ExtremeDrive 面向危急驾驶及恶劣条件下的自动驾驶研究，将真�
 - **驾驶场景：** 覆盖危急操作及恶劣天气、光照条件，规划数据同时包含常规驾驶。
 - **场景标注：** 提供与车辆运动对齐的道路标线、可行驶区域和动态交通参与者信息。
 - **规划评价：** 支持轨迹误差，以及执行后的碰撞规避、道路合规、碰撞时间、行驶进度和舒适性评价。
-- **方法比较：** 使用预定义数据划分、统一轨迹执行协议，并提供七种适配规划方法的参考结果。
+- **方法比较：** 使用预定义数据划分与统一轨迹执行协议。
 
 训练、验证、测试集分别包含 758、89、341 个规划窗口；执行评测采用测试集中的 131 个窗口。详见[数据划分](docs/splits.md)与[评价协议](docs/PROTOCOL.md)。
 
@@ -56,15 +56,6 @@ extremedrive --assets assets predict --agent my_agent:Agent \
 extremedrive --assets assets evaluate --submission predictions_4hz.jsonl --trajectory-hz 4 --out results/model_4hz
 ```
 
-## 参考结果
-
-提供 Latent TransFuser、TCP、TransFuser、DiffusionDrive、PlanTF、PLUTO 和 Diffusion-Planner 的适配预测及参考评测结果。
-
-```bash
-extremedrive --assets assets reference --model pluto --out results/reference_pluto
-```
-
-`reference` 用于导出已有参考结果，`evaluate` 用于评测新的轨迹提交。结果来源及复核规则见[评测说明](docs/submission.md)。
 
 ## 开发与维护
 
