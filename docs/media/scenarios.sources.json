@@ -1,0 +1,62 @@
+[
+  {
+    "caption": "Critical maneuvers",
+    "token": "19a3f9be14809500:000001:main",
+    "source": "train/Critical_Driving/Emergency_Left_Avoidance/episode_5_part1/images/ZED_LEFT/ZED_LEFT_20251127_152353_891602.jpg",
+    "source_resolution": [
+      640,
+      360
+    ],
+    "presentation": "HTML viewport crop only; no synthesized or retouched scene content"
+  },
+  {
+    "caption": "Obstacle encounters",
+    "token": "7dc1d9bc1991364e:000017:main",
+    "source": "train/Critical_Driving/Emergency_Maneuver/episode_10/images/ZED_LEFT/ZED_LEFT_20251121_122353_307118.jpg",
+    "source_resolution": [
+      640,
+      360
+    ],
+    "presentation": "HTML viewport crop only; no synthesized or retouched scene content"
+  },
+  {
+    "caption": "Snow-covered roads",
+    "token": "a15d046daa77813f:000001:main",
+    "source": "train/Snow_Driving/Go_Straight/episode_2__pi05_annotations_snow_clean/images/ZED_LEFT/ZED_LEFT_20260322_152601_256652.jpg",
+    "source_resolution": [
+      640,
+      360
+    ],
+    "presentation": "HTML viewport crop only; no synthesized or retouched scene content"
+  },
+  {
+    "caption": "Rain and wet roads",
+    "token": "f69a8a242754ea01:000033:main",
+    "source": "train/Rain_Driving/Go_Straight/episode_179_part1/images/ZED_LEFT/ZED_LEFT_20251120_173312_570366.jpg",
+    "source_resolution": [
+      640,
+      360
+    ],
+    "presentation": "HTML viewport crop only; no synthesized or retouched scene content"
+  },
+  {
+    "caption": "Low-light driving",
+    "token": "ae1a4214ed5e31ef:000891:main",
+    "source": "train/Low_Light_Driving/Go_Straight/episode_185_part8/images/ZED_LEFT/ZED_LEFT_20251120_182415_046859.jpg",
+    "source_resolution": [
+      640,
+      360
+    ],
+    "presentation": "HTML viewport crop only; no synthesized or retouched scene content"
+  },
+  {
+    "caption": "Complex traffic",
+    "token": "b751fd8beceddc47:000017:main",
+    "source": "train/Complex_Traffic_Driving/Lane_Change_Left/episode_70_part1/images/ZED_LEFT/ZED_LEFT_20260205_181228_918866.jpg",
+    "source_resolution": [
+      640,
+      360
+    ],
+    "presentation": "HTML viewport crop only; no synthesized or retouched scene content"
+  }
+]

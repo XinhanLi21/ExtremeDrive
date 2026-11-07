@@ -4,6 +4,8 @@
 <p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">数据集</a> · <a href="docs/QUICKSTART_ZH.md">使用说明</a> · <a href="docs/agents.md">模型接口</a> · <a href="docs/PROTOCOL.md">评价指标</a> · <a href="README.md">English</a></p>
 </div>
 
+![ExtremeDrive 真实道路代表性场景](docs/media/scenarios.png)
+
 ExtremeDrive 面向危急驾驶及恶劣条件下的自动驾驶研究，将真实道路驾驶记录与道路结构、交通参与者标注相结合，评价环境约束和车辆动力学约束下的运动规划能力。
 
 本工具库提供数据访问、规划模型接入、轨迹执行、指标计算及结果可视化功能。模型提交的轨迹通过统一控制器与车辆模型执行，用于比较规划结果及其对应的车辆行为。
