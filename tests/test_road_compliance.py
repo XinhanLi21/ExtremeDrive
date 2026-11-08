@@ -17,3 +17,12 @@ class RoadComplianceTests(unittest.TestCase):
   self.assertEqual(s['road_compliance']['mean'],1)
   self.assertNotIn('marking_compliance',s)
   self.assertNotIn('drivable_compliance',s)
+ def test_direction_does_not_gate_score_or_emergency(self):
+  from extremebench.benchmark.emergency import emergency_safety
+  b=dict(no_collision=1,white_compliance=1,yellow_compliance=1,progress=1,ttc_compliance=1)
+  for direction in [0,.5,1,None]:
+   road=dict(drivable_area_compliance=1,driving_direction_compliance=direction)
+   self.assertEqual(scoped_total(b,road,None,False),100)
+   result=emergency_safety(dict(category='Critical_Driving',metrics=b,road_metrics=road))
+   self.assertTrue(result['success'])
+   self.assertNotIn('driving_direction_compliance',result['checks'])

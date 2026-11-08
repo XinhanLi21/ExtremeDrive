@@ -9,7 +9,6 @@ def emergency_safety(row):
     m, road = row['metrics'], row['road_metrics']
     checks = {k: m.get(k) for k in ('no_collision', 'ttc_compliance')}
     checks['road_compliance'] = road_compliance(m, road)
-    checks['driving_direction_compliance'] = road.get('driving_direction_compliance')
     success = False if any(v is not None and v < 1 for v in checks.values()) else None if any(v is None for v in checks.values()) else True
     return {'applicable': True, 'success': success, 'checks': checks,
             'exclusion_available': m.get('annotated_exclusion_compliance') is not None,

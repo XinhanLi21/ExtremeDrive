@@ -15,8 +15,7 @@ def road_compliance(base, road):
     return float(np.prod(checks))
 
 def scoped_total(base, road, comfort, applicable):
-    gates = [base.get('no_collision'), road_compliance(base, road),
-             road.get('driving_direction_compliance')]
+    gates = [base.get('no_collision'), road_compliance(base, road)]
     weighted = [(5, base.get('progress')), (5, base.get('ttc_compliance'))]
     if applicable:
         weighted.append((2, comfort))

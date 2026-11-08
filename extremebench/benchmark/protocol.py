@@ -5,7 +5,7 @@ from .comfort import ComfortConfig
 
 @dataclass(frozen=True)
 class Protocol:
-    version: str = 'extremedrive-execution-v1'
+    version: str = 'extremedrive-execution-v2'
     actor_evidence_policy: str = 'annotated_3d_only'
     horizon_s: float = 4.0
     stride_s: float = 4.0

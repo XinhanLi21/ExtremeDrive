@@ -1,5 +1,5 @@
 {
-  "version": "extremedrive-execution-v1",
+  "version": "extremedrive-execution-v2",
   "horizon_s": 4.0,
   "stride_s": 4.0,
   "sample_dt_s": 0.05,
