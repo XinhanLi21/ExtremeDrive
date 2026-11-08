@@ -73,8 +73,3 @@ python scripts/dev/build_release.py
 ## 数据来源
 
 原始数据由 Shiyue Zhao 与清华大学智能底盘团队整理，托管于 [Hugging Face](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset)，采用 CC BY-NC 4.0 许可。
-
-
-### 三维目标证据
-
-碰撞与 TTC 以三维目标标注为准，不要求匹配二维检测；有效三维框不受相机检测可用标志影响。TTC 对可能冲突的目标还需要相邻帧速度证据，单个三维框不等于已知运动速度。评分输出分别记录三维观测时间缺口和相关目标速度不足。

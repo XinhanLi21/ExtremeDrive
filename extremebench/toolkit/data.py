@@ -70,6 +70,10 @@ class Dataset:
         scene=blob(packed['scene_static']);scene['frames']=packed['frames']
         result['scene']=scene;result['road']=blob(packed['road'])
         if digest(result)!=packed['reconstructed_sha256']:raise ValueError('reconstructed context checksum mismatch')
+        scope_path=self.assets/'ttc_actor_scope.json'
+        if scope_path.exists():
+            scope=load(scope_path)
+            result['ttc_actor_scope']={'basis':scope['basis'],'nonconflicting_ids':scope['clips'].get(token,[])}
         return result
 
 def read_predictions(path,expected=None,hz=None):

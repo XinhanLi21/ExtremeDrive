@@ -40,7 +40,7 @@ Unavailable exclusion geometry contributes no additional gate. A known failed ha
 
 ## TTC evidence and review
 
-Actor association and local adjacent-frame fits are supplied with the annotation snapshot. Unknown-velocity actors are excluded from TTC only when a conservative reachable set cannot intersect the ego sweep. Risk-relevant actors without velocity evidence remain unknown. Source annotations and review decisions are kept distinct.
+TTC evaluates predicted footprint conflicts within the configured horizon using the released actor scope and adjacent-frame motion estimates. Reviewed actor relevance annotations are shared across models; observed overlaps remain violations.
 
 Formal comparisons use `automatic_only_v1` for every model: collision and TTC are computed by the same code on the same annotation snapshot, with no prediction-specific human overrides. Unknown evidence remains unknown. Archived reviewed results retain their prediction bindings but are marked `benchmark_eligible=false`; they cannot enter the `compare` command. Re-scoring an archived prediction recomputes the metrics and does not import review outcomes.
 
@@ -49,9 +49,3 @@ Formal comparisons use `automatic_only_v1` for every model: collision and TTC ar
 The default execution run requires all 2,574 tokens. Unknowns remain in the denominator; the output reports lower/upper bounds and separately labeled known-only means. Comfort and emergency safety include their own applicability counts. A partial diagnostic run is explicitly marked as incomplete.
 
 The `compare` command requires complete sensor-only automatic runs with equal protocol, asset, cohort and output-rate identities. Hint-conditioned runs and unspecified input declarations remain diagnostic results. Comparisons use the same split, execution configuration, metric definitions and review policy. These definitions constitute the ExtremeDrive evaluation protocol.
-
-## Actor evidence scope
-
-Collision and TTC use annotated 3D actors only (`actor_evidence_policy=annotated_3d_only`). Unmatched 2D detections are retained for audit but do not invalidate an otherwise available observation. A readable annotation with no 3D actors supplies an empty actor set; this is evaluation against the annotated 3D subset, not a claim that the physical scene contains no other actors. Missing annotation files and temporal gaps remain unknown. Velocity evidence is still required for potentially conflicting 3D actors. Historical scores are not relabeled under this policy; its protocol identity is recorded for new evaluations.
-
-A valid 3D footprint remains usable even when its camera detection or legacy availability flag is absent. Collision and TTC do not require a matched 2D box. For TTC, a footprint alone does not establish velocity: adjacent-frame motion evidence is required for potentially conflicting actors. `ttc_evidence.unknown_reasons` distinguishes missing temporal 3D observations from unavailable risk-relevant actor velocities.

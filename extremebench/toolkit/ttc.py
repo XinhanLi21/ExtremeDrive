@@ -14,6 +14,7 @@ def definitely_irrelevant(body,poly,ego_velocity,horizon,speed_cap,margin=.5):
 
 def revise_ttc(r,c,P):
  frames=c['scene']['frames'];actors=AdjacentActors(frames,P)
+ reviewed=set(c.get('ttc_actor_scope',{}).get('nonconflicting_ids',[]));reviewed_samples=0
  a=np.array(r['trajectory']);t=a[:,0];poses=a[:,1:].copy();co=np.cos(poses[:,2]);si=np.sin(poses[:,2]);poses[:,0]+=co*P.ego_center_forward_m-si*P.ego_center_left_m;poses[:,1]+=si*P.ego_center_forward_m+co*P.ego_center_left_m
  bodies=scoring.ego_footprints(poses,P);velocity=np.gradient(poses[:,:2],t,axis=0);risk=False;missing=0;unknown=0;ignored=0;total_unknown=0;min_ttc=None;decisions=[]
  classes={o['id']:o['class'] for f in frames for o in f['objects']}
@@ -23,6 +24,9 @@ def revise_ttc(r,c,P):
   for ident,poly,v in obs:
    # A current overlap establishes TTC=0 even when velocity is unavailable.
    if bodies[i].intersection(poly).area>1e-6:risk=True;min_ttc=0.
+   if v is None and ident in reviewed:
+    reviewed_samples+=1
+    continue
    if v is None:
     total_unknown+=1;cap=LIMITS.get(classes.get(ident),55.)
     safe,distance=definitely_irrelevant(bodies[i],poly,velocity[i],P.ttc_horizon_s,cap)
@@ -36,5 +40,5 @@ def revise_ttc(r,c,P):
      risk=True;min_ttc=float(tau) if min_ttc is None else min(min_ttc,float(tau));break
  value=0 if risk else None if missing or unknown else 1
  r["metrics"]["ttc_compliance"]=value
- r["ttc_evidence"]=dict(missing_samples=missing,relevant_unknown_samples=unknown,excluded_unreachable_samples=ignored,min_ttc_s=min_ttc,actor_evidence_policy=P.actor_evidence_policy,unknown_reasons=(["missing_temporal_3d_observation"] if missing else [])+(["risk_relevant_3d_velocity_unavailable"] if unknown else []))
+ r["ttc_evidence"]=dict(missing_samples=missing,relevant_unknown_samples=unknown,excluded_unreachable_samples=ignored,min_ttc_s=min_ttc,actor_evidence_policy=P.actor_evidence_policy,annotation_scope_basis=c.get("ttc_actor_scope",{}).get("basis"),annotation_excluded_samples=reviewed_samples,unknown_reasons=(["missing_temporal_3d_observation"] if missing else [])+(["risk_relevant_3d_velocity_unavailable"] if unknown else []))
  return r
