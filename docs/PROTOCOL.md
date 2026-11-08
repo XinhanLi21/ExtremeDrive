@@ -53,3 +53,5 @@ The `compare` command requires complete sensor-only automatic runs with equal pr
 ## Actor evidence scope
 
 Collision and TTC use annotated 3D actors only (`actor_evidence_policy=annotated_3d_only`). Unmatched 2D detections are retained for audit but do not invalidate an otherwise available observation. A readable annotation with no 3D actors supplies an empty actor set; this is evaluation against the annotated 3D subset, not a claim that the physical scene contains no other actors. Missing annotation files and temporal gaps remain unknown. Velocity evidence is still required for potentially conflicting 3D actors. Historical scores are not relabeled under this policy; its protocol identity is recorded for new evaluations.
+
+A valid 3D footprint remains usable even when its camera detection or legacy availability flag is absent. Collision and TTC do not require a matched 2D box. For TTC, a footprint alone does not establish velocity: adjacent-frame motion evidence is required for potentially conflicting actors. `ttc_evidence.unknown_reasons` distinguishes missing temporal 3D observations from unavailable risk-relevant actor velocities.

@@ -25,3 +25,16 @@ class ActorEvidenceTests(unittest.TestCase):
  def test_temporal_gap_remains_unknown(self):
   sc,w,plan=self.example();sc['frames']=[sc['frames'][0],sc['frames'][-1]]
   r=score_window(sc,w,plan,Protocol());self.assertIsNone(r['metrics']['no_collision'])
+
+ def test_3d_without_camera_availability_is_authoritative(self):
+  sc,w,plan=self.example()
+  for f in sc['frames']:
+   f['dynamic_available']=False
+   f['objects']=[dict(id='car',xy=[[-1,-1],[1,-1],[1,1],[-1,1],[-1,-1]],**{'class':'car'})]
+  r=score_window(sc,w,plan,Protocol())
+  self.assertEqual(r['metrics']['no_collision'],0)
+  self.assertEqual(r['metrics']['ttc_compliance'],0)
+
+ def test_invalid_3d_does_not_override_missing_observation(self):
+  from extremebench.benchmark.scoring import has_3d_observation
+  self.assertFalse(has_3d_observation(dict(dynamic_available=False,objects=[{'xy':[[0,0],[1,0],[2,0]]}])))

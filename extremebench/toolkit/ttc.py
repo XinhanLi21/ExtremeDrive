@@ -36,5 +36,5 @@ def revise_ttc(r,c,P):
      risk=True;min_ttc=float(tau) if min_ttc is None else min(min_ttc,float(tau));break
  value=0 if risk else None if missing or unknown else 1
  r["metrics"]["ttc_compliance"]=value
- r["ttc_evidence"]=dict(missing_samples=missing,relevant_unknown_samples=unknown,excluded_unreachable_samples=ignored,min_ttc_s=min_ttc)
+ r["ttc_evidence"]=dict(missing_samples=missing,relevant_unknown_samples=unknown,excluded_unreachable_samples=ignored,min_ttc_s=min_ttc,actor_evidence_policy=P.actor_evidence_policy,unknown_reasons=(["missing_temporal_3d_observation"] if missing else [])+(["risk_relevant_3d_velocity_unavailable"] if unknown else []))
  return r

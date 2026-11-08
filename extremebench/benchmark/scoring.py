@@ -71,6 +71,21 @@ def line_events(poses,t,g,kind,p):
     dt=np.diff(t)
     return sorted(runs,key=lambda r:r['start_s']),{'contact_s':float(np.sum(dt*contact[:-1])),'ignored_contact_s':float(np.sum(dt*(contact&~deep)[:-1])),'available_marking':True}
 
+def has_3d_observation(frame):
+    """A valid 3D footprint is evidence independently of camera matching flags."""
+    if frame.get('dynamic_available', False):
+        return True
+    for obj in frame.get('objects', []):
+        try:
+            xy = np.asarray(obj['xy'], dtype=float)
+            if xy.ndim == 2 and xy.shape[1] == 2 and len(xy) >= 3 and np.isfinite(xy).all():
+                poly = Polygon(xy)
+                if poly.is_valid and poly.area > 0:
+                    return True
+        except (KeyError, TypeError, ValueError):
+            continue
+    return False
+
 class Actors:
     def __init__(self,frames,p):
         self.frames=frames;self.ts=np.array([f['t'] for f in frames]);self.p=p
@@ -78,7 +93,7 @@ class Actors:
         idx=int(np.searchsorted(self.ts,time,side='right')-1);idx=max(0,min(idx,len(self.ts)-2))
         if idx>0 and abs(time-self.ts[idx])<1e-8 and (self.frames[idx]['key']!=self.frames[idx+1]['key'] or self.ts[idx+1]-self.ts[idx]>self.p.max_observation_gap_s):idx-=1
         a,b=self.frames[idx:idx+2];dt=b['t']-a['t']
-        if time<self.ts[0]-1e-7 or time>self.ts[-1]+1e-7 or not a['dynamic_available'] or not b['dynamic_available'] or dt<=0 or dt>self.p.max_observation_gap_s+1e-8 or a['key']!=b['key']:return None
+        if time<self.ts[0]-1e-7 or time>self.ts[-1]+1e-7 or not has_3d_observation(a) or not has_3d_observation(b) or dt<=0 or dt>self.p.max_observation_gap_s+1e-8 or a['key']!=b['key']:return None
         alpha=float(np.clip((time-a['t'])/dt,0,1));left={o['id']:o for o in a['objects']};right={o['id']:o for o in b['objects']};out=[]
         for key in left.keys()|right.keys():
             x,y=left.get(key),right.get(key)
