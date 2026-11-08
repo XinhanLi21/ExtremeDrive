@@ -9,7 +9,7 @@ from .ttc import revise_ttc
 from ..benchmark import scoring
 from ..benchmark.protocol import Protocol
 from ..benchmark.road_rules import evaluate as road_evaluate
-from ..benchmark.aggregation import scoped_total
+from ..benchmark.aggregation import scoped_total, road_compliance
 from ..benchmark.emergency import emergency_safety
 from ..execution.comfort import dynamic_comfort
 from ..execution.mohe_lateral_profile import load_candidate
@@ -36,6 +36,7 @@ def score(dataset,pred,run):
         r=scoring.score_window(ctx['scene'],ctx['window'],plan,p,execution_status=run['execution_status'])
     finally:scoring.Actors=original
     r['road_metrics']=road_evaluate(r['trajectory'],ctx['road'],p)
+    r['metrics']['road_compliance']=road_compliance(r['metrics'],r['road_metrics'])
     r=revise_ttc(r,ctx,p);r['future_comfort']=dynamic_comfort(run['logs'],p.comfort)
     applicable=ctx['window']['category']!='Critical_Driving'
     r['metrics']['comfort']=r['future_comfort']['score'] if applicable else None
@@ -46,7 +47,7 @@ def score(dataset,pred,run):
     return r
 
 def summarize(records):
-    fields={'score':lambda r:r.get('score'),'no_collision':lambda r:r.get('metrics',{}).get('no_collision'),'marking_compliance':lambda r:r.get('metrics',{}).get('marking_compliance'),'drivable_compliance':lambda r:r.get('road_metrics',{}).get('drivable_area_compliance'),'ttc_compliance':lambda r:r.get('metrics',{}).get('ttc_compliance'),'progress':lambda r:r.get('metrics',{}).get('progress')}
+    fields={'score':lambda r:r.get('score'),'no_collision':lambda r:r.get('metrics',{}).get('no_collision'),'road_compliance':lambda r:road_compliance(r.get('metrics',{}),r.get('road_metrics',{})),'ttc_compliance':lambda r:r.get('metrics',{}).get('ttc_compliance'),'progress':lambda r:r.get('metrics',{}).get('progress')}
     result={'windows':len(records),'metrics':{}}
     for key,fn in fields.items():
         values=[fn(r) for r in records];known=[v for v in values if v is not None];n=len(values);hi=100. if key=='score' else 1.

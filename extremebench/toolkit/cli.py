@@ -94,7 +94,7 @@ def report(out,records,summary):
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     rows=[]
     for r in records:
-        rows.append({'token':r['token'],'score':r.get('score'),**{k:r.get('metrics',{}).get(k) for k in ['no_collision','marking_compliance','ttc_compliance','progress']},'drivable_compliance':r.get('road_metrics',{}).get('drivable_area_compliance')})
+        rows.append({'token':r['token'],'score':r.get('score'),**{k:r.get('metrics',{}).get(k) for k in ['no_collision','road_compliance','ttc_compliance','progress']}})
     with (out/'metrics.csv').open('w') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     text='<meta charset="utf-8"><title>ExtremeDrive results</title><style>body{max-width:1200px;margin:40px auto;font:16px system-ui;color:#163042}table{border-collapse:collapse;width:100%}td,th{padding:9px;border-bottom:1px solid #ddd;text-align:left}pre{background:#f0f5f7;padding:20px}</style><h1>ExtremeDrive evaluation</h1><p>Unknown metrics remain unknown. Historical reviewed references and fresh automated evaluations are reported separately.</p><pre>'+html.escape(json.dumps(summary,indent=2))+'</pre><table><tr>'+''.join('<th>'+k+'</th>' for k in rows[0])+'</tr>'

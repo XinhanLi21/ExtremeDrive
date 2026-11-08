@@ -73,3 +73,5 @@ python scripts/dev/build_release.py
 ## 数据来源
 
 原始数据由 Shiyue Zhao 与清华大学智能底盘团队整理，托管于 [Hugging Face](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset)，采用 CC BY-NC 4.0 许可。
+
+道路合规率统一评价白线与黄线、可行驶面以及墙体和隔离带等不可行区域。片段须同时满足适用的道路约束才算通过；压线容忍仍为 0 cm，行驶方向单独评价。

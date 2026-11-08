@@ -21,10 +21,8 @@ Vehicle initialization uses measured motion states together with fixed actuator 
 | Metric | Definition |
 |---|---|
 | Collision avoidance N | No overlap above the specified area threshold with observed traffic participants |
-| Marking compliance M | Joint compliance with white and yellow road markings, evaluated using the vehicle footprint; zero crossing tolerance and zero persistence |
-| Drivable-area compliance D | Executed body lies within the reviewed road surface and a 0.15 m outward geometry allowance |
+| Road compliance R | Joint compliance with white/yellow markings, the reviewed drivable surface, and annotated physical exclusion regions. All applicable conditions must hold. Marking tolerance is 0 cm; the road-surface geometry allowance is 0.15 m. |
 | Direction Q | Same/opposite direction from road topology; wrong-way distance within one second produces factors 1, 0.5, 0 at 2 m and 6 m thresholds |
-| Exclusion X | Compliance with annotated physical exclusion geometry, when available |
 | TTC T | Constant-velocity footprint conflict test over one second, at 0.1 s increments |
 | Progress P | Route-relative progress within the specified route-distance threshold |
 | Comfort C | Duration-weighted severity of executed acceleration, jerk and yaw motion; only noncritical test windows; [active limits and filtering](comfort.md) |
@@ -34,9 +32,9 @@ The 0.15 m road-surface allowance is distinct from the **0 cm marking rule**; it
 
 For applicable comfort flag a ∈ {0,1}:
 
-`score = 100 × N × M × D × Q × X × (5P + 5T + 2aC) / (10 + 2a)`
+`score = 100 × N × R × Q × (5P + 5T + 2aC) / (10 + 2a)`
 
-Unavailable exclusion geometry contributes no additional gate. A known failed hard gate gives score zero. Otherwise, unavailable required evidence produces an unknown score, not an automatic pass. EC is absent. Traffic lights and counterfactual follow-on scenes are outside this protocol.
+Physical exclusion constraints apply where annotated. A known failed hard gate gives score zero. Otherwise, unavailable required evidence produces an unknown score, not an automatic pass. EC is absent. Traffic lights and counterfactual follow-on scenes are outside this protocol.
 
 ## TTC evidence and review
 
