@@ -22,7 +22,7 @@ The toolkit contains one evaluation implementation in `extremebench/benchmark/`.
 - **Planning evaluation:** trajectory accuracy and execution-based measures of collision avoidance, road compliance, time-to-collision, progress and comfort.
 - **Reproducible comparison:** predefined data splits and a common trajectory-execution protocol.
 
-The planning split contains 11,541 training clips, 1,285 validation clips and 2,574 test clips. Execution-based evaluation covers all 2,574 test clips. See [data splits](docs/splits.md) and [evaluation protocol](docs/PROTOCOL.md).
+See [data splits](docs/splits.md) and [evaluation protocol](docs/PROTOCOL.md) for the dataset organization and evaluation setup.
 
 ## Getting started
 
