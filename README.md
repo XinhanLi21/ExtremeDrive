@@ -98,4 +98,3 @@ See the [contribution guide](CONTRIBUTING.md) and [release guide](docs/releasing
 
 Original data: [Extreme Driving Conditions Dataset](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset), curated by Shiyue Zhao and the Tsinghua University Intelligent Chassis Team (CC BY-NC 4.0).
 
-Road compliance jointly evaluates white/yellow markings, the drivable surface, and physical exclusion regions. A clip passes only when all applicable road constraints are satisfied.
