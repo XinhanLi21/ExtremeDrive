@@ -16,15 +16,15 @@ def wrap(a): return (a+np.pi)%(2*np.pi)-np.pi
 
 @dataclass(frozen=True)
 class Config:
-    mass: float=1800.
-    yaw_inertia: float=3000.
-    lf: float=1.2
-    lr: float=1.6
+    mass: float=2178.
+    yaw_inertia: float=3216.
+    lf: float=1.526
+    lr: float=1.374
     track: float=1.6
     length: float=4.7
     width: float=1.85
     wheel_radius: float=.31
-    wheel_inertia: float=1.8
+    wheel_inertia: float=2.5
     corner_stiffness: float=40000.
     longitudinal_stiffness: float=65000.
     mu: float=.85

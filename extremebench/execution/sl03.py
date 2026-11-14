@@ -10,8 +10,8 @@ from ..core import Config, Vehicle
 class SL03Config(Config):
     length: float=4.82
     width: float=1.89
-    lf: float=1.45
-    lr: float=1.45
+    lf: float=1.526
+    lr: float=1.374
     track: float=1.62
     drive_front_share: float=0.
     front_corner_stiffness: float=40000. # N/rad per wheel

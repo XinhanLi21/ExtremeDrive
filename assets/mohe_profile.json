@@ -23,10 +23,10 @@
       24954.62158657309
     ]
   ],
-  "assumed_mass_kg": 1800.0,
-  "assumed_yaw_inertia_kgm2": 3000.0,
-  "lf_m": 1.45,
-  "lr_m": 1.45,
+  "assumed_mass_kg": 2178.0,
+  "assumed_yaw_inertia_kgm2": 3216.0,
+  "lf_m": 1.526,
+  "lr_m": 1.374,
   "domain": "MoHe, 3<vx<10, |GPS beta|<5deg, |r|<.35rad/s, |front angle|<.15rad, |dvx/dt|<1m/s2; offline centered 1.1s filters",
   "validation": "conditional lateral bicycle rollout: measured speed/steer throughout horizon, initial vy/r only; not full free-running 7DOF or closed-loop planning",
   "evaluation": {
@@ -122,5 +122,11 @@
     "motor torque",
     "steering actuator delay"
   ],
-  "default_global_update": false
+  "default_global_update": false,
+  "original_fit_parameter_assumptions": {
+    "assumed_mass_kg": 1800.0,
+    "assumed_yaw_inertia_kgm2": 3000.0,
+    "lf_m": 1.45,
+    "lr_m": 1.45
+  }
 }
