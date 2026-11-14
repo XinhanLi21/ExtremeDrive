@@ -1,7 +1,7 @@
 <div align="center">
 <h1><img src="docs/media/extremedrive-icon.png" alt="" width="100" align="absmiddle">&nbsp; ExtremeDrive</h1>
 <h3>A Real-World Dataset and Benchmark for Critical Driving</h3>
-<p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Dataset</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a></p>
+<p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Download Dataset</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a></p>
 </div>
 
 ![Representative real-world driving scenarios in ExtremeDrive](docs/media/scenarios.png)
@@ -12,6 +12,19 @@ This toolkit provides data access, planning-agent interfaces, trajectory executi
 
 
 ![Paired camera observations and BEV annotations](docs/media/bev-scenes.png)
+
+## Download dataset
+
+Raw sensor data and source annotations are available on [Hugging Face](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset). Sign in and accept the dataset access conditions on that page before downloading. The toolkit includes benchmark splits, reviewed annotations and trajectory labels under `assets/`.
+
+After [installation](docs/install.md), authenticate and download the evaluation data:
+
+```bash
+hf auth login
+extremedrive --assets assets download --scope execution --dataroot data
+```
+
+Use `--scope all` for the source episodes required by training, validation and testing. See the [download guide](docs/dataset.md) for individual splits, download previews and local data access.
 
 ## Benchmark
 
