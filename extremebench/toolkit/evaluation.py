@@ -1,11 +1,13 @@
 """Fresh trajectory -> LQR -> fitted dynamics -> geometry and risk evaluation."""
 import json
+from dataclasses import replace
 from pathlib import Path
 import numpy as np
 from scipy.interpolate import PchipInterpolator
 from .data import load,digest,prediction_digest
 from .actors import AdjacentActors
 from .ttc import revise_ttc
+from .friction import resolve_friction, table_identity
 from ..benchmark import scoring
 from ..benchmark.protocol import Protocol
 from ..benchmark.road_rules import evaluate as road_evaluate
@@ -20,14 +22,17 @@ def execute(dataset,pred):
     world=q[:,:2]@np.array([[co,si],[-si,co]])+a['xy'];heading=q[:,2]+yaw
     speed=np.hypot(*[PchipInterpolator(t,world[:,k]).derivative()(t) for k in (0,1)])
     state=dict(x=a['xy'][0],y=a['xy'][1],yaw=yaw,vx=float(ctx['sensor_state']['velocity'][0]),vy=float(ctx['sensor_state']['velocity'][1]),yaw_rate=ctx['measured_initial_yaw_rate'])
+    friction=resolve_friction(dataset.assets,ctx,pred['token'])
     config,meta=load_candidate(dataset.assets/'mohe_profile.json',experimental=True)
+    config=replace(config,mu=friction['mu']).validate()
+    meta['friction']=friction
     run=execute_official_dynamic(dict(id=pred['token'],trajectory=np.column_stack([t,world,heading,speed]).tolist(),initial_state=state),config)
-    run['geometry']=run['geometry'].tolist();run['candidate_profile']=meta;run['initial_state_supplied']=state;run['source_prediction']=pred
+    run['scene_friction']=friction;run['geometry']=run['geometry'].tolist();run['candidate_profile']=meta;run['initial_state_supplied']=state;run['source_prediction']=pred
     return run
 
 def score(dataset,pred,run):
     ctx=dataset.context(pred['token']);protocol=load(dataset.assets/'protocol.json');p=Protocol(**protocol).validate()
-    identity={'token':pred['token'],'prediction_sha256':prediction_digest(pred),'protocol_sha256':digest(protocol),'context_sha256':digest(ctx),'input_policy':pred.get('input_policy','unspecified'),'review_policy':'automatic_only_v1'}
+    identity={'scene_friction':run.get('scene_friction'),'token':pred['token'],'prediction_sha256':prediction_digest(pred),'protocol_sha256':digest(protocol),'context_sha256':digest(ctx),'input_policy':pred.get('input_policy','unspecified'),'review_policy':'automatic_only_v1'}
     if run['failure']:return {**identity,'score':0.,'status':'execution_failed','failure':run['failure']}
     plan=[[l['t'],l['x'],l['y'],l['yaw']] for l in run['logs']]
     original=scoring.Actors
@@ -74,14 +79,15 @@ def evaluation_identity(dataset,preds,records):
                 benchmark_eligible=complete and policy=='sensor_only',
                 protocol_sha256=digest(load(dataset.assets/'protocol.json')),
                 cohort_sha256=digest(sorted(preds)),
-                asset_manifest_sha256=digest(load(dataset.assets/'manifest.json')))
+                asset_manifest_sha256=digest(load(dataset.assets/'manifest.json')),
+                scene_friction_sha256=table_identity(dataset.assets))
 
 
 def compare_summaries(summaries):
     """Reject archived, incomplete, ambiguous, or differently configured runs."""
     if not summaries:raise ValueError('No runs supplied')
     keys=('mode','review_policy','input_policy','trajectory_hz','protocol_sha256',
-          'cohort_sha256','asset_manifest_sha256')
+          'cohort_sha256','asset_manifest_sha256','scene_friction_sha256')
     first=summaries[0]
     for s in summaries:
         if not s.get('benchmark_eligible') or not s.get('complete_cohort') or s.get('mode')!='fresh_automated_execution' or s.get('review_policy')!='automatic_only_v1' or s.get('input_policy')!='sensor_only':

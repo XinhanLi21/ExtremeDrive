@@ -14,6 +14,8 @@ The default input policy removes scenario-derived action hints. The input contra
 4. A seven-degree-of-freedom model integrates planar motion and four wheel rotations at 1 kHz. Effective lateral parameters are fitted from vehicle recordings. Parameter provenance and validation status are included in the execution output.
 5. Geometry metrics sample executed motion at 20 Hz. Other actors follow recorded observations; they do not react to the simulated ego vehicle. The planner is not queried again during this four-second execution.
 
+Road friction is assigned by source-scene surface conditions: snow 0.30, wet 0.60 and dry 0.85. These are empirical estimates, held fixed across planners for the same source scene. The execution reads `assets/scene_friction.json`; a shared map may contain source episodes with different surface labels. See [scene friction](friction.md).
+
 Vehicle initialization uses measured motion states together with fixed actuator and wheel-state assumptions. Parameter values and initialization details are retained in the configuration and execution logs.
 
 ## Metrics

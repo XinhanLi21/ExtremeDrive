@@ -52,7 +52,7 @@ class ProtocolFairnessTests(unittest.TestCase):
   with self.assertRaises(ValueError):replace(ComfortConfig(),inertial_jerk_limit_mps3=0).validate()
   with self.assertRaises(ValueError):Protocol(comfort={'acceleration_limit_mps2':0}).validate()
  def test_no_archive_or_policy_mixing(self):
-  s=dict(benchmark_eligible=True,complete_cohort=True,mode='fresh_automated_execution',review_policy='automatic_only_v1',input_policy='sensor_only',trajectory_hz=2,protocol_sha256='p',cohort_sha256='c',asset_manifest_sha256='a')
+  s=dict(benchmark_eligible=True,complete_cohort=True,mode='fresh_automated_execution',review_policy='automatic_only_v1',input_policy='sensor_only',trajectory_hz=2,protocol_sha256='p',cohort_sha256='c',asset_manifest_sha256='a',scene_friction_sha256='f')
   self.assertEqual(len(compare_summaries([s,s])),2)
   for key,value in [('mode','archived_reviewed_reference'),('input_policy','scenario_hint'),('trajectory_hz',4),('protocol_sha256','other'),('benchmark_eligible',False),('complete_cohort',False)]:
    other={**s,key:value}
