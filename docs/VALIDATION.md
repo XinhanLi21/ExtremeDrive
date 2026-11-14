@@ -12,8 +12,8 @@ The repository contains one current dataset manifest and one benchmark implement
 - The asset manifest verifies current data files by SHA-256. The downloader resolves 56 execution-source episodes and 336 planning-source episodes.
 - Conda manages the runtime environment. CI checks Python 3.10 and 3.12, unit tests, asset integrity, execution regression cases and packaging.
 
-## Regression provenance
+## Execution checks
 
-Archived prediction-bound results remain only for reproducibility and execution regression checks; they do not represent scores on the current test set. Historical evidence records such as [compression validation](compression-validation.json), [portability checks](portability-check.json), and [reference aggregate checks](reference-check.json) describe the dataset and implementation at the time of those checks, not current split counts.
+The smoke example checks fresh execution outputs, token coverage, finite trajectories and report generation. Asset integrity and unit tests validate the current distribution.
 
 The default comfort configuration reproduces the earlier effective computation within floating-point tolerance. Threshold-change tests verify that configuration edits actually affect scoring. Formal comparisons require the same protocol, assets, cohort, trajectory frequency and input policy, with automatic scoring for every model.

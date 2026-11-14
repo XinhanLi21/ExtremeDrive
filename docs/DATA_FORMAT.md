@@ -12,9 +12,6 @@ assets/
   protocol.json                 # geometry and timing rules
   mohe_profile.json             # fixed vehicle parameter candidate
   huggingface.json              # source repository, revision and file index
-  reference/<model>/            # predictions and reviewed per-window results
-  reference_bindings.json       # exact prediction/result identities
-  manual_review.json            # scoped review provenance
   manifest.json                 # asset SHA-256 checksums
 ```
 
@@ -42,7 +39,7 @@ Each line contains exactly one window prediction. Required keys:
 
 Duplicates, missing/extra cohort tokens, wrong shape, invalid timing and nonfinite numbers are rejected. The `input_policy` field records the information contract. Missing policies are diagnostic only; formally comparable submissions declare `sensor_only`. Additional model metadata cannot change evaluation scope.
 
-Use `examples/smoke_predictions.jsonl` as a valid example. Archived 131-clip reference prediction files use the same format. Current planning inputs contain three selected camera streams; raw upstream episodes contain additional sensors available to custom adapters. Adding sensor inputs does not change the frozen split or scoring protocol.
+Use `examples/smoke_predictions.jsonl` as a valid example. Current planning inputs contain three selected camera streams; raw upstream episodes contain additional sensors available to custom adapters. Adding sensor inputs does not change the frozen split or scoring protocol.
 
 ## Reproducibility
 

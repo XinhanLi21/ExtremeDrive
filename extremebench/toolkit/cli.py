@@ -16,7 +16,6 @@ def main():
         q=sub.add_parser(name);q.add_argument('--trajectory-hz',type=int,choices=[2,4]);q.add_argument('--submission',required=True);q.add_argument('--out',default='results');q.add_argument('--split',default='test',choices=['train','val','test'])
         if name in ('validate','evaluate'):q.add_argument('--subset',action='store_true',help='Allow diagnostic subsets; never report as full cohort')
         if name=='evaluate':q.add_argument('--workers',type=int,default=1)
-    q=sub.add_parser('reference');q.add_argument('--model',required=True);q.add_argument('--out',default='reference_results')
     q=sub.add_parser('compare');q.add_argument('--summary',action='append',required=True);q.add_argument('--out',default='results/comparison.json')
     q=sub.add_parser('visualize');q.add_argument('--result',required=True);q.add_argument('--out',default='bev.png')
     a=p.parse_args();assets=Path(a.assets)
@@ -46,15 +45,6 @@ def main():
         with dest.open('w') as out:
             for token in ds.tokens(a.execution_only):out.write(json.dumps(dict(token=token,times_s=trajectory_times(a.trajectory_hz).tolist(),trajectory_hz=a.trajectory_hz,input_hz=a.input_hz,input_policy=a.input_policy,poses=np.asarray(agent.predict(ds.inputs(token))).tolist()),allow_nan=False)+'\n')
         result={'predictions':len(read_predictions(dest,hz=a.trajectory_hz)),'input_hz':a.input_hz,'trajectory_hz':a.trajectory_hz}
-    elif a.command=='reference':
-        from .evaluation import summarize,write,evaluation_identity
-        if a.model not in [x.name for x in (assets/'reference').iterdir()]:raise ValueError('unknown reference model')
-        records=load(assets/'reference'/a.model/'results.json.gz');preds=read_predictions(assets/'reference'/a.model/'predictions.jsonl')
-        binding=load(assets/'reference_bindings.json')[a.model]
-        for r in records:
-            t=r['token']
-            if digest(r)!=binding[t]['result_sha256'] or prediction_digest(preds[t])!=binding[t]['prediction_sha256']:raise ValueError('Reference binding mismatch')
-        result=summarize(records);result.update(mode='archived_reviewed_reference',review_policy='historical_prediction_specific_review',benchmark_eligible=False);write(Path(a.out)/'summary.json',result);write(Path(a.out)/'records.json',records);report(Path(a.out),records,result)
     else:
         from .evaluation import summarize,write,evaluation_identity
         ds=Dataset(assets,split=a.split)
@@ -97,7 +87,7 @@ def report(out,records,summary):
         rows.append({'token':r['token'],'score':r.get('score'),**{k:r.get('metrics',{}).get(k) for k in ['no_collision','road_compliance','ttc_compliance','progress']}})
     with (out/'metrics.csv').open('w') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
-    text='<meta charset="utf-8"><title>ExtremeDrive results</title><style>body{max-width:1200px;margin:40px auto;font:16px system-ui;color:#163042}table{border-collapse:collapse;width:100%}td,th{padding:9px;border-bottom:1px solid #ddd;text-align:left}pre{background:#f0f5f7;padding:20px}</style><h1>ExtremeDrive evaluation</h1><p>Unknown metrics remain unknown. Historical reviewed references and fresh automated evaluations are reported separately.</p><pre>'+html.escape(json.dumps(summary,indent=2))+'</pre><table><tr>'+''.join('<th>'+k+'</th>' for k in rows[0])+'</tr>'
+    text='<meta charset="utf-8"><title>ExtremeDrive results</title><style>body{max-width:1200px;margin:40px auto;font:16px system-ui;color:#163042}table{border-collapse:collapse;width:100%}td,th{padding:9px;border-bottom:1px solid #ddd;text-align:left}pre{background:#f0f5f7;padding:20px}</style><h1>ExtremeDrive evaluation</h1><p>Evaluation reports use freshly executed trajectories under the configured protocol.</p><pre>'+html.escape(json.dumps(summary,indent=2))+'</pre><table><tr>'+''.join('<th>'+k+'</th>' for k in rows[0])+'</tr>'
     for r in rows:text+='<tr>'+''.join('<td>'+html.escape('unknown' if v is None else str(round(v,4)) if isinstance(v,float) else str(v))+'</td>' for v in r.values())+'</tr>'
     (out/'index.html').write_text(text+'</table>')
 if __name__=='__main__':main()

@@ -33,4 +33,4 @@ The 4 Hz trajectory labels and causal motion history were reconstructed from the
 
 `Dataset(..., input_hz=4, trajectory_hz=4)` exposes the 4 Hz configuration. `Dataset.target(token, hz=4)` accesses the sixteen-pose reference. Frequency-specific records are stored losslessly in `assets/sampling/`; `audit.json` records source fingerprints and split identities. Rebuilding these records requires the original aligned episodes and sensor logs; normal toolkit use needs only the bundled assets.
 
-LQR, vehicle integration and metric sampling retain their existing clocks. ADE/FDE use references at the submission's sampling grid. A denser trajectory can change interpolation and tracking behavior, so scores at different output rates should be labeled with their rate. Historical reference results retain their original 2 Hz predictions and review scope.
+LQR, vehicle integration and metric sampling retain their existing clocks. ADE/FDE use references at the submission's sampling grid. A denser trajectory can change interpolation and tracking behavior, so scores at different output rates should be labeled with their rate.

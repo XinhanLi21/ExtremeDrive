@@ -13,4 +13,4 @@ The archive has a stable name, `ExtremeDrive_Toolkit.zip`, with a SHA-256 checks
 
 The manually triggered release workflow validates the toolkit and uploads only this archive and checksum. After a successful upload, older toolkit download artifacts are removed. CI retains its run logs without accumulating downloadable smoke-test artifacts. This workflow does not publish to PyPI or create a GitHub Release.
 
-Protocol identities, asset hashes and archived evaluation provenance remain available for reproducibility. They identify experimental conditions, not alternative supported toolkit versions.
+Protocol identities and asset hashes remain available for reproducibility. They identify experimental conditions, not alternative supported toolkit versions.
