@@ -1,6 +1,6 @@
 """Fresh trajectory -> LQR -> fitted dynamics -> geometry and risk evaluation."""
 import json
-from dataclasses import replace
+from dataclasses import replace, asdict
 from pathlib import Path
 import numpy as np
 from scipy.interpolate import PchipInterpolator
@@ -12,7 +12,7 @@ from ..benchmark import scoring
 from ..benchmark.protocol import Protocol
 from ..benchmark.road_rules import evaluate as road_evaluate
 from ..benchmark.aggregation import scoped_total, road_compliance
-from ..benchmark.emergency import emergency_safety
+from ..benchmark.emergency import emergency_safety, EMERGENCY_SUCCESS_DEFINITION
 from ..execution.comfort import dynamic_comfort
 from ..execution.mohe_lateral_profile import load_candidate
 from ..execution.navsim_dynamic import execute_official_dynamic
@@ -26,13 +26,28 @@ def execute(dataset,pred):
     config,meta=load_candidate(dataset.assets/'mohe_profile.json',experimental=True)
     config=replace(config,mu=friction['mu']).validate()
     meta['friction']=friction
-    run=execute_official_dynamic(dict(id=pred['token'],trajectory=np.column_stack([t,world,heading,speed]).tolist(),initial_state=state),config)
+    if state['vx']<0:
+        run=dict(logs=[],geometry=np.empty((0,2)),config=asdict(config),
+                 failure='reverse initial state unsupported',
+                 failure_stage='initial_state_validation',
+                 execution_status='unsupported_initial_state')
+    else:
+        run=execute_official_dynamic(dict(id=pred['token'],trajectory=np.column_stack([t,world,heading,speed]).tolist(),initial_state=state),config)
     run['scene_friction']=friction;run['geometry']=run['geometry'].tolist();run['candidate_profile']=meta;run['initial_state_supplied']=state;run['source_prediction']=pred
     return run
 
 def score(dataset,pred,run):
     ctx=dataset.context(pred['token']);protocol=load(dataset.assets/'protocol.json');p=Protocol(**protocol).validate()
     identity={'scene_friction':run.get('scene_friction'),'token':pred['token'],'prediction_sha256':prediction_digest(pred),'protocol_sha256':digest(protocol),'context_sha256':digest(ctx),'input_policy':pred.get('input_policy','unspecified'),'review_policy':'automatic_only_v1'}
+    if run.get('execution_status')=='unsupported_initial_state':
+        critical=ctx['window']['category']=='Critical_Driving'
+        return {**identity,'score':None,'status':'unsupported_initial_state',
+                'score_status':'unavailable','failure':run['failure'],
+                'category':ctx['window']['category'],'metrics':{},'road_metrics':{},
+                'comfort_applicability':{'applicable':not critical},
+                'emergency_safety':{'applicable':critical,'success':None,
+                    'definition':EMERGENCY_SUCCESS_DEFINITION,'reason':'unsupported_initial_state'},
+                'manual_review_applied':False}
     if run['failure']:return {**identity,'score':0.,'status':'execution_failed','failure':run['failure']}
     plan=[[l['t'],l['x'],l['y'],l['yaw']] for l in run['logs']]
     original=scoring.Actors
@@ -46,6 +61,11 @@ def score(dataset,pred,run):
     applicable=ctx['window']['category']!='Critical_Driving'
     r['metrics']['comfort']=r['future_comfort']['score'] if applicable else None
     r['comfort_applicability']={'applicable':applicable,'reason':'noncritical_test' if applicable else 'emergency_maneuver'}
+    if not applicable:
+        emergency=revise_ttc(dict(r,metrics=dict(r['metrics'])),ctx,replace(p,ttc_horizon_s=p.emergency_ttc_horizon_s))
+        r['metrics']['emergency_ttc_compliance']=emergency['metrics']['ttc_compliance']
+        r['emergency_ttc_evidence']=emergency['ttc_evidence']
+        r['emergency_ttc_horizon_s']=p.emergency_ttc_horizon_s
     r['emergency_safety']=emergency_safety(r)
     r['score']=scoped_total(r['metrics'],r['road_metrics'],r['future_comfort']['score'] if applicable else None,applicable)
     r.update(identity,status='automated',manual_review_applied=False,score_name='ExtremeDrive automatic execution score',score_status='unavailable' if r['score'] is None else 'evaluated')
@@ -53,7 +73,7 @@ def score(dataset,pred,run):
 
 def summarize(records):
     fields={'score':lambda r:r.get('score'),'no_collision':lambda r:r.get('metrics',{}).get('no_collision'),'road_compliance':lambda r:road_compliance(r.get('metrics',{}),r.get('road_metrics',{})),'ttc_compliance':lambda r:r.get('metrics',{}).get('ttc_compliance'),'progress':lambda r:r.get('metrics',{}).get('progress')}
-    result={'windows':len(records),'metrics':{}}
+    result={'windows':len(records),'metrics':{},'emergency_success_definition':EMERGENCY_SUCCESS_DEFINITION,'unsupported_initial_states':sum(r.get('status')=='unsupported_initial_state' for r in records)}
     for key,fn in fields.items():
         values=[fn(r) for r in records];known=[v for v in values if v is not None];n=len(values);hi=100. if key=='score' else 1.
         result['metrics'][key]={'mean':float(np.mean(known)) if len(known)==n and n else None,'known_mean':float(np.mean(known)) if known else None,'unknown':n-len(known),'lower':sum(known)/n if n else None,'upper':(sum(known)+(n-len(known))*hi)/n if n else None}

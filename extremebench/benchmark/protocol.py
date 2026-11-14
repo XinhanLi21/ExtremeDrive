@@ -17,6 +17,7 @@ class Protocol:
     yellow_persistence_s: float = 0
     event_merge_gap_s: float = 0.5
     ttc_horizon_s: float = 1.0
+    emergency_ttc_horizon_s: float = 0.5
     ttc_step_s: float = 0.1
     comfort: dict = field(default_factory=lambda: asdict(ComfortConfig()))
     ego_outline: str = 'sl03_body_approx_v1'
@@ -38,7 +39,7 @@ class Protocol:
         ComfortConfig(**self.comfort).validate()
         for k,v in asdict(self).items():
             if isinstance(v,(int,float)) and not math.isfinite(v): raise ValueError(f'nonfinite {k}')
-        for k in ('horizon_s','stride_s','sample_dt_s','max_observation_gap_s','ttc_horizon_s','ttc_step_s','ego_length_m','ego_width_m','progress_weight','ttc_weight','comfort_weight'):
+        for k in ('horizon_s','stride_s','sample_dt_s','max_observation_gap_s','ttc_horizon_s','emergency_ttc_horizon_s','ttc_step_s','ego_length_m','ego_width_m','progress_weight','ttc_weight','comfort_weight'):
             if getattr(self,k)<=0: raise ValueError(f'{k} must be positive')
         for k in ('white_tolerance_m','yellow_tolerance_m','white_persistence_s','yellow_persistence_s','event_merge_gap_s'):
             if getattr(self,k)<0: raise ValueError(f'{k} must be nonnegative')

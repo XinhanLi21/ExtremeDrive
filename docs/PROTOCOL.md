@@ -16,7 +16,7 @@ The default input policy removes scenario-derived action hints. The input contra
 
 Road friction is assigned by source-scene surface conditions: snow 0.30, wet 0.60 and dry 0.85. These are empirical estimates, held fixed across planners for the same source scene. The execution reads `assets/scene_friction.json`; a shared map may contain source episodes with different surface labels. See [scene friction](friction.md).
 
-Vehicle initialization uses measured motion states together with fixed actuator and wheel-state assumptions. Parameter values and initialization details are retained in the configuration and execution logs.
+Vehicle initialization uses measured motion states together with fixed actuator and wheel-state assumptions. A negative initial longitudinal velocity is outside the supported execution domain and produces an unavailable result. The clip remains in its applicable evaluation cohort; it is neither a zero-score failure nor a safety pass. Parameter values and initialization details are retained in the configuration and execution logs.
 
 ## Metrics
 
@@ -27,13 +27,13 @@ Vehicle initialization uses measured motion states together with fixed actuator 
 | TTC T | Constant-velocity footprint conflict test over one second, at 0.1 s increments |
 | Progress P | Route-relative progress within the specified route-distance threshold |
 | Comfort C | Duration-weighted severity of executed acceleration, jerk and yaw motion; only noncritical test windows; [active limits and filtering](comfort.md) |
-| Emergency safety | Critical-driving windows satisfying collision, road and TTC safety conditions over the four-second horizon |
+| Emergency safety | Critical-driving clips satisfying no collision, road compliance and a separate 0.5 s TTC check over the four-second horizon |
 
-The 0.15 m road-surface allowance is distinct from the **0 cm marking rule**; it does not permit crossing a marked boundary. Emergency safety measures compliance with the specified safety criteria over the evaluation horizon.
+The 0.15 m road-surface allowance is distinct from the **0 cm marking rule**; it does not permit crossing a marked boundary. Emergency success is `N × R × T_0.5`: all three conditions must pass throughout the four-second evaluation horizon. The composite score uses the separate 1.0 s TTC term `T_1.0`. Both TTC checks use 0.1 s forecast increments and include their horizon endpoint; predicted footprint overlap fails the corresponding check. Comfort does not gate emergency success.
 
 For applicable comfort flag a ∈ {0,1}:
 
-`score = 100 × N × R × (5P + 5T + 2aC) / (10 + 2a)`
+`score = 100 × N × R × (5P + 5T_1.0 + 2aC) / (10 + 2a)`
 
 Physical exclusion constraints apply where annotated. A known failed hard gate gives score zero. Otherwise, unavailable required evidence produces an unknown score, not an automatic pass. EC is absent. Traffic lights and counterfactual follow-on scenes are outside this protocol.
 

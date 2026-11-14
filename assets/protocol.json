@@ -38,5 +38,6 @@
   "measured_max_accel_mps2": null,
   "measured_max_decel_mps2": null,
   "measured_max_lateral_mps2": null,
-  "actor_evidence_policy": "annotated_3d_only"
+  "actor_evidence_policy": "annotated_3d_only",
+  "emergency_ttc_horizon_s": 0.5
 }
