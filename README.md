@@ -26,6 +26,10 @@ extremedrive --assets assets download --scope execution --dataroot data
 
 Use `--scope all` for the source episodes required by training, validation and testing. See the [download guide](docs/dataset.md) for individual splits, download previews and local data access.
 
+## Data license, privacy and hosting
+
+The source dataset is hosted on Hugging Face under **CC BY-NC 4.0**, with DOI [10.57967/hf/8637](https://doi.org/10.57967/hf/8637). The publisher reports face and license-plate blurring before release. See [data governance](docs/DATA_GOVERNANCE.md) for privacy measures, access conditions, hosting and license scope, and [LICENSE](LICENSE) for project-specific materials.
+
 ## Benchmark
 
 The toolkit contains one evaluation implementation in `extremebench/benchmark/`. The `evaluate` command uses the current protocol and annotation snapshot.

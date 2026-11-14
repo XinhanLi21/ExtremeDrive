@@ -1,5 +1,22 @@
-ExtremeDrive project-specific materials
+ExtremeDrive licensing notice
 
-No public redistribution license has yet been assigned to the ExtremeDrive-specific code or reviewed annotation assets in this repository. Rights remain with their respective owners. This file does not grant permissions beyond applicable law or permissions separately obtained from those owners.
+Source dataset
+--------------
+The original Hugging Face dataset is distributed under Creative Commons
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0):
+https://creativecommons.org/licenses/by-nc/4.0/
+Source data card and access conditions:
+https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset
 
-Bundled dependencies retain the license and source notices included under extremebench/_vendor/. The original Hugging Face dataset is distributed separately under CC BY-NC 4.0.
+Project-specific materials
+--------------------------
+No public redistribution license has yet been assigned to the ExtremeDrive-specific
+code or additional reviewed annotation assets in this repository. Rights remain
+with their respective owners. The source-data license does not grant permissions
+to independently authored project materials. This notice does not grant permissions
+beyond applicable law or permissions separately obtained from those owners.
+
+Bundled dependencies retain their included licenses and source notices under
+extremebench/_vendor/.
+
+Data privacy and hosting are described in docs/DATA_GOVERNANCE.md.

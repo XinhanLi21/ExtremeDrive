@@ -25,3 +25,7 @@ Scopes: `execution` selects 56 source episodes, `train`, `val`, and `test` follo
 Existing data may be used directly with `--dataroot`; no redownload is necessary. The upstream data include camera/LiDAR streams, vehicle records and CoC annotations. The released planner interface selects current images and causal history; it does not pass future CoC or future actor labels to the agent.
 
 Source data are CC BY-NC 4.0. The reviewed benchmark annotations and corrected labels in `assets/` are a separate versioned resource. Source folder train/val names must not be used to reconstruct benchmark splits.
+
+## License, privacy and hosting
+
+See [data governance](DATA_GOVERNANCE.md) for the source-data license, published privacy measures, DOI and hosting. The source data card governs dataset access; the repository [LICENSE](../LICENSE) distinguishes source data from project-specific code and annotations.
