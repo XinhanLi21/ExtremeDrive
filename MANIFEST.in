@@ -1,5 +1,5 @@
 include environment.yml
-include README.md README_zh.md LICENSE CHANGELOG.md
+include README.md LICENSE CHANGELOG.md
 recursive-include docs *.md *.json *.txt *.png
 recursive-include tests *.py
 recursive-include tutorials *.ipynb

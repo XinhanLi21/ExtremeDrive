@@ -1,4 +1,4 @@
-# Sampling and timestamps / 采样与时间戳
+# Sampling and timestamps
 
 ## Two sampling modes
 
@@ -34,9 +34,3 @@ The 4 Hz trajectory labels and causal motion history were reconstructed from the
 `Dataset(..., input_hz=4, trajectory_hz=4)` exposes the 4 Hz configuration. `Dataset.target(token, hz=4)` accesses the sixteen-pose reference. Frequency-specific records are stored losslessly in `assets/sampling/`; `audit.json` records source fingerprints and split identities. Rebuilding these records requires the original aligned episodes and sensor logs; normal toolkit use needs only the bundled assets.
 
 LQR, vehicle integration and metric sampling retain their existing clocks. ADE/FDE use references at the submission's sampling grid. A denser trajectory can change interpolation and tracking behavior, so scores at different output rates should be labeled with their rate. Historical reference results retain their original 2 Hz predictions and review scope.
-
-## 中文说明
-
-数据提供 2 Hz、4 Hz 两种读取与预测配置，不通过更改训练/测试划分实现降采样。`--input-hz 4` 选择过去 1.5 秒内的七个历史时刻，`--trajectory-hz 4` 输出未来 4 秒的十六个轨迹点。两项可独立设置。
-
-发布文件名的标称间隔与真实采集时间可能不同，运动标签使用已校正的传感器时间。历史图像只选真实且因果的观测，缺帧用有效性标记表示；4 Hz 标签来自原始传感器记录，并非由 2 Hz 标签插值生成。当前控制、车辆仿真和指标采样频率不随这两个选项变化。

@@ -1,7 +1,7 @@
 <div align="center">
 <h1><img src="docs/media/extremedrive-icon.png" alt="" width="100" align="absmiddle">&nbsp; ExtremeDrive</h1>
 <h3>A Real-World Dataset and Benchmark for Critical Driving</h3>
-<p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Dataset</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a> · <a href="README_zh.md">中文</a></p>
+<p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Dataset</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a></p>
 </div>
 
 ![Representative real-world driving scenarios in ExtremeDrive](docs/media/scenarios.png)
