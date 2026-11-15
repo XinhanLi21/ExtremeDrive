@@ -23,7 +23,7 @@ def execute(dataset,pred):
     speed=np.hypot(*[PchipInterpolator(t,world[:,k]).derivative()(t) for k in (0,1)])
     state=dict(x=a['xy'][0],y=a['xy'][1],yaw=yaw,vx=float(ctx['sensor_state']['velocity'][0]),vy=float(ctx['sensor_state']['velocity'][1]),yaw_rate=ctx['measured_initial_yaw_rate'])
     friction=resolve_friction(dataset.assets,ctx,pred['token'])
-    config,meta=load_candidate(dataset.assets/'mohe_profile.json',experimental=True)
+    config,meta=load_candidate(dataset.assets/'mohe_profile.json',experimental=True,surface=friction['surface'])
     config=replace(config,mu=friction['mu']).validate()
     meta['friction']=friction
     if state['vx']<0:

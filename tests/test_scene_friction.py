@@ -49,6 +49,31 @@ class SceneFrictionTests(unittest.TestCase):
    self.assertEqual(result['mu'],table['surface_mu'][result['surface']])
   for split in ['train','val','test']:
    for row in Dataset(ROOT/'assets',split=split).rows.values():self.assertIn(row['context']['source_episode'],table['records'])
+ def test_surface_vehicle_parameters(self):
+  from extremebench.execution.mohe_lateral_profile import load_candidate
+  path=ROOT/'assets/mohe_profile.json'
+  expected={'dry':(61181.68490125882,106550.15497025044),'wet':(61181.68490125882,106550.15497025044),'snow':(18918.76996877162,20072.639751171774)}
+  for surface,(front,rear) in expected.items():
+   config,meta=load_candidate(path,experimental=True,surface=surface)
+   self.assertAlmostEqual(config.front_corner_stiffness,front)
+   self.assertAlmostEqual(config.rear_corner_stiffness,rear)
+   self.assertEqual(meta['surface'],surface)
+   self.assertEqual(config.physics_dt,.001)
+  with self.assertRaises(ValueError):load_candidate(path,experimental=True,surface='unknown')
+ def test_surface_vehicle_parameters_reach_execution(self):
+  from extremebench.execution.mohe_lateral_profile import load_candidate
+  path=ROOT/'assets/mohe_profile.json'
+  for surface in ['dry','wet','snow']:
+   ctx={**self.ctx(surface),'anchor':{'xy':[0,0],'yaw':0},'sensor_state':{'velocity':[5,0]},'measured_initial_yaw_rate':0}
+   ds=SimpleNamespace(assets=self.assets,context=lambda token:ctx)
+   pred={'token':surface,'times_s':[.5*i for i in range(1,9)],'poses':[[2.5*i,0,0] for i in range(1,9)]}
+   with patch('extremebench.toolkit.evaluation.load_candidate',side_effect=lambda ignored,**kw:load_candidate(path,**kw)),patch('extremebench.toolkit.evaluation.execute_official_dynamic',return_value={'geometry':np.zeros((1,2))}) as engine:
+    execute(ds,pred)
+   expected,_=load_candidate(path,experimental=True,surface=surface)
+   actual=engine.call_args.args[1]
+   self.assertEqual(actual.front_corner_stiffness,expected.front_corner_stiffness)
+   self.assertEqual(actual.rear_corner_stiffness,expected.rear_corner_stiffness)
+   self.assertEqual(actual.mu,self.table['surface_mu'][surface])
  def test_comparisons_reject_different_friction(self):
   s=dict(benchmark_eligible=True,complete_cohort=True,mode='fresh_automated_execution',review_policy='automatic_only_v1',input_policy='sensor_only',trajectory_hz=2,protocol_sha256='p',cohort_sha256='c',asset_manifest_sha256='a',scene_friction_sha256='f')
   with self.assertRaises(ValueError):compare_summaries([s,{**s,'scene_friction_sha256':'changed'}])

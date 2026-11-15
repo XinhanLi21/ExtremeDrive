@@ -11,12 +11,13 @@ def validation_gate(profile):
     passed=valid and all(new[k]<=old[k] for k in ('vy_rmse_mps','yaw_rmse_deg_s'))
     return {'passed':passed,'criteria':'at least20 matched 1s windows; neither lateral-velocity nor yaw-rate RMSE may worsen','evidence_level':'conditional bicycle only; a pass would still need 7DOF validation','default_update':False}
 
-def load_candidate(path,*,experimental=False,config=None):
+def load_candidate(path,*,experimental=False,config=None,surface="dry"):
     p=Path(path);data=json.loads(p.read_text());gate=validation_gate(data)
     if not experimental:raise ValueError('candidate not validated for full plant; explicit experimental=True required')
     c=config or SL03Config()
     for key,expected in [('mass',data['assumed_mass_kg']),('yaw_inertia',data['assumed_yaw_inertia_kgm2']),('lf',data['lf_m']),('lr',data['lr_m'])]:
         if abs(getattr(c,key)-expected)>1e-6:raise ValueError('candidate fit assumes '+key)
-    cf,cr=data['trajectory_fit_axle_n_rad']
+    if surface not in ('dry','wet','snow'):raise ValueError('unknown road surface: '+str(surface))
+    cf,cr=data['surface_axle_corner_stiffness_n_rad'][surface]
     c=replace(c,front_corner_stiffness=cf/2,rear_corner_stiffness=cr/2,parameter_status='MoHe_effective_lateral_candidate_not_validated_for_7DOF')
-    return c,{'profile_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'gate':gate,'domain':data['domain'],'friction':'unchanged assumption, not identified','status':'experimental_only'}
+    return c,{'profile_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'gate':gate,'domain':data['domain'],'surface':surface,'friction':'unchanged assumption, not identified','status':'experimental_only'}
