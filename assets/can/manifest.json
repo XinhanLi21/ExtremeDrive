@@ -1,0 +1,30 @@
+{
+  "schema": "extremedrive-can-keyframes",
+  "episodes": 589,
+  "frames": 30186,
+  "matched_frames": 30186,
+  "source_recordings": 50,
+  "signal_presence": {
+    "whl_fr": 30186,
+    "stamp": 30186,
+    "whl_rr": 30186,
+    "tq": 30186,
+    "whl_rl": 30186,
+    "whl_fl": 30186,
+    "spd": 30186,
+    "steer": 30186,
+    "brake_pressure": 302
+  },
+  "source_split_frame_counts": {
+    "train": 27186,
+    "val": 3000
+  },
+  "license": "CC-BY-NC-4.0",
+  "sha256": {
+    "README.md": "96681e2212cf531615fa4644969cab6d0e94ce5a77e125184c48b26d79d4257c",
+    "alignment_report.json": "efd3d9ea502778a53214b07e48d3c5676ba2ecac98954ad5ca9a29a4ab1b0887",
+    "episode_index.json": "073a5d9cc42d8a1de8d479de9a6b9b60f0057256d45903d7e93b91c9587e5e92",
+    "frames.jsonl": "0ac2e5ffd8641b46bab1dbb3b437e47356ee81bffa7d724782d2de6501688f62",
+    "read_can.py": "ca0aeff10162a06534e5c276226f56e756db4342dc3498b56984e65966b89255"
+  }
+}

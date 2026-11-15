@@ -17,3 +17,7 @@ The publisher notes that occluded or low-resolution instances may escape detecti
 The data are hosted on Hugging Face with DOI [10.57967/hf/8637](https://doi.org/10.57967/hf/8637). The toolkit downloads the source revision recorded in `assets/huggingface.json`, using resumable caching and per-episode archives. The DOI identifies the dataset; the pinned revision identifies the files used by the toolkit.
 
 Code and compact benchmark assets are distributed through this repository. See [dataset access](dataset.md) and [toolkit distribution](releasing.md). The current hosting arrangement does not specify a guaranteed retention period.
+
+## CAN export
+
+The aligned CAN export in `assets/can/` is distributed under the source dataset's CC BY-NC 4.0 license. It contains vehicle channels and timing metadata; no RGB images, absolute geographic coordinates or local filesystem paths are included. Source logger identifiers are represented by opaque IDs. See [CAN access and schema](can.md).

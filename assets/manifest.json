@@ -5208,6 +5208,9 @@
     "context_blobs/64efd98a0c806b98749501910e9b83b1dd8a60dc25c77517649fe1e4c7b308da.json.xz": "11ef1ac748917a8579c04b7fed1854a982b861c09aca85e3cafca518c12a578b",
     "execution_coverage.json": "f08155aa141a5b7e35476d13c497cd8b905e5ea87261209446cba4dcba6b411b",
     "ttc_actor_scope.json": "b9a81cb15842be85f7fdeef5866dbd6d2ee67d1a48fbbb7648ef83fb1f1cdc63",
-    "scene_friction.json": "4664c3c3caeaf0811a2880fcf0df6b673822cc1e3d7229d98b3a2ade64c4ac37"
+    "scene_friction.json": "4664c3c3caeaf0811a2880fcf0df6b673822cc1e3d7229d98b3a2ade64c4ac37",
+    "can/ExtremeDrive_CAN.zip": "44fa3bc32badc751202bc46a0af71a8d791704f7e25e4450ce5f8863f6acea36",
+    "can/ExtremeDrive_CAN.zip.sha256": "e3b1e3d2446d9d1817d73f2aac18a9a9863f4e80c7847bc9689a251e86f705eb",
+    "can/manifest.json": "a4dad5b848368bc1b282fc4f6d6347fc4bde537f6944d9c3fbc9bb525ea01f93"
   }
 }

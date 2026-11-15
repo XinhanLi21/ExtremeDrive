@@ -9,7 +9,7 @@ conda activate extremedrive
 python scripts/dev/build_release.py
 ```
 
-The archive has a stable name, `ExtremeDrive_Toolkit.zip`, with a SHA-256 checksum. It includes compact benchmark assets and the offline tutorial; raw sensor data and trained checkpoints are not included.
+The archive has a stable name, `ExtremeDrive_Toolkit.zip`, with a SHA-256 checksum. It includes compact benchmark assets and the offline tutorial; the aligned CAN archive is included, while raw camera/LiDAR files and trained checkpoints are not included.
 
 The manually triggered release workflow validates the toolkit and uploads only this archive and checksum. After a successful upload, older toolkit download artifacts are removed. CI retains its run logs without accumulating downloadable smoke-test artifacts. This workflow does not publish to PyPI or create a GitHub Release.
 

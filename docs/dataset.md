@@ -26,6 +26,10 @@ Existing data may be used directly with `--dataroot`; no redownload is necessary
 
 Source data are CC BY-NC 4.0. The reviewed benchmark annotations and corrected labels in `assets/` are a separate versioned resource. Source folder train/val names must not be used to reconstruct benchmark splits.
 
+## CAN measurements
+
+The [CAN archive](../assets/can/ExtremeDrive_CAN.zip?raw=true) is included in the repository. It contains aligned measurements for all source episodes and can be joined to Hugging Face metadata by episode and zero-based frame index. See [fields, timestamps and examples](can.md). Benchmark split assignments remain defined by `assets/splits/`.
+
 ## License, privacy and hosting
 
 See [data governance](DATA_GOVERNANCE.md) for the source-data license, published privacy measures, DOI and hosting. The source data card governs dataset access; the repository [LICENSE](../LICENSE) distinguishes source data from project-specific code and annotations.

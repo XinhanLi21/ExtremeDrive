@@ -1,7 +1,7 @@
 <div align="center">
 <h1><img src="docs/media/extremedrive-icon.png" alt="" width="100" align="absmiddle">&nbsp; ExtremeDrive</h1>
 <h3>A Real-World Dataset and Benchmark for Critical Driving</h3>
-<p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Download Dataset</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a></p>
+<p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Download Dataset</a> · <a href="assets/can/ExtremeDrive_CAN.zip?raw=true">Download CAN</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a></p>
 </div>
 
 ![Representative real-world driving scenarios in ExtremeDrive](docs/media/scenarios.png)
@@ -25,6 +25,8 @@ extremedrive --assets assets download --scope execution --dataroot data
 ```
 
 Use `--scope all` for the source episodes required by training, validation and testing. See the [download guide](docs/dataset.md) for individual splits, download previews and local data access.
+
+Aligned vehicle CAN signals are bundled separately: [download the CAN archive](assets/can/ExtremeDrive_CAN.zip?raw=true) or see the [signal schema and reading guide](docs/can.md). The export provides wheel-speed channels, steering-wheel angle, vehicle speed, a raw torque-related channel and source timing information.
 
 ## Data license, privacy and hosting
 
