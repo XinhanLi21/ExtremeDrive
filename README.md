@@ -2,6 +2,7 @@
 <h1><img src="docs/media/extremedrive-icon.png" alt="" width="100" align="absmiddle">&nbsp; ExtremeDrive</h1>
 <h3>A Real-World Dataset and Benchmark for Critical Driving</h3>
 <p>
+  <a href="https://arxiv.org/abs/2611.20574"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&amp;logoColor=white" alt="Paper on arXiv"></a>
   <a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset"></a>
 </p>
 <p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Download Dataset</a> · <a href="assets/can/ExtremeDrive_CAN.zip?raw=true">Download CAN</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a></p>
