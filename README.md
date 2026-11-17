@@ -2,10 +2,12 @@
 <h1><img src="docs/media/extremedrive-icon.png" alt="" width="100" align="absmiddle">&nbsp; ExtremeDrive</h1>
 <h3>A Real-World Dataset and Benchmark for Critical Driving</h3>
 <p>
+  <a href="https://sean-shiyuez.github.io/extreme-driving-dataset-web/"><img src="https://img.shields.io/badge/Project-Website-blue" alt="Project Website"></a>
   <a href="https://arxiv.org/abs/2611.20574"><img src="https://img.shields.io/badge/arXiv-Paper-b31b1b?logo=arxiv&amp;logoColor=white" alt="Paper on arXiv"></a>
   <a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset"></a>
 </p>
 <p><a href="https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset">Download Dataset</a> · <a href="assets/can/ExtremeDrive_CAN.zip?raw=true">Download CAN</a> · <a href="docs/install.md">Installation</a> · <a href="docs/agents.md">Agents</a> · <a href="docs/PROTOCOL.md">Metrics</a></p>
+<p><a href="https://arxiv.org/abs/2611.20574">ExtremeDrive: A Real-World Dataset and Benchmark for Critical Driving</a> · <a href="#citation">Citation / BibTeX</a></p>
 </div>
 
 ![Representative real-world driving scenarios in ExtremeDrive](docs/media/scenarios.png)
@@ -120,4 +122,20 @@ See the [contribution guide](CONTRIBUTING.md) and [release guide](docs/releasing
 ## Dataset
 
 Original data: [Extreme Driving Conditions Dataset](https://huggingface.co/datasets/Stary108/Extreme_Driving_Conditions_Dataset), curated by Shiyue Zhao and the Tsinghua University Intelligent Chassis Team (CC BY-NC 4.0).
+
+## Citation
+
+If you use ExtremeDrive in your research, please cite our [paper](https://arxiv.org/abs/2611.20574):
+
+```bibtex
+@misc{li2026extremedrive,
+  title         = {ExtremeDrive: A Real-World Dataset and Benchmark for Critical Driving},
+  author        = {Xinhan Li and Yuhong Jiang and Shiyue Zhao and Junzhi Zhang and Chengkun He and Ruihai Ma and Shijie Zhao and Wenxuan Cheng and Jinbo Lv and Tao Liu},
+  year          = {2026},
+  eprint        = {2611.20574},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2611.20574}
+}
+```
 
